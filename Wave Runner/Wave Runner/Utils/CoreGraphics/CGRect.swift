@@ -19,8 +19,8 @@ extension CGRect {
         
         var origin = self.origin
         
-        let diff = dest.add(x: -point.x, y: -point.y)
-        origin = origin.add(x: diff.x, y: diff.y)
+        let diff = dest.add(dx: -point.x, dy: -point.y)
+        origin = origin.add(dx: diff.x, dy: diff.y)
         
         return CGRect(origin: origin, size: self.size)
     }

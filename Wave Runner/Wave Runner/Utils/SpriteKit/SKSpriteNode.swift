@@ -22,7 +22,7 @@ extension SKSpriteNode {
         let angle = CGFloat.angleHeadTowardDestination(current: self.position, destination: destination, spriteAngle: spriteAngle)
         self.zRotation = angle
         
-        let vector = CGVector(dx: destination.x - self.position.x, dy: destination.y - self.position.y).scale(by: speed / destination.distance(to: self.position))
+        let vector = CGVector(dx: destination.x - self.position.x, dy: destination.y - self.position.y).scale(by: speed / destination.distance(other: self.position))
         self.physicsBody?.velocity = vector
         self.physicsBody?.angularVelocity = 0
     }

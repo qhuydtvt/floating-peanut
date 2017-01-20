@@ -8,7 +8,12 @@
 
 import SpriteKit
 
-protocol Controller {
-    func config(parent: SKNode) -> Void;
-    func run(parent: SKNode, time: TimeInterval) -> Void;
+class Controller {
+    func config(parent: SKNode) -> Void {
+        
+    }
+    
+    func run(parent: SKNode, time: TimeInterval) -> Void {
+        
+    }
 }

@@ -11,15 +11,15 @@ import SpriteKit
 class EnemyController : Controller {
     var sprite : SKSpriteNode
     
-    init() {
+    override init() {
         sprite = SKSpriteNode(imageNamed: "rock")
     }
     
-    func config(parent: SKNode) {
+    override func config(parent: SKNode) {
         
     }
     
-    func run(parent: SKNode, time: TimeInterval) {
+    override func run(parent: SKNode, time: TimeInterval) {
         
     }
 }

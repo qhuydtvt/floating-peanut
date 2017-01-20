@@ -8,13 +8,13 @@
 import SpriteKit
 import Foundation
 
-class PlatformController {
-    var platform1: SKSpriteNode!
-    var platform2: SKSpriteNode!
+class PlatformController: Controller {
+    var platform1: View!
+    var platform2: View!
     
-    init() {
-        platform1 = SKSpriteNode(image: #imageLiteral(resourceName: "platform"))
-        platform2 = SKSpriteNode(image: #imageLiteral(resourceName: "platform"))
+    override init() {
+        platform1 = View(image: #imageLiteral(resourceName: "platform"))
+        platform2 = View(image: #imageLiteral(resourceName: "platform"))
         
         platform1.name = "platform"
         platform2.name = "platform"
@@ -26,7 +26,7 @@ class PlatformController {
         platform2.zPosition = 2
     }
     
-    func config(parent: SKNode) -> Void {
+    override func config(parent: SKNode) -> Void {
         platform1.position = .zero
         platform2.position = CGPoint(x: platform1.position.x + platform1.size.width - 5, y: platform2.position.y)
         
@@ -38,7 +38,7 @@ class PlatformController {
         parent.enumerateChildNodes(withName: "platform", using: {
             node, _ in
             let background = node as! SKSpriteNode
-            background.position = background.position.add(x: -5, y: 0)
+            background.position = background.position.add(dx: -5, dy: 0)
             if background.position.x <  -background.size.width {
                 background.position = CGPoint(x: background.position.x + background.size.width * 2 - 10, y: background.position.y)
             }

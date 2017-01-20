@@ -15,7 +15,7 @@ class EnemyController : Controller {
         sprite = SKSpriteNode(imageNamed: "rock")
     }
     
-    override func config(parent: SKNode) {
+    override func config(position: CGPoint, parent: SKNode) {
         
     }
     

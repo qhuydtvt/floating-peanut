@@ -23,7 +23,7 @@ class BackgroundController : Controller {
         background2.anchorPoint = .zero
     }
     
-    override func config(parent: SKNode) -> Void {
+    override func config(position: CGPoint, parent: SKNode) -> Void {
         background1.position = .zero
         background2.position = CGPoint(x: background1.position.x + background1.size.width - 5, y: background2.position.y)
         

@@ -19,7 +19,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func configBackground() -> Void {
         self.backgroundController = BackgroundController()
-        self.backgroundController.config(parent: self)
+        self.backgroundController.config(position: .zero, parent: self)
     }
     
     override func update(_ currentTime: TimeInterval) {

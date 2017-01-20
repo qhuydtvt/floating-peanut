@@ -30,4 +30,8 @@ extension SKSpriteNode {
     convenience init(image: UIImage, size: CGSize) {
         self.init(texture: SKTexture(image: image), size: size)
     }
+    
+    convenience init(image: UIImage) {
+        self.init(image: image, size: image.size)
+    }
 }

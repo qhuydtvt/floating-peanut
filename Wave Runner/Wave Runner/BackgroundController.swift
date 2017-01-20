@@ -25,7 +25,7 @@ class BackgroundController {
     
     func config(parent: SKNode) -> Void {
         background1.position = .zero
-        background2.position = CGPoint(x: background1.position.x + background1.size.width - 2, y: background2.position.y)
+        background2.position = CGPoint(x: background1.position.x + background1.size.width - 5, y: background2.position.y)
         
         parent.addChild(background1)
         parent.addChild(background2)
@@ -37,7 +37,7 @@ class BackgroundController {
             let background = node as! SKSpriteNode
             background.position = background.position.add(x: -2, y: 0)
             if background.position.x <  -background.size.width {
-                background.position = CGPoint(x: background.position.x + background.size.width * 2 - 4, y: background.position.y)
+                background.position = CGPoint(x: background.position.x + background.size.width * 2 - 10, y: background.position.y)
             }
         })
     }

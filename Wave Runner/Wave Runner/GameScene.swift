@@ -10,14 +10,19 @@ import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene {
-    
     var backgroundController: BackgroundController!
+    var platformController: PlatformController!
+    
     override func didMove(to view: SKView) {
         self.backgroundController = BackgroundController()
         self.backgroundController.config(parent: self)
+        
+        self.platformController = PlatformController()
+        self.platformController.config(parent: self)
     }
     
     override func update(_ currentTime: TimeInterval) {
         backgroundController.run(parent: self)
+        platformController.run(parent: self)
     }
 }

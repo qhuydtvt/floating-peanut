@@ -109,16 +109,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		182595431E32B92100481B37 /* Waves */ = {
+			isa = PBXGroup;
+			children = (
+				505FEE7C1E32AF85001C7ABA /* WaveController.swift */,
+			);
+			name = Waves;
+			sourceTree = "<group>";
+		};
 		1856F37E1E327F9A00F65563 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				182595431E32B92100481B37 /* Waves */,
 				1856F38C1E3299AD00F65563 /* Enemies */,
 				1856F37F1E327FB500F65563 /* BackgroundController.swift */,
 				505FEE701E3289A5001C7ABA /* PlatformController.swift */,
 				1856F3831E32845A00F65563 /* Controller.swift */,
 				1856F3871E328A8600F65563 /* SingleController.swift */,
 				505FEE7B1E32AF85001C7ABA /* PlayerController.swift */,
-				505FEE7C1E32AF85001C7ABA /* WaveController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";

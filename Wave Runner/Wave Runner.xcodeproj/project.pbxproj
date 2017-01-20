@@ -315,7 +315,7 @@
 				TargetAttributes = {
 					500C0E171E325B5700FCF079 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 3CJF6M3857;
+						DevelopmentTeam = Z3TDYH9DM8;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -563,11 +563,11 @@
 			baseConfigurationReference = A262C3DE2D62DC763A39A564 /* Pods-Wave Runner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3CJF6M3857;
+				DEVELOPMENT_TEAM = Z3TDYH9DM8;
 				INFOPLIST_FILE = "Wave Runner/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "vn.techkids.Wave-Runner";
+				PRODUCT_BUNDLE_IDENTIFIER = "duyanh2912.Wave-Runner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -578,11 +578,11 @@
 			baseConfigurationReference = 972D3FC7CC34502E45407B4F /* Pods-Wave Runner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3CJF6M3857;
+				DEVELOPMENT_TEAM = Z3TDYH9DM8;
 				INFOPLIST_FILE = "Wave Runner/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "vn.techkids.Wave-Runner";
+				PRODUCT_BUNDLE_IDENTIFIER = "duyanh2912.Wave-Runner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

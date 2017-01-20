@@ -14,16 +14,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var backgroundController: BackgroundController!
     var platformController: PlatformController!
     
+    let enemyController = EnemyController()
+    
     override func didMove(to view: SKView) {
         configPhysics()
         configBackground()
         configPlatform()
         
-        let enemyController = EnemyController()
-        let enemyPosition = CGPoint(x: self.size.width, y: self.size.height / 2)
+        let enemyPosition = CGPoint(x: self.size.width, y: self.size.height / 2 + 20)
 //        enemyController.config(position: enemyPosition
         enemyController.config(position: enemyPosition, parent: self)
-        
     }
     
     func configPlatform() {
@@ -71,6 +71,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func configPhysics() -> Void {
+        self.physicsWorld.gravity = .zero
         self.physicsWorld.contactDelegate = self
     }
 }

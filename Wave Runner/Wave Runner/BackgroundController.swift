@@ -35,7 +35,7 @@ class BackgroundController : Controller {
         parent.enumerateChildNodes(withName: "background", using: {
             node, _ in
             let background = node as! SKSpriteNode
-            background.position = background.position.add(dx: -2, dy: 0)
+            background.position = background.position.add(dx: -1, dy: 0)
             if background.position.x <  -background.size.width {
                 background.position = CGPoint(x: background.position.x + background.size.width * 2 - 10, y: background.position.y)
             }

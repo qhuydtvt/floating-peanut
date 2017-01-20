@@ -6,7 +6,7 @@
 //  Copyright © 2017 Duy Anh. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension UIImage {
     static public func thumbnail(of image: UIImage, scaledToFillSize size: CGSize) -> UIImage {

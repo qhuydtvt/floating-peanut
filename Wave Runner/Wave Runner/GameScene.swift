@@ -14,6 +14,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var backgroundController: BackgroundController!
     var platformController: PlatformController!
     var enemyManager : EnemyControllerManager!
+    var playerController: PlayerController!
     
     override func didMove(to view: SKView) {
         configPhysics()
@@ -21,6 +22,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         configPlatform()
         
         enemyManager = EnemyControllerManager(enemyGenerator: EnemyControllerGenerator(jsonFile: "stage1"))
+        
+        configPlayer()
+    }
+    
+    func configPlayer() {
+        self.playerController = PlayerController()
+        playerController.config(position: CGPoint(x: 175, y: platformController.platform1.height + playerController.board.height * 1.5), parent: self)
     }
     
     func configPlatform() {
@@ -72,5 +80,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func configPhysics() -> Void {
         self.physicsWorld.gravity = .zero
         self.physicsWorld.contactDelegate = self
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        playerController.attack()
     }
 }

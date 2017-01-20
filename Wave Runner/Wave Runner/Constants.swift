@@ -18,8 +18,11 @@ struct Masks {
     static let PLATFORM        =   UInt32(1 << 4)
 }
 
-
 struct Speed {
     static let PLATFORM_SPEED : CGFloat = 5
     static let ENEMY_VELOCITY : CGFloat = PLATFORM_SPEED * 60
+}
+
+enum Element {
+    case wind, water, thunder, light
 }

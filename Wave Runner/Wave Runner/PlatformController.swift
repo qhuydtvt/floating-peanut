@@ -34,7 +34,7 @@ class PlatformController: Controller {
         platform2.physicsBody?.categoryBitMask = Masks.PLATFORM
     }
     
-    override func config(parent: SKNode) -> Void {
+    override func config(position: CGPoint, parent: SKNode) -> Void {
         platform1.position = .zero
         platform2.position = CGPoint(x: platform1.position.x + platform1.size.width - 5, y: platform2.position.y)
         

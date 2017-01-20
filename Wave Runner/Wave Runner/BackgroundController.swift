@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class BackgroundController {
+class BackgroundController : Controller {
     var background1: SKSpriteNode!
     var background2: SKSpriteNode!
     
@@ -31,7 +31,7 @@ class BackgroundController {
         parent.addChild(background2)
     }
     
-    func run(parent: SKNode) -> Void {
+    func run(parent: SKNode, time: TimeInterval) -> Void {
         parent.enumerateChildNodes(withName: "background", using: {
             node, _ in
             let background = node as! SKSpriteNode

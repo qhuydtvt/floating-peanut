@@ -9,15 +9,53 @@
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var backgroundController: BackgroundController!
     override func didMove(to view: SKView) {
+        configPhysics()
+        configBackground()
+    }
+    
+    func configBackground() -> Void {
         self.backgroundController = BackgroundController()
         self.backgroundController.config(parent: self)
     }
     
     override func update(_ currentTime: TimeInterval) {
-        backgroundController.run(parent: self)
+        backgroundController.run(parent: self, time: currentTime)
+    }
+    
+    func didBegin(_ contact: SKPhysicsContact) {
+        
+        guard let viewA = contact.bodyA.node as? View, let viewB = contact.bodyB.node as? View else {
+            return
+        }
+        
+        if viewA.parent == nil || viewB.parent == nil {
+            return
+        }
+        
+        if viewA.contacted || viewB.contacted || viewA.avoidContact || viewB.avoidContact {
+            return
+        }
+        
+        viewA.contacted = true
+        viewB.contacted = true
+        
+        viewA.physicsWorld = self.physicsWorld
+        viewB.physicsWorld = self.physicsWorld
+        
+        if let handleContactA = viewA.handleContact {
+            handleContactA(viewB)
+        }
+        
+        if let handleContactB = viewB.handleContact {
+            handleContactB(viewA)
+        }
+    }
+    
+    func configPhysics() -> Void {
+        self.physicsWorld.contactDelegate = self
     }
 }

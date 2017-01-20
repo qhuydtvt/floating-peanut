@@ -30,4 +30,8 @@ class EnemyController : Controller {
     override func run(parent: SKNode, time: TimeInterval) {
         
     }
+    
+    static func create(type: Int) -> EnemyController {
+        return EnemyController()
+    }
 }

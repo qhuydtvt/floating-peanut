@@ -13,6 +13,9 @@
 		1856F3861E32863300F65563 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1856F3851E32863300F65563 /* View.swift */; };
 		1856F3881E328A8600F65563 /* SingleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1856F3871E328A8600F65563 /* SingleController.swift */; };
 		1856F38B1E328B0C00F65563 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1856F38A1E328B0C00F65563 /* Constants.swift */; };
+		1856F38E1E329A1F00F65563 /* EnemyControllerGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1856F38D1E329A1F00F65563 /* EnemyControllerGenerator.swift */; };
+		18A0A7E71E329E7F0072A8EE /* stage1.json in Resources */ = {isa = PBXBuildFile; fileRef = 18A0A7E61E329E7F0072A8EE /* stage1.json */; };
+		30106198D306146C017C546F /* Pods_Wave_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 558FE0BD98FE42AEB7C5C6C7 /* Pods_Wave_Runner.framework */; };
 		500C0E1C1E325B5800FCF079 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E1B1E325B5800FCF079 /* AppDelegate.swift */; };
 		500C0E1E1E325B5800FCF079 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 500C0E1D1E325B5800FCF079 /* GameScene.sks */; };
 		500C0E221E325B5800FCF079 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E211E325B5800FCF079 /* GameScene.swift */; };
@@ -50,6 +53,8 @@
 		1856F3851E32863300F65563 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		1856F3871E328A8600F65563 /* SingleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleController.swift; sourceTree = "<group>"; };
 		1856F38A1E328B0C00F65563 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1856F38D1E329A1F00F65563 /* EnemyControllerGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyControllerGenerator.swift; sourceTree = "<group>"; };
+		18A0A7E61E329E7F0072A8EE /* stage1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stage1.json; sourceTree = "<group>"; };
 		500C0E181E325B5800FCF079 /* Wave Runner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wave Runner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		500C0E1B1E325B5800FCF079 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		500C0E1D1E325B5800FCF079 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -81,6 +86,9 @@
 		500C0E4D1E326BBD00FCF079 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		500C0E4E1E326BBD00FCF079 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		505FEE701E3289A5001C7ABA /* PlatformController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformController.swift; sourceTree = "<group>"; };
+		558FE0BD98FE42AEB7C5C6C7 /* Pods_Wave_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wave_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		972D3FC7CC34502E45407B4F /* Pods-Wave Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wave Runner.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wave Runner/Pods-Wave Runner.release.xcconfig"; sourceTree = "<group>"; };
+		A262C3DE2D62DC763A39A564 /* Pods-Wave Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wave Runner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wave Runner/Pods-Wave Runner.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30106198D306146C017C546F /* Pods_Wave_Runner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,8 +106,8 @@
 		1856F37E1E327F9A00F65563 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1856F38C1E3299AD00F65563 /* Enemies */,
 				1856F37F1E327FB500F65563 /* BackgroundController.swift */,
-				1856F3811E32842200F65563 /* EnemyController.swift */,
 				505FEE701E3289A5001C7ABA /* PlatformController.swift */,
 				1856F3831E32845A00F65563 /* Controller.swift */,
 				1856F3871E328A8600F65563 /* SingleController.swift */,
@@ -114,11 +123,30 @@
 			name = Constants;
 			sourceTree = "<group>";
 		};
+		1856F38C1E3299AD00F65563 /* Enemies */ = {
+			isa = PBXGroup;
+			children = (
+				1856F3811E32842200F65563 /* EnemyController.swift */,
+				1856F38D1E329A1F00F65563 /* EnemyControllerGenerator.swift */,
+			);
+			name = Enemies;
+			sourceTree = "<group>";
+		};
+		18A0A7E51E329E580072A8EE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				18A0A7E61E329E7F0072A8EE /* stage1.json */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		500C0E0F1E325B5700FCF079 = {
 			isa = PBXGroup;
 			children = (
 				500C0E1A1E325B5800FCF079 /* Wave Runner */,
 				500C0E191E325B5800FCF079 /* Products */,
+				7003DB4BFA12155C505FCE82 /* Pods */,
+				951B4BE05DB5306AB945D2AE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +161,7 @@
 		500C0E1A1E325B5800FCF079 /* Wave Runner */ = {
 			isa = PBXGroup;
 			children = (
+				18A0A7E51E329E580072A8EE /* Data */,
 				1856F3891E328B0300F65563 /* Constants */,
 				1856F3851E32863300F65563 /* View.swift */,
 				1856F37E1E327F9A00F65563 /* Controllers */,
@@ -217,6 +246,23 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
+		7003DB4BFA12155C505FCE82 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A262C3DE2D62DC763A39A564 /* Pods-Wave Runner.debug.xcconfig */,
+				972D3FC7CC34502E45407B4F /* Pods-Wave Runner.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		951B4BE05DB5306AB945D2AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				558FE0BD98FE42AEB7C5C6C7 /* Pods_Wave_Runner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -224,9 +270,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 500C0E301E325B5800FCF079 /* Build configuration list for PBXNativeTarget "Wave Runner" */;
 			buildPhases = (
+				B5127ABB830A06531DE0BEE4 /* [CP] Check Pods Manifest.lock */,
 				500C0E141E325B5700FCF079 /* Sources */,
 				500C0E151E325B5700FCF079 /* Frameworks */,
 				500C0E161E325B5700FCF079 /* Resources */,
+				D539E6BB91FEAEE9F1C0AEAC /* [CP] Embed Pods Frameworks */,
+				CE07E8771FC07462A69EFE0A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -281,10 +330,59 @@
 				500C0E1E1E325B5800FCF079 /* GameScene.sks in Resources */,
 				500C0E291E325B5800FCF079 /* Assets.xcassets in Resources */,
 				500C0E2C1E325B5800FCF079 /* LaunchScreen.storyboard in Resources */,
+				18A0A7E71E329E7F0072A8EE /* stage1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B5127ABB830A06531DE0BEE4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CE07E8771FC07462A69EFE0A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wave Runner/Pods-Wave Runner-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D539E6BB91FEAEE9F1C0AEAC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wave Runner/Pods-Wave Runner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		500C0E141E325B5700FCF079 /* Sources */ = {
@@ -314,6 +412,7 @@
 				500C0E571E326BBE00FCF079 /* SKNode.swift in Sources */,
 				1856F3881E328A8600F65563 /* SingleController.swift in Sources */,
 				500C0E5D1E326BBE00FCF079 /* Visualizer.swift in Sources */,
+				1856F38E1E329A1F00F65563 /* EnemyControllerGenerator.swift in Sources */,
 				500C0E5C1E326BBE00FCF079 /* UIWindow+Swizzle.swift in Sources */,
 				500C0E241E325B5800FCF079 /* GameViewController.swift in Sources */,
 				500C0E5B1E326BBE00FCF079 /* TouchView.swift in Sources */,
@@ -441,6 +540,7 @@
 		};
 		500C0E311E325B5800FCF079 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A262C3DE2D62DC763A39A564 /* Pods-Wave Runner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3CJF6M3857;
@@ -455,6 +555,7 @@
 		};
 		500C0E321E325B5800FCF079 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 972D3FC7CC34502E45407B4F /* Pods-Wave Runner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3CJF6M3857;

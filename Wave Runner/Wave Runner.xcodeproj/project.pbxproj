@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		182595421E32AAE400481B37 /* EnemyControllerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182595411E32AAE400481B37 /* EnemyControllerManager.swift */; };
 		1856F3801E327FB500F65563 /* BackgroundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1856F37F1E327FB500F65563 /* BackgroundController.swift */; };
 		1856F3821E32842200F65563 /* EnemyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1856F3811E32842200F65563 /* EnemyController.swift */; };
 		1856F3841E32845A00F65563 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1856F3831E32845A00F65563 /* Controller.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		182595411E32AAE400481B37 /* EnemyControllerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyControllerManager.swift; sourceTree = "<group>"; };
 		1856F37F1E327FB500F65563 /* BackgroundController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundController.swift; sourceTree = "<group>"; };
 		1856F3811E32842200F65563 /* EnemyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyController.swift; sourceTree = "<group>"; };
 		1856F3831E32845A00F65563 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			children = (
 				1856F3811E32842200F65563 /* EnemyController.swift */,
 				1856F38D1E329A1F00F65563 /* EnemyControllerGenerator.swift */,
+				182595411E32AAE400481B37 /* EnemyControllerManager.swift */,
 			);
 			name = Enemies;
 			sourceTree = "<group>";
@@ -298,7 +301,7 @@
 				TargetAttributes = {
 					500C0E171E325B5700FCF079 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = Z3TDYH9DM8;
+						DevelopmentTeam = 3CJF6M3857;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -409,6 +412,7 @@
 				500C0E551E326BBD00FCF079 /* GKGraphNode2D.swift in Sources */,
 				500C0E601E326BBE00FCF079 /* UIColor.swift in Sources */,
 				500C0E5A1E326BBE00FCF079 /* Configuration.swift in Sources */,
+				182595421E32AAE400481B37 /* EnemyControllerManager.swift in Sources */,
 				500C0E571E326BBE00FCF079 /* SKNode.swift in Sources */,
 				1856F3881E328A8600F65563 /* SingleController.swift in Sources */,
 				500C0E5D1E326BBE00FCF079 /* Visualizer.swift in Sources */,
@@ -543,11 +547,11 @@
 			baseConfigurationReference = A262C3DE2D62DC763A39A564 /* Pods-Wave Runner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Z3TDYH9DM8;
+				DEVELOPMENT_TEAM = 3CJF6M3857;
 				INFOPLIST_FILE = "Wave Runner/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "duyanh2912.Wave-Runner";
+				PRODUCT_BUNDLE_IDENTIFIER = "vn.techkids.Wave-Runner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -558,11 +562,11 @@
 			baseConfigurationReference = 972D3FC7CC34502E45407B4F /* Pods-Wave Runner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Z3TDYH9DM8;
+				DEVELOPMENT_TEAM = 3CJF6M3857;
 				INFOPLIST_FILE = "Wave Runner/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "duyanh2912.Wave-Runner";
+				PRODUCT_BUNDLE_IDENTIFIER = "vn.techkids.Wave-Runner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

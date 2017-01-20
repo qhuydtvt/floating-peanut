@@ -47,9 +47,9 @@ class PlatformController: Controller {
         parent.enumerateChildNodes(withName: "platform", using: {
             node, _ in
             let background = node as! SKSpriteNode
-            background.position = background.position.add(dx: -5, dy: 0)
+            background.position = background.position.add(dx: -Speed.PLATFORM_SPEED, dy: 0)
             if background.position.x <  -background.size.width / 2 {
-                background.position = CGPoint(x: background.position.x + background.size.width * 2 - 10, y: background.position.y)
+                background.position = CGPoint(x: background.position.x + background.size.width * 2 - 2*Speed.PLATFORM_SPEED, y: background.position.y)
             }
         })
     }

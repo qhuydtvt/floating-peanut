@@ -35,6 +35,7 @@
 		500C0E621E326BBE00FCF079 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E4C1E326BBD00FCF079 /* UIImage.swift */; };
 		500C0E631E326BBE00FCF079 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E4D1E326BBD00FCF079 /* UIImageView.swift */; };
 		500C0E641E326BBE00FCF079 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E4E1E326BBD00FCF079 /* UIView.swift */; };
+		505FEE6F1E3285DF001C7ABA /* PlatformController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FEE6E1E3285DF001C7ABA /* PlatformController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		500C0E4C1E326BBD00FCF079 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		500C0E4D1E326BBD00FCF079 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		500C0E4E1E326BBD00FCF079 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		505FEE6E1E3285DF001C7ABA /* PlatformController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				1856F37F1E327FB500F65563 /* BackgroundController.swift */,
+				505FEE6E1E3285DF001C7ABA /* PlatformController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				500C0E531E326BBD00FCF079 /* CGSize.swift in Sources */,
 				500C0E611E326BBE00FCF079 /* UIColorExtension.swift in Sources */,
 				500C0E551E326BBD00FCF079 /* GKGraphNode2D.swift in Sources */,
+				505FEE6F1E3285DF001C7ABA /* PlatformController.swift in Sources */,
 				500C0E601E326BBE00FCF079 /* UIColor.swift in Sources */,
 				500C0E5A1E326BBE00FCF079 /* Configuration.swift in Sources */,
 				500C0E571E326BBE00FCF079 /* SKNode.swift in Sources */,

@@ -18,16 +18,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         configPhysics()
         configBackground()
         configPlatform()
+        
+        let enemyController = EnemyController()
+        let enemyPosition = CGPoint(x: self.size.width, y: self.size.height / 2)
+//        enemyController.config(position: enemyPosition
+        enemyController.config(position: enemyPosition, parent: self)
+        
     }
     
     func configPlatform() {
         self.platformController = PlatformController()
-        self.platformController.config(parent: self)
+        self.platformController.config(position: .zero, parent: self)
     }
     
     func configBackground() -> Void {
         self.backgroundController = BackgroundController()
-        self.backgroundController.config(parent: self)
+        self.backgroundController.config(position: .zero, parent: self)
     }
     
     override func update(_ currentTime: TimeInterval) {

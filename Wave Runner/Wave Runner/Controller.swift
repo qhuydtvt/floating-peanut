@@ -10,7 +10,7 @@ import SpriteKit
 
 class Controller {
     
-    func config(parent: SKNode) -> Void {
+    func config(position: CGPoint, parent: SKNode) -> Void {
         
     }
     

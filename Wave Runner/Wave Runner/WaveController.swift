@@ -23,6 +23,8 @@ class WaveController: SingleControler {
         self.view.physicsBody?.affectedByGravity = false
         self.view.physicsBody?.velocity = CGVector(dx: -(Speed.ENEMY_VELOCITY), dy: 0)
         
+        view.anchorPoint = CGPoint(x: 1, y: 0.5)
+        
         self.view.zPosition = 100
         self.view.color = .red
         self.view.colorBlendFactor = 0.5

@@ -12,9 +12,17 @@ import GameplayKit
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var backgroundController: BackgroundController!
+    var platformController: PlatformController!
+    
     override func didMove(to view: SKView) {
         configPhysics()
         configBackground()
+        configPlatform()
+    }
+    
+    func configPlatform() {
+        self.platformController = PlatformController()
+        self.platformController.config(parent: self)
     }
     
     func configBackground() -> Void {
@@ -24,6 +32,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func update(_ currentTime: TimeInterval) {
         backgroundController.run(parent: self, time: currentTime)
+        platformController.run(parent: self)
     }
     
     func didBegin(_ contact: SKPhysicsContact) {

@@ -9,9 +9,11 @@
 import SpriteKit
 
 struct Masks {
-    let PLAYER          =   UInt32(1 << 0)
-    let PLAYER_WAVE     =   UInt32(1 << 1)
+    static let PLAYER          =   UInt32(1 << 0)
+    static let PLAYER_WAVE     =   UInt32(1 << 1)
     
-    let ENEMY           =   UInt32(1 << 2)
-    let ENEMY_WAVE      =   UInt32(1 << 3)
+    static let ENEMY           =   UInt32(1 << 2)
+    static let ENEMY_WAVE      =   UInt32(1 << 3)
+    
+    static let PLATFORM        =   UInt32(1 << 4)
 }

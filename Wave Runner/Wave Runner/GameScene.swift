@@ -21,6 +21,9 @@ class GameScene: SKScene {
         background1.name = "background"
         background2.name = "background"
         
+        background1.anchorPoint = .zero
+        background2.anchorPoint = .zero
+        
         background2.position = CGPoint(x: background1.position.x + background1.size.width, y: background2.position.y)
         
         

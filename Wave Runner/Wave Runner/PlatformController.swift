@@ -24,6 +24,14 @@ class PlatformController: Controller {
 
         platform1.zPosition = 2
         platform2.zPosition = 2
+        
+        platform1.physicsBody = SKPhysicsBody(rectangleOf: platform1.size)
+        platform1.physicsBody?.affectedByGravity = false
+        platform1.physicsBody?.categoryBitMask = Masks.PLATFORM
+        
+        platform2.physicsBody = SKPhysicsBody(rectangleOf: platform2.size)
+        platform2.physicsBody?.affectedByGravity = false
+        platform2.physicsBody?.categoryBitMask = Masks.PLATFORM
     }
     
     override func config(parent: SKNode) -> Void {

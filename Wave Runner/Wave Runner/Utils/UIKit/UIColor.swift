@@ -5,8 +5,7 @@
 //  Created by Duy Anh on 1/8/17.
 //  Copyright © 2017 Duy Anh. All rights reserved.
 //
-import Foundation
-import UIKit
+import SpriteKit
 
 extension UIColor {
     public static var system: UIColor {

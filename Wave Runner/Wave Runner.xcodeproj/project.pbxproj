@@ -11,6 +11,8 @@
 		1856F3821E32842200F65563 /* EnemyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1856F3811E32842200F65563 /* EnemyController.swift */; };
 		1856F3841E32845A00F65563 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1856F3831E32845A00F65563 /* Controller.swift */; };
 		1856F3861E32863300F65563 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1856F3851E32863300F65563 /* View.swift */; };
+		1856F3881E328A8600F65563 /* SingleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1856F3871E328A8600F65563 /* SingleController.swift */; };
+		1856F38B1E328B0C00F65563 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1856F38A1E328B0C00F65563 /* Constants.swift */; };
 		500C0E1C1E325B5800FCF079 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E1B1E325B5800FCF079 /* AppDelegate.swift */; };
 		500C0E1E1E325B5800FCF079 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 500C0E1D1E325B5800FCF079 /* GameScene.sks */; };
 		500C0E221E325B5800FCF079 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E211E325B5800FCF079 /* GameScene.swift */; };
@@ -46,6 +48,8 @@
 		1856F3811E32842200F65563 /* EnemyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyController.swift; sourceTree = "<group>"; };
 		1856F3831E32845A00F65563 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		1856F3851E32863300F65563 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		1856F3871E328A8600F65563 /* SingleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleController.swift; sourceTree = "<group>"; };
+		1856F38A1E328B0C00F65563 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		500C0E181E325B5800FCF079 /* Wave Runner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wave Runner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		500C0E1B1E325B5800FCF079 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		500C0E1D1E325B5800FCF079 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -97,8 +101,17 @@
 				1856F3811E32842200F65563 /* EnemyController.swift */,
 				505FEE701E3289A5001C7ABA /* PlatformController.swift */,
 				1856F3831E32845A00F65563 /* Controller.swift */,
+				1856F3871E328A8600F65563 /* SingleController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		1856F3891E328B0300F65563 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				1856F38A1E328B0C00F65563 /* Constants.swift */,
+			);
+			name = Constants;
 			sourceTree = "<group>";
 		};
 		500C0E0F1E325B5700FCF079 = {
@@ -120,6 +133,7 @@
 		500C0E1A1E325B5800FCF079 /* Wave Runner */ = {
 			isa = PBXGroup;
 			children = (
+				1856F3891E328B0300F65563 /* Constants */,
 				1856F3851E32863300F65563 /* View.swift */,
 				1856F37E1E327F9A00F65563 /* Controllers */,
 				500C0E1B1E325B5800FCF079 /* AppDelegate.swift */,
@@ -282,6 +296,7 @@
 				1856F3821E32842200F65563 /* EnemyController.swift in Sources */,
 				500C0E521E326BBD00FCF079 /* CGRect.swift in Sources */,
 				500C0E221E325B5800FCF079 /* GameScene.swift in Sources */,
+				1856F38B1E328B0C00F65563 /* Constants.swift in Sources */,
 				500C0E591E326BBE00FCF079 /* SKTextureAtlas.swift in Sources */,
 				500C0E581E326BBE00FCF079 /* SKSpriteNode.swift in Sources */,
 				1856F3841E32845A00F65563 /* Controller.swift in Sources */,
@@ -297,6 +312,7 @@
 				500C0E601E326BBE00FCF079 /* UIColor.swift in Sources */,
 				500C0E5A1E326BBE00FCF079 /* Configuration.swift in Sources */,
 				500C0E571E326BBE00FCF079 /* SKNode.swift in Sources */,
+				1856F3881E328A8600F65563 /* SingleController.swift in Sources */,
 				500C0E5D1E326BBE00FCF079 /* Visualizer.swift in Sources */,
 				500C0E5C1E326BBE00FCF079 /* UIWindow+Swizzle.swift in Sources */,
 				500C0E241E325B5800FCF079 /* GameViewController.swift in Sources */,

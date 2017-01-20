@@ -9,6 +9,7 @@
 import SpriteKit
 
 class Controller {
+    
     func config(parent: SKNode) -> Void {
         
     }

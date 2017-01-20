@@ -13,17 +13,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var backgroundController: BackgroundController!
     var platformController: PlatformController!
-    
-    let enemyController = EnemyController()
+    var enemyManager : EnemyControllerManager!
     
     override func didMove(to view: SKView) {
         configPhysics()
         configBackground()
         configPlatform()
         
-        let enemyPosition = CGPoint(x: self.size.width, y: self.size.height / 2 + 20)
-//        enemyController.config(position: enemyPosition
-        enemyController.config(position: enemyPosition, parent: self)
+        enemyManager = EnemyControllerManager(enemyGenerator: EnemyControllerGenerator(jsonFile: "stage1"))
     }
     
     func configPlatform() {
@@ -39,6 +36,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func update(_ currentTime: TimeInterval) {
         backgroundController.run(parent: self, time: currentTime)
         platformController.run(parent: self)
+        enemyManager.run(parent: self, time: currentTime)
+        print("currentTime: \(currentTime)")
     }
     
     func didBegin(_ contact: SKPhysicsContact) {

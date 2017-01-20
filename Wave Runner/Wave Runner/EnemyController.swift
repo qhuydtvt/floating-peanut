@@ -28,6 +28,12 @@ class EnemyController : Controller {
     }
     
     override func run(parent: SKNode, time: TimeInterval) {
-        
+        if self.view.position.x < 0 {
+            self.view.removeFromParent()
+        }
+    }
+    
+    static func create(type: Int) -> EnemyController {
+        return EnemyController()
     }
 }

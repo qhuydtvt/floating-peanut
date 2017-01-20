@@ -28,7 +28,7 @@ class PlayerController: Controller {
         
         player.position = CGPoint(x: 10.05, y: 24.5)
         
-//        player.physicsBody = SKPhysicsBody(rectangleOf: player.frame.size)
+        player.physicsBody = SKPhysicsBody(rectangleOf: player.frame.size.scale(by: 0.9))
         player.physicsBody?.categoryBitMask = Masks.PLAYER
     }
     

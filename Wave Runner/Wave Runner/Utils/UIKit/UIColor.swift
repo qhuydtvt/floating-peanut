@@ -6,6 +6,7 @@
 //  Copyright © 2017 Duy Anh. All rights reserved.
 //
 import Foundation
+import UIKit
 
 extension UIColor {
     public static var system: UIColor {

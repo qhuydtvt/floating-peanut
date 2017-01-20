@@ -35,7 +35,7 @@ class GameScene: SKScene {
         enumerateChildNodes(withName: "background", using: {
             node, _ in
             let background = node as! SKSpriteNode
-            background.position = background.position.add(x: -5, y: 0)
+            background.position = background.position.add(x: -2, y: 0)
             if background.position.x <  -background.size.width {
                 background.position = CGPoint(x: background.position.x + background.size.width * 2 , y: background.position.y)
             }

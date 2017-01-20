@@ -45,6 +45,8 @@
 		500C0E631E326BBE00FCF079 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E4D1E326BBD00FCF079 /* UIImageView.swift */; };
 		500C0E641E326BBE00FCF079 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E4E1E326BBD00FCF079 /* UIView.swift */; };
 		505FEE711E3289A5001C7ABA /* PlatformController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FEE701E3289A5001C7ABA /* PlatformController.swift */; };
+		505FEE7D1E32AF85001C7ABA /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FEE7B1E32AF85001C7ABA /* PlayerController.swift */; };
+		505FEE7E1E32AF85001C7ABA /* WaveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FEE7C1E32AF85001C7ABA /* WaveController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +90,8 @@
 		500C0E4D1E326BBD00FCF079 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		500C0E4E1E326BBD00FCF079 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		505FEE701E3289A5001C7ABA /* PlatformController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformController.swift; sourceTree = "<group>"; };
+		505FEE7B1E32AF85001C7ABA /* PlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
+		505FEE7C1E32AF85001C7ABA /* WaveController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveController.swift; sourceTree = "<group>"; };
 		558FE0BD98FE42AEB7C5C6C7 /* Pods_Wave_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wave_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		972D3FC7CC34502E45407B4F /* Pods-Wave Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wave Runner.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wave Runner/Pods-Wave Runner.release.xcconfig"; sourceTree = "<group>"; };
 		A262C3DE2D62DC763A39A564 /* Pods-Wave Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wave Runner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wave Runner/Pods-Wave Runner.debug.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +117,8 @@
 				505FEE701E3289A5001C7ABA /* PlatformController.swift */,
 				1856F3831E32845A00F65563 /* Controller.swift */,
 				1856F3871E328A8600F65563 /* SingleController.swift */,
+				505FEE7B1E32AF85001C7ABA /* PlayerController.swift */,
+				505FEE7C1E32AF85001C7ABA /* WaveController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -406,12 +412,14 @@
 				500C0E621E326BBE00FCF079 /* UIImage.swift in Sources */,
 				1856F3801E327FB500F65563 /* BackgroundController.swift in Sources */,
 				505FEE711E3289A5001C7ABA /* PlatformController.swift in Sources */,
+				505FEE7E1E32AF85001C7ABA /* WaveController.swift in Sources */,
 				500C0E531E326BBD00FCF079 /* CGSize.swift in Sources */,
 				500C0E611E326BBE00FCF079 /* UIColorExtension.swift in Sources */,
 				1856F3861E32863300F65563 /* View.swift in Sources */,
 				500C0E551E326BBD00FCF079 /* GKGraphNode2D.swift in Sources */,
 				500C0E601E326BBE00FCF079 /* UIColor.swift in Sources */,
 				500C0E5A1E326BBE00FCF079 /* Configuration.swift in Sources */,
+				505FEE7D1E32AF85001C7ABA /* PlayerController.swift in Sources */,
 				182595421E32AAE400481B37 /* EnemyControllerManager.swift in Sources */,
 				500C0E571E326BBE00FCF079 /* SKNode.swift in Sources */,
 				1856F3881E328A8600F65563 /* SingleController.swift in Sources */,

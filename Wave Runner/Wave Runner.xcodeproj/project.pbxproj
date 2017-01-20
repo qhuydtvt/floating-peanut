@@ -9,25 +9,64 @@
 /* Begin PBXBuildFile section */
 		500C0E1C1E325B5800FCF079 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E1B1E325B5800FCF079 /* AppDelegate.swift */; };
 		500C0E1E1E325B5800FCF079 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 500C0E1D1E325B5800FCF079 /* GameScene.sks */; };
-		500C0E201E325B5800FCF079 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 500C0E1F1E325B5800FCF079 /* Actions.sks */; };
 		500C0E221E325B5800FCF079 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E211E325B5800FCF079 /* GameScene.swift */; };
 		500C0E241E325B5800FCF079 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E231E325B5800FCF079 /* GameViewController.swift */; };
 		500C0E271E325B5800FCF079 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 500C0E251E325B5800FCF079 /* Main.storyboard */; };
 		500C0E291E325B5800FCF079 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 500C0E281E325B5800FCF079 /* Assets.xcassets */; };
 		500C0E2C1E325B5800FCF079 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 500C0E2A1E325B5800FCF079 /* LaunchScreen.storyboard */; };
+		500C0E501E326BBD00FCF079 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E351E326BBD00FCF079 /* CGFloat.swift */; };
+		500C0E511E326BBD00FCF079 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E361E326BBD00FCF079 /* CGPoint.swift */; };
+		500C0E521E326BBD00FCF079 /* CGRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E371E326BBD00FCF079 /* CGRect.swift */; };
+		500C0E531E326BBD00FCF079 /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E381E326BBD00FCF079 /* CGSize.swift */; };
+		500C0E541E326BBD00FCF079 /* CGVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E391E326BBD00FCF079 /* CGVector.swift */; };
+		500C0E551E326BBD00FCF079 /* GKGraphNode2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E3B1E326BBD00FCF079 /* GKGraphNode2D.swift */; };
+		500C0E571E326BBE00FCF079 /* SKNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E3E1E326BBD00FCF079 /* SKNode.swift */; };
+		500C0E581E326BBE00FCF079 /* SKSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E3F1E326BBD00FCF079 /* SKSpriteNode.swift */; };
+		500C0E591E326BBE00FCF079 /* SKTextureAtlas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E401E326BBD00FCF079 /* SKTextureAtlas.swift */; };
+		500C0E5A1E326BBE00FCF079 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E421E326BBD00FCF079 /* Configuration.swift */; };
+		500C0E5B1E326BBE00FCF079 /* TouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E431E326BBD00FCF079 /* TouchView.swift */; };
+		500C0E5C1E326BBE00FCF079 /* UIWindow+Swizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E451E326BBD00FCF079 /* UIWindow+Swizzle.swift */; };
+		500C0E5D1E326BBE00FCF079 /* Visualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E461E326BBD00FCF079 /* Visualizer.swift */; };
+		500C0E5E1E326BBE00FCF079 /* GifUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E481E326BBD00FCF079 /* GifUIImageView.swift */; };
+		500C0E5F1E326BBE00FCF079 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E491E326BBD00FCF079 /* UIButton.swift */; };
+		500C0E601E326BBE00FCF079 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E4A1E326BBD00FCF079 /* UIColor.swift */; };
+		500C0E611E326BBE00FCF079 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E4B1E326BBD00FCF079 /* UIColorExtension.swift */; };
+		500C0E621E326BBE00FCF079 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E4C1E326BBD00FCF079 /* UIImage.swift */; };
+		500C0E631E326BBE00FCF079 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E4D1E326BBD00FCF079 /* UIImageView.swift */; };
+		500C0E641E326BBE00FCF079 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E4E1E326BBD00FCF079 /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		500C0E181E325B5800FCF079 /* Wave Runner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wave Runner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		500C0E1B1E325B5800FCF079 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		500C0E1D1E325B5800FCF079 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		500C0E1F1E325B5800FCF079 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		500C0E211E325B5800FCF079 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		500C0E231E325B5800FCF079 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		500C0E261E325B5800FCF079 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		500C0E281E325B5800FCF079 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		500C0E2B1E325B5800FCF079 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		500C0E2D1E325B5800FCF079 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		500C0E351E326BBD00FCF079 /* CGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
+		500C0E361E326BBD00FCF079 /* CGPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
+		500C0E371E326BBD00FCF079 /* CGRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRect.swift; sourceTree = "<group>"; };
+		500C0E381E326BBD00FCF079 /* CGSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSize.swift; sourceTree = "<group>"; };
+		500C0E391E326BBD00FCF079 /* CGVector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGVector.swift; sourceTree = "<group>"; };
+		500C0E3B1E326BBD00FCF079 /* GKGraphNode2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKGraphNode2D.swift; sourceTree = "<group>"; };
+		500C0E3E1E326BBD00FCF079 /* SKNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKNode.swift; sourceTree = "<group>"; };
+		500C0E3F1E326BBD00FCF079 /* SKSpriteNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKSpriteNode.swift; sourceTree = "<group>"; };
+		500C0E401E326BBD00FCF079 /* SKTextureAtlas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTextureAtlas.swift; sourceTree = "<group>"; };
+		500C0E421E326BBD00FCF079 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		500C0E431E326BBD00FCF079 /* TouchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchView.swift; sourceTree = "<group>"; };
+		500C0E441E326BBD00FCF079 /* TouchVisualizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchVisualizer.h; sourceTree = "<group>"; };
+		500C0E451E326BBD00FCF079 /* UIWindow+Swizzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Swizzle.swift"; sourceTree = "<group>"; };
+		500C0E461E326BBD00FCF079 /* Visualizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Visualizer.swift; sourceTree = "<group>"; };
+		500C0E481E326BBD00FCF079 /* GifUIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifUIImageView.swift; sourceTree = "<group>"; };
+		500C0E491E326BBD00FCF079 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		500C0E4A1E326BBD00FCF079 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		500C0E4B1E326BBD00FCF079 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		500C0E4C1E326BBD00FCF079 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		500C0E4D1E326BBD00FCF079 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		500C0E4E1E326BBD00FCF079 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,15 +101,83 @@
 			children = (
 				500C0E1B1E325B5800FCF079 /* AppDelegate.swift */,
 				500C0E1D1E325B5800FCF079 /* GameScene.sks */,
-				500C0E1F1E325B5800FCF079 /* Actions.sks */,
 				500C0E211E325B5800FCF079 /* GameScene.swift */,
 				500C0E231E325B5800FCF079 /* GameViewController.swift */,
 				500C0E251E325B5800FCF079 /* Main.storyboard */,
 				500C0E281E325B5800FCF079 /* Assets.xcassets */,
 				500C0E2A1E325B5800FCF079 /* LaunchScreen.storyboard */,
 				500C0E2D1E325B5800FCF079 /* Info.plist */,
+				500C0E331E326BBD00FCF079 /* Utils */,
 			);
 			path = "Wave Runner";
+			sourceTree = "<group>";
+		};
+		500C0E331E326BBD00FCF079 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				500C0E341E326BBD00FCF079 /* CoreGraphics */,
+				500C0E3A1E326BBD00FCF079 /* GameplayKit */,
+				500C0E3D1E326BBD00FCF079 /* SpriteKit */,
+				500C0E411E326BBD00FCF079 /* TouchVisualizer */,
+				500C0E471E326BBD00FCF079 /* UIKit */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		500C0E341E326BBD00FCF079 /* CoreGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				500C0E351E326BBD00FCF079 /* CGFloat.swift */,
+				500C0E361E326BBD00FCF079 /* CGPoint.swift */,
+				500C0E371E326BBD00FCF079 /* CGRect.swift */,
+				500C0E381E326BBD00FCF079 /* CGSize.swift */,
+				500C0E391E326BBD00FCF079 /* CGVector.swift */,
+			);
+			path = CoreGraphics;
+			sourceTree = "<group>";
+		};
+		500C0E3A1E326BBD00FCF079 /* GameplayKit */ = {
+			isa = PBXGroup;
+			children = (
+				500C0E3B1E326BBD00FCF079 /* GKGraphNode2D.swift */,
+			);
+			path = GameplayKit;
+			sourceTree = "<group>";
+		};
+		500C0E3D1E326BBD00FCF079 /* SpriteKit */ = {
+			isa = PBXGroup;
+			children = (
+				500C0E3E1E326BBD00FCF079 /* SKNode.swift */,
+				500C0E3F1E326BBD00FCF079 /* SKSpriteNode.swift */,
+				500C0E401E326BBD00FCF079 /* SKTextureAtlas.swift */,
+			);
+			path = SpriteKit;
+			sourceTree = "<group>";
+		};
+		500C0E411E326BBD00FCF079 /* TouchVisualizer */ = {
+			isa = PBXGroup;
+			children = (
+				500C0E421E326BBD00FCF079 /* Configuration.swift */,
+				500C0E431E326BBD00FCF079 /* TouchView.swift */,
+				500C0E441E326BBD00FCF079 /* TouchVisualizer.h */,
+				500C0E451E326BBD00FCF079 /* UIWindow+Swizzle.swift */,
+				500C0E461E326BBD00FCF079 /* Visualizer.swift */,
+			);
+			path = TouchVisualizer;
+			sourceTree = "<group>";
+		};
+		500C0E471E326BBD00FCF079 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				500C0E481E326BBD00FCF079 /* GifUIImageView.swift */,
+				500C0E491E326BBD00FCF079 /* UIButton.swift */,
+				500C0E4A1E326BBD00FCF079 /* UIColor.swift */,
+				500C0E4B1E326BBD00FCF079 /* UIColorExtension.swift */,
+				500C0E4C1E326BBD00FCF079 /* UIImage.swift */,
+				500C0E4D1E326BBD00FCF079 /* UIImageView.swift */,
+				500C0E4E1E326BBD00FCF079 /* UIView.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +243,6 @@
 				500C0E1E1E325B5800FCF079 /* GameScene.sks in Resources */,
 				500C0E291E325B5800FCF079 /* Assets.xcassets in Resources */,
 				500C0E2C1E325B5800FCF079 /* LaunchScreen.storyboard in Resources */,
-				500C0E201E325B5800FCF079 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,9 +253,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				500C0E5E1E326BBE00FCF079 /* GifUIImageView.swift in Sources */,
+				500C0E501E326BBD00FCF079 /* CGFloat.swift in Sources */,
+				500C0E521E326BBD00FCF079 /* CGRect.swift in Sources */,
 				500C0E221E325B5800FCF079 /* GameScene.swift in Sources */,
+				500C0E591E326BBE00FCF079 /* SKTextureAtlas.swift in Sources */,
+				500C0E581E326BBE00FCF079 /* SKSpriteNode.swift in Sources */,
+				500C0E631E326BBE00FCF079 /* UIImageView.swift in Sources */,
+				500C0E641E326BBE00FCF079 /* UIView.swift in Sources */,
+				500C0E621E326BBE00FCF079 /* UIImage.swift in Sources */,
+				500C0E531E326BBD00FCF079 /* CGSize.swift in Sources */,
+				500C0E611E326BBE00FCF079 /* UIColorExtension.swift in Sources */,
+				500C0E551E326BBD00FCF079 /* GKGraphNode2D.swift in Sources */,
+				500C0E601E326BBE00FCF079 /* UIColor.swift in Sources */,
+				500C0E5A1E326BBE00FCF079 /* Configuration.swift in Sources */,
+				500C0E571E326BBE00FCF079 /* SKNode.swift in Sources */,
+				500C0E5D1E326BBE00FCF079 /* Visualizer.swift in Sources */,
+				500C0E5C1E326BBE00FCF079 /* UIWindow+Swizzle.swift in Sources */,
 				500C0E241E325B5800FCF079 /* GameViewController.swift in Sources */,
+				500C0E5B1E326BBE00FCF079 /* TouchView.swift in Sources */,
+				500C0E511E326BBD00FCF079 /* CGPoint.swift in Sources */,
+				500C0E541E326BBD00FCF079 /* CGVector.swift in Sources */,
 				500C0E1C1E325B5800FCF079 /* AppDelegate.swift in Sources */,
+				500C0E5F1E326BBE00FCF079 /* UIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +437,7 @@
 				500C0E321E325B5800FCF079 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -42,6 +42,7 @@ class EnemyController : SingleControler {
         if (delta > 3) {
             self.attack()
             lastTimeUpdate = time
+            print("Attack")
         }
     }
     

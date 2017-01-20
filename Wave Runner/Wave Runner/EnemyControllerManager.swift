@@ -29,6 +29,11 @@ class EnemyControllerManager: Controller {
             enemies.append(enemyController)
         }
         
+        enemies = enemies.filter{
+            enemy in
+            return !enemy.viewDetached
+        }
+        
         for enemyController in self.enemies {
             enemyController.run(parent: parent, time: time)
         }

@@ -7,15 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		182595421E32AAE400481B37 /* EnemyControllerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182595411E32AAE400481B37 /* EnemyControllerManager.swift */; };
-		1856F3801E327FB500F65563 /* BackgroundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1856F37F1E327FB500F65563 /* BackgroundController.swift */; };
-		1856F3821E32842200F65563 /* EnemyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1856F3811E32842200F65563 /* EnemyController.swift */; };
-		1856F3841E32845A00F65563 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1856F3831E32845A00F65563 /* Controller.swift */; };
-		1856F3861E32863300F65563 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1856F3851E32863300F65563 /* View.swift */; };
-		1856F3881E328A8600F65563 /* SingleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1856F3871E328A8600F65563 /* SingleController.swift */; };
-		1856F38B1E328B0C00F65563 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1856F38A1E328B0C00F65563 /* Constants.swift */; };
-		1856F38E1E329A1F00F65563 /* EnemyControllerGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1856F38D1E329A1F00F65563 /* EnemyControllerGenerator.swift */; };
-		18A0A7E71E329E7F0072A8EE /* stage1.json in Resources */ = {isa = PBXBuildFile; fileRef = 18A0A7E61E329E7F0072A8EE /* stage1.json */; };
 		30106198D306146C017C546F /* Pods_Wave_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 558FE0BD98FE42AEB7C5C6C7 /* Pods_Wave_Runner.framework */; };
 		500C0E1C1E325B5800FCF079 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E1B1E325B5800FCF079 /* AppDelegate.swift */; };
 		500C0E1E1E325B5800FCF079 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 500C0E1D1E325B5800FCF079 /* GameScene.sks */; };
@@ -44,22 +35,24 @@
 		500C0E621E326BBE00FCF079 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E4C1E326BBD00FCF079 /* UIImage.swift */; };
 		500C0E631E326BBE00FCF079 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E4D1E326BBD00FCF079 /* UIImageView.swift */; };
 		500C0E641E326BBE00FCF079 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E4E1E326BBD00FCF079 /* UIView.swift */; };
-		505FEE711E3289A5001C7ABA /* PlatformController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FEE701E3289A5001C7ABA /* PlatformController.swift */; };
-		505FEE7D1E32AF85001C7ABA /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FEE7B1E32AF85001C7ABA /* PlayerController.swift */; };
-		505FEE7E1E32AF85001C7ABA /* WaveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505FEE7C1E32AF85001C7ABA /* WaveController.swift */; };
-		5066E8571E32CC1C009771B6 /* DBPathRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066E8561E32CC1C009771B6 /* DBPathRecognizer.swift */; };
+		5066E86F1E32CF5F009771B6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066E85B1E32CF5F009771B6 /* Constants.swift */; };
+		5066E8701E32CF5F009771B6 /* BackgroundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066E85D1E32CF5F009771B6 /* BackgroundController.swift */; };
+		5066E8711E32CF5F009771B6 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066E85E1E32CF5F009771B6 /* Controller.swift */; };
+		5066E8721E32CF5F009771B6 /* EnemyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066E8601E32CF5F009771B6 /* EnemyController.swift */; };
+		5066E8731E32CF5F009771B6 /* EnemyControllerGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066E8611E32CF5F009771B6 /* EnemyControllerGenerator.swift */; };
+		5066E8741E32CF5F009771B6 /* EnemyControllerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066E8621E32CF5F009771B6 /* EnemyControllerManager.swift */; };
+		5066E8751E32CF5F009771B6 /* GestureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066E8631E32CF5F009771B6 /* GestureController.swift */; };
+		5066E8761E32CF5F009771B6 /* PlatformController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066E8641E32CF5F009771B6 /* PlatformController.swift */; };
+		5066E8771E32CF5F009771B6 /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066E8651E32CF5F009771B6 /* PlayerController.swift */; };
+		5066E8781E32CF5F009771B6 /* SingleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066E8661E32CF5F009771B6 /* SingleController.swift */; };
+		5066E8791E32CF5F009771B6 /* WaveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066E8681E32CF5F009771B6 /* WaveController.swift */; };
+		5066E87A1E32CF5F009771B6 /* stage1.json in Resources */ = {isa = PBXBuildFile; fileRef = 5066E86A1E32CF5F009771B6 /* stage1.json */; };
+		5066E87B1E32CF5F009771B6 /* DBPathRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066E86C1E32CF5F009771B6 /* DBPathRecognizer.swift */; };
+		5066E87C1E32CF5F009771B6 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5066E86E1E32CF5F009771B6 /* background.mp3 */; };
+		5066E87E1E32CF75009771B6 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066E87D1E32CF75009771B6 /* View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		182595411E32AAE400481B37 /* EnemyControllerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyControllerManager.swift; sourceTree = "<group>"; };
-		1856F37F1E327FB500F65563 /* BackgroundController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundController.swift; sourceTree = "<group>"; };
-		1856F3811E32842200F65563 /* EnemyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyController.swift; sourceTree = "<group>"; };
-		1856F3831E32845A00F65563 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
-		1856F3851E32863300F65563 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		1856F3871E328A8600F65563 /* SingleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleController.swift; sourceTree = "<group>"; };
-		1856F38A1E328B0C00F65563 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		1856F38D1E329A1F00F65563 /* EnemyControllerGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyControllerGenerator.swift; sourceTree = "<group>"; };
-		18A0A7E61E329E7F0072A8EE /* stage1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stage1.json; sourceTree = "<group>"; };
 		500C0E181E325B5800FCF079 /* Wave Runner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wave Runner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		500C0E1B1E325B5800FCF079 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		500C0E1D1E325B5800FCF079 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -90,10 +83,21 @@
 		500C0E4C1E326BBD00FCF079 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		500C0E4D1E326BBD00FCF079 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		500C0E4E1E326BBD00FCF079 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		505FEE701E3289A5001C7ABA /* PlatformController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformController.swift; sourceTree = "<group>"; };
-		505FEE7B1E32AF85001C7ABA /* PlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
-		505FEE7C1E32AF85001C7ABA /* WaveController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveController.swift; sourceTree = "<group>"; };
-		5066E8561E32CC1C009771B6 /* DBPathRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBPathRecognizer.swift; sourceTree = "<group>"; };
+		5066E85B1E32CF5F009771B6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5066E85D1E32CF5F009771B6 /* BackgroundController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundController.swift; sourceTree = "<group>"; };
+		5066E85E1E32CF5F009771B6 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		5066E8601E32CF5F009771B6 /* EnemyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyController.swift; sourceTree = "<group>"; };
+		5066E8611E32CF5F009771B6 /* EnemyControllerGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyControllerGenerator.swift; sourceTree = "<group>"; };
+		5066E8621E32CF5F009771B6 /* EnemyControllerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyControllerManager.swift; sourceTree = "<group>"; };
+		5066E8631E32CF5F009771B6 /* GestureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureController.swift; sourceTree = "<group>"; };
+		5066E8641E32CF5F009771B6 /* PlatformController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformController.swift; sourceTree = "<group>"; };
+		5066E8651E32CF5F009771B6 /* PlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
+		5066E8661E32CF5F009771B6 /* SingleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleController.swift; sourceTree = "<group>"; };
+		5066E8681E32CF5F009771B6 /* WaveController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveController.swift; sourceTree = "<group>"; };
+		5066E86A1E32CF5F009771B6 /* stage1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stage1.json; sourceTree = "<group>"; };
+		5066E86C1E32CF5F009771B6 /* DBPathRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBPathRecognizer.swift; sourceTree = "<group>"; };
+		5066E86E1E32CF5F009771B6 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
+		5066E87D1E32CF75009771B6 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		558FE0BD98FE42AEB7C5C6C7 /* Pods_Wave_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wave_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		972D3FC7CC34502E45407B4F /* Pods-Wave Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wave Runner.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wave Runner/Pods-Wave Runner.release.xcconfig"; sourceTree = "<group>"; };
 		A262C3DE2D62DC763A39A564 /* Pods-Wave Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wave Runner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wave Runner/Pods-Wave Runner.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,54 +115,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		182595431E32B92100481B37 /* Waves */ = {
-			isa = PBXGroup;
-			children = (
-				505FEE7C1E32AF85001C7ABA /* WaveController.swift */,
-			);
-			name = Waves;
-			sourceTree = "<group>";
-		};
-		1856F37E1E327F9A00F65563 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				182595431E32B92100481B37 /* Waves */,
-				1856F38C1E3299AD00F65563 /* Enemies */,
-				1856F37F1E327FB500F65563 /* BackgroundController.swift */,
-				505FEE701E3289A5001C7ABA /* PlatformController.swift */,
-				1856F3831E32845A00F65563 /* Controller.swift */,
-				1856F3871E328A8600F65563 /* SingleController.swift */,
-				505FEE7B1E32AF85001C7ABA /* PlayerController.swift */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
-		1856F3891E328B0300F65563 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				1856F38A1E328B0C00F65563 /* Constants.swift */,
-			);
-			name = Constants;
-			sourceTree = "<group>";
-		};
-		1856F38C1E3299AD00F65563 /* Enemies */ = {
-			isa = PBXGroup;
-			children = (
-				1856F3811E32842200F65563 /* EnemyController.swift */,
-				1856F38D1E329A1F00F65563 /* EnemyControllerGenerator.swift */,
-				182595411E32AAE400481B37 /* EnemyControllerManager.swift */,
-			);
-			name = Enemies;
-			sourceTree = "<group>";
-		};
-		18A0A7E51E329E580072A8EE /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				18A0A7E61E329E7F0072A8EE /* stage1.json */,
-			);
-			name = Data;
-			sourceTree = "<group>";
-		};
 		500C0E0F1E325B5700FCF079 = {
 			isa = PBXGroup;
 			children = (
@@ -180,11 +136,12 @@
 		500C0E1A1E325B5800FCF079 /* Wave Runner */ = {
 			isa = PBXGroup;
 			children = (
-				5066E8551E32CC03009771B6 /* Gesture */,
-				18A0A7E51E329E580072A8EE /* Data */,
-				1856F3891E328B0300F65563 /* Constants */,
-				1856F3851E32863300F65563 /* View.swift */,
-				1856F37E1E327F9A00F65563 /* Controllers */,
+				5066E87D1E32CF75009771B6 /* View.swift */,
+				5066E85A1E32CF5F009771B6 /* Constant */,
+				5066E85C1E32CF5F009771B6 /* Controllers */,
+				5066E8691E32CF5F009771B6 /* Data */,
+				5066E86B1E32CF5F009771B6 /* Gesture Recognizer */,
+				5066E86D1E32CF5F009771B6 /* Sounds */,
 				500C0E1B1E325B5800FCF079 /* AppDelegate.swift */,
 				500C0E1D1E325B5800FCF079 /* GameScene.sks */,
 				500C0E211E325B5800FCF079 /* GameScene.swift */,
@@ -266,12 +223,69 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
-		5066E8551E32CC03009771B6 /* Gesture */ = {
+		5066E85A1E32CF5F009771B6 /* Constant */ = {
 			isa = PBXGroup;
 			children = (
-				5066E8561E32CC1C009771B6 /* DBPathRecognizer.swift */,
+				5066E85B1E32CF5F009771B6 /* Constants.swift */,
 			);
-			name = Gesture;
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		5066E85C1E32CF5F009771B6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5066E85F1E32CF5F009771B6 /* Enemies */,
+				5066E85D1E32CF5F009771B6 /* BackgroundController.swift */,
+				5066E85E1E32CF5F009771B6 /* Controller.swift */,
+				5066E8631E32CF5F009771B6 /* GestureController.swift */,
+				5066E8641E32CF5F009771B6 /* PlatformController.swift */,
+				5066E8651E32CF5F009771B6 /* PlayerController.swift */,
+				5066E8661E32CF5F009771B6 /* SingleController.swift */,
+				5066E8671E32CF5F009771B6 /* Waves */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5066E85F1E32CF5F009771B6 /* Enemies */ = {
+			isa = PBXGroup;
+			children = (
+				5066E8601E32CF5F009771B6 /* EnemyController.swift */,
+				5066E8611E32CF5F009771B6 /* EnemyControllerGenerator.swift */,
+				5066E8621E32CF5F009771B6 /* EnemyControllerManager.swift */,
+			);
+			path = Enemies;
+			sourceTree = "<group>";
+		};
+		5066E8671E32CF5F009771B6 /* Waves */ = {
+			isa = PBXGroup;
+			children = (
+				5066E8681E32CF5F009771B6 /* WaveController.swift */,
+			);
+			path = Waves;
+			sourceTree = "<group>";
+		};
+		5066E8691E32CF5F009771B6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5066E86A1E32CF5F009771B6 /* stage1.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5066E86B1E32CF5F009771B6 /* Gesture Recognizer */ = {
+			isa = PBXGroup;
+			children = (
+				5066E86C1E32CF5F009771B6 /* DBPathRecognizer.swift */,
+			);
+			path = "Gesture Recognizer";
+			sourceTree = "<group>";
+		};
+		5066E86D1E32CF5F009771B6 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				5066E86E1E32CF5F009771B6 /* background.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		7003DB4BFA12155C505FCE82 /* Pods */ = {
@@ -358,7 +372,8 @@
 				500C0E1E1E325B5800FCF079 /* GameScene.sks in Resources */,
 				500C0E291E325B5800FCF079 /* Assets.xcassets in Resources */,
 				500C0E2C1E325B5800FCF079 /* LaunchScreen.storyboard in Resources */,
-				18A0A7E71E329E7F0072A8EE /* stage1.json in Resources */,
+				5066E87C1E32CF5F009771B6 /* background.mp3 in Resources */,
+				5066E87A1E32CF5F009771B6 /* stage1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,39 +434,40 @@
 			files = (
 				500C0E5E1E326BBE00FCF079 /* GifUIImageView.swift in Sources */,
 				500C0E501E326BBD00FCF079 /* CGFloat.swift in Sources */,
-				1856F3821E32842200F65563 /* EnemyController.swift in Sources */,
+				5066E8771E32CF5F009771B6 /* PlayerController.swift in Sources */,
 				500C0E521E326BBD00FCF079 /* CGRect.swift in Sources */,
 				500C0E221E325B5800FCF079 /* GameScene.swift in Sources */,
-				1856F38B1E328B0C00F65563 /* Constants.swift in Sources */,
 				500C0E591E326BBE00FCF079 /* SKTextureAtlas.swift in Sources */,
 				500C0E581E326BBE00FCF079 /* SKSpriteNode.swift in Sources */,
-				1856F3841E32845A00F65563 /* Controller.swift in Sources */,
-				5066E8571E32CC1C009771B6 /* DBPathRecognizer.swift in Sources */,
 				500C0E631E326BBE00FCF079 /* UIImageView.swift in Sources */,
+				5066E8711E32CF5F009771B6 /* Controller.swift in Sources */,
+				5066E87B1E32CF5F009771B6 /* DBPathRecognizer.swift in Sources */,
+				5066E8761E32CF5F009771B6 /* PlatformController.swift in Sources */,
 				500C0E641E326BBE00FCF079 /* UIView.swift in Sources */,
 				500C0E621E326BBE00FCF079 /* UIImage.swift in Sources */,
-				1856F3801E327FB500F65563 /* BackgroundController.swift in Sources */,
-				505FEE711E3289A5001C7ABA /* PlatformController.swift in Sources */,
-				505FEE7E1E32AF85001C7ABA /* WaveController.swift in Sources */,
 				500C0E531E326BBD00FCF079 /* CGSize.swift in Sources */,
 				500C0E611E326BBE00FCF079 /* UIColorExtension.swift in Sources */,
-				1856F3861E32863300F65563 /* View.swift in Sources */,
+				5066E8791E32CF5F009771B6 /* WaveController.swift in Sources */,
 				500C0E551E326BBD00FCF079 /* GKGraphNode2D.swift in Sources */,
 				500C0E601E326BBE00FCF079 /* UIColor.swift in Sources */,
+				5066E8781E32CF5F009771B6 /* SingleController.swift in Sources */,
+				5066E8731E32CF5F009771B6 /* EnemyControllerGenerator.swift in Sources */,
 				500C0E5A1E326BBE00FCF079 /* Configuration.swift in Sources */,
-				505FEE7D1E32AF85001C7ABA /* PlayerController.swift in Sources */,
-				182595421E32AAE400481B37 /* EnemyControllerManager.swift in Sources */,
 				500C0E571E326BBE00FCF079 /* SKNode.swift in Sources */,
-				1856F3881E328A8600F65563 /* SingleController.swift in Sources */,
+				5066E8741E32CF5F009771B6 /* EnemyControllerManager.swift in Sources */,
 				500C0E5D1E326BBE00FCF079 /* Visualizer.swift in Sources */,
-				1856F38E1E329A1F00F65563 /* EnemyControllerGenerator.swift in Sources */,
 				500C0E5C1E326BBE00FCF079 /* UIWindow+Swizzle.swift in Sources */,
 				500C0E241E325B5800FCF079 /* GameViewController.swift in Sources */,
+				5066E8701E32CF5F009771B6 /* BackgroundController.swift in Sources */,
 				500C0E5B1E326BBE00FCF079 /* TouchView.swift in Sources */,
 				500C0E511E326BBD00FCF079 /* CGPoint.swift in Sources */,
 				500C0E541E326BBD00FCF079 /* CGVector.swift in Sources */,
+				5066E8751E32CF5F009771B6 /* GestureController.swift in Sources */,
 				500C0E1C1E325B5800FCF079 /* AppDelegate.swift in Sources */,
+				5066E87E1E32CF75009771B6 /* View.swift in Sources */,
 				500C0E5F1E326BBE00FCF079 /* UIButton.swift in Sources */,
+				5066E8721E32CF5F009771B6 /* EnemyController.swift in Sources */,
+				5066E86F1E32CF5F009771B6 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

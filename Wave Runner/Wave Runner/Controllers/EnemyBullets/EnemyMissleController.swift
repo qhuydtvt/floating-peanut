@@ -19,6 +19,17 @@ class EnemyMissleController: SingleControler {
             trailNode.position = CGPoint(x: 0, y: -(self.size.height / 2))
             self.view.addChild(trailNode)
         }
+        
+        self.configPhysics()
+    }
+    
+    func configPhysics() -> Void {
+        self.view.physicsBody = SKPhysicsBody(rectangleOf: self.size)
+        self.view.physicsBody?.affectedByGravity = false
+        self.view.physicsBody?.collisionBitMask = Masks.ENEMY | Masks.ENEMY_WAVE
+        self.view.physicsBody?.categoryBitMask = Masks.ENEMY_WAVE
+        self.view.physicsBody?.linearDamping = 0
+        self.view.physicsBody?.fieldBitMask = 1
     }
     
     override func run(parent: SKNode, time: TimeInterval) {

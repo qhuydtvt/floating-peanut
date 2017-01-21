@@ -20,7 +20,7 @@ class ShieldSkill {
         let shield = View(texture: Textures.shield)
         shield.physicsBody = SKPhysicsBody(circleOfRadius: 50)
         shield.physicsBody?.categoryBitMask = Masks.SHIELD
-        shield.physicsBody?.contactTestBitMask = Masks.ENEMY | Masks.ENEMY_WAVE
+        shield.physicsBody?.contactTestBitMask = Masks.ENEMY | Masks.ENEMY_MISSLE
         shield.physicsBody?.collisionBitMask = 0
         shield.physicsBody?.fieldBitMask = 0
         shield.handleContact = {

@@ -15,11 +15,11 @@ let PLAYER_ANIMATION_TIME_FER_FRAME : Double    = 0.15
 struct Masks {
     static let PLAYER          =   UInt32(1 << 0)
     static let PLAYER_LAZER    =   UInt32(1 << 1)
-    static let PLAYER_SONIC     =   UInt32(1 << 2)
+    static let PLAYER_SONIC    =   UInt32(1 << 2)
     
     static let ENEMY           =   UInt32(1 << 3)
     static let ENEMY_MISSLE    =   UInt32(1 << 4)
-    static let ENEMY_SONIC      =   UInt32(1 << 5)
+    static let ENEMY_SONIC     =   UInt32(1 << 5)
     static let PLATFORM        =   UInt32(1 << 6)
     static let LASER           =   UInt32(1 << 7)
     static let SHIELD          =   UInt32(1 << 8)

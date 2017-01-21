@@ -24,6 +24,7 @@ class PlayerController: SingleControler {
     
     var lightNode: SKLightNode!
     
+    
     let laserSkill = LaserSkill()
     let gravity = GravitySkill()
     let sonicSkill = SonicSkill()
@@ -51,6 +52,8 @@ class PlayerController: SingleControler {
         lightNode.categoryBitMask = 1
         lightNode.falloff = 4
         player.addChild(lightNode)
+        
+        
         
         configPhysics()
     }

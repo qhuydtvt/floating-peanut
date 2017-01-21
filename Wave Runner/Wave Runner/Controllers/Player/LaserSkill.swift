@@ -13,9 +13,16 @@ class LaserSkill {
     var coolDownTime: Double = CoolDown.LASER
     var isCoolingDown = false
     lazy var playerController = PlayerController.instance
+    var playSound: SKAction!
+    
+    init() {
+        playSound = SKAction.playSoundFileNamed("lazer.mp3", waitForCompletion: false)
+    }
     
     func spawn(aimAt dest: CGPoint) {
         guard isCoolingDown == false else { return }
+        
+        
         var anim = Textures.laserUpwardAnimation
         anim.append(SKTexture(image: #imageLiteral(resourceName: "goku_standing")))
         
@@ -35,6 +42,7 @@ class LaserSkill {
         let delay = SKAction.wait(forDuration: 0.2)
         let sequence = SKAction.sequence([delay, shootAction])
         playerController.player.run(.group([animateAction, sequence]))
+        playerController.player.run(playSound)
         
         self.isCoolingDown = true
         DispatchQueue.main.asyncAfter(deadline: .now() + coolDownTime) {

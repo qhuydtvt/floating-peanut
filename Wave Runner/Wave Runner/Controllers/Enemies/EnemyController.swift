@@ -63,6 +63,7 @@ class EnemyController : SingleControler {
         self.view.handleContact = { [weak self]
             other in
             print(">> EnemyController: contacted")
+            
             guard self != nil else { return }
             if !self!.exposed {
                 self!.view.run(.sequence([.run{

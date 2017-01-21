@@ -23,6 +23,8 @@ class PlayerController: SingleControler {
     var attacking : Bool = false
     
     var lightNode: SKLightNode!
+    var screamSound: SKAction!
+    
     
     
     let laserSkill = LaserSkill()
@@ -53,7 +55,7 @@ class PlayerController: SingleControler {
         lightNode.falloff = 4
         player.addChild(lightNode)
         
-        
+        screamSound = SKAction.playSoundFileNamed("player_scream.mp3", waitForCompletion: false)
         
         configPhysics()
     }
@@ -69,9 +71,12 @@ class PlayerController: SingleControler {
         player.physicsBody?.contactTestBitMask = Masks.ENEMY | Masks.ENEMY_MISSLE
         player.physicsBody?.collisionBitMask = 0
         player.physicsBody?.fieldBitMask = 0
+        
         player.handleContact = {
             other in
-            print("Contacted")
+            if (other.physicsBody?.categoryBitMask)! & (Masks.ENEMY | Masks.ENEMY_MISSLE) != 0 {
+                self.destroy()
+            }
         }
     }
     
@@ -81,6 +86,12 @@ class PlayerController: SingleControler {
     
     func shootLaser(at dest: CGPoint) {
         laserSkill.spawn(aimAt: dest)
+    }
+    
+    override func destroy() {
+        super.destroy()
+        print("Player destroying")
+        self.parent.run(self.screamSound)
     }
     
     @objc

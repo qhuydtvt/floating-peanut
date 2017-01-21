@@ -38,7 +38,7 @@ class LaserController: SingleControler {
         let distance = laser.width
         let time = distance / speed
         laser.run(.move(by: CGVector(dx: distance, dy: 0), duration: TimeInterval(time))) { [unowned self] in
-            self.laser.run(.fadeAlpha(to: 0, duration: 0.5)) {
+            self.laser.run(.fadeAlpha(to: 0, duration: 0.15)) {
                 self.view.removeFromParent()
             }
         }

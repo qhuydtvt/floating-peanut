@@ -64,7 +64,7 @@ class PlayerController: SingleControler {
 //            self.scan()
         }
     }
-    
+    @objc
     func fireLaser() {
         var anim = laserAnimation
         anim.append(SKTexture(image: #imageLiteral(resourceName: "goku_standing")))
@@ -72,7 +72,7 @@ class PlayerController: SingleControler {
         let animateAction = SKAction.animate(with: anim, timePerFrame: 0.1, resize: true, restore: false)
         let shootAction = SKAction.run { [unowned self] in
             let laser = LaserController(type: .straight)
-            laser.config(position: CGPoint(x: laser.laser.width/2 + self.player.width*3/4, y: 0), parent: self.player)
+            laser.config(position: CGPoint(x: laser.laser.width/2 + self.player.width/3, y: -0.5), parent: self.player)
             laser.move(speed: 1200)
         }
         let delay = SKAction.wait(forDuration: 0.2)

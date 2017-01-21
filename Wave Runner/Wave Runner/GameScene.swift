@@ -26,6 +26,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         enemyManager = EnemyControllerManager(enemyGenerator: EnemyControllerGenerator(jsonFile: "stage1"))
         
         configPlayer()
+        configGesture()
+    }
+    
+    func configGesture() {
+        let gesture = UISwipeGestureRecognizer(target: playerController, action: #selector(PlayerController.fireLaser))
+        gesture.direction = .right
+        view?.addGestureRecognizer(gesture)
     }
     
     func configPlayer() {

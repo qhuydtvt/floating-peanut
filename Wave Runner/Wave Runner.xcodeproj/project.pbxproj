@@ -16,6 +16,8 @@
 		18B12BFB1E33FE2C007721FB /* lazer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18B12BFA1E33FE2C007721FB /* lazer.mp3 */; };
 		18B12BFD1E340119007721FB /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18B12BFC1E340119007721FB /* explosion.mp3 */; };
 		18C03EB01E34059D007944BE /* player_scream.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18C03EAF1E34059D007944BE /* player_scream.mp3 */; };
+		18C03EB21E341F36007944BE /* light.json in Resources */ = {isa = PBXBuildFile; fileRef = 18C03EB11E341F36007944BE /* light.json */; };
+		18C03EB41E341FA1007944BE /* LightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C03EB31E341FA1007944BE /* LightController.swift */; };
 		30106198D306146C017C546F /* Pods_Wave_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 558FE0BD98FE42AEB7C5C6C7 /* Pods_Wave_Runner.framework */; };
 		500C0E1C1E325B5800FCF079 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E1B1E325B5800FCF079 /* AppDelegate.swift */; };
 		500C0E1E1E325B5800FCF079 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 500C0E1D1E325B5800FCF079 /* GameScene.sks */; };
@@ -84,6 +86,8 @@
 		18B12BFA1E33FE2C007721FB /* lazer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lazer.mp3; sourceTree = "<group>"; };
 		18B12BFC1E340119007721FB /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion.mp3; sourceTree = "<group>"; };
 		18C03EAF1E34059D007944BE /* player_scream.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = player_scream.mp3; sourceTree = "<group>"; };
+		18C03EB11E341F36007944BE /* light.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = light.json; sourceTree = "<group>"; };
+		18C03EB31E341FA1007944BE /* LightController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightController.swift; sourceTree = "<group>"; };
 		500C0E181E325B5800FCF079 /* Wave Runner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wave Runner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		500C0E1B1E325B5800FCF079 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		500C0E1D1E325B5800FCF079 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -301,6 +305,7 @@
 				504B965A1E33848B000110C2 /* PlayerController.swift */,
 				5075C6B51E33DD7E00B5B3B5 /* ShieldSkill.swift */,
 				5075C6B71E33E33600B5B3B5 /* ShieldEmitter.sks */,
+				18C03EB31E341FA1007944BE /* LightController.swift */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -362,6 +367,7 @@
 			children = (
 				5066E86A1E32CF5F009771B6 /* stage1.json */,
 				5066E89F1E32E06E009771B6 /* Gestures.json */,
+				18C03EB11E341F36007944BE /* light.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -464,6 +470,7 @@
 				500C0E291E325B5800FCF079 /* Assets.xcassets in Resources */,
 				18B12BED1E33A84A007721FB /* enemy_explosion.sks in Resources */,
 				18B12BF51E33CAEF007721FB /* missle_explosion.sks in Resources */,
+				18C03EB21E341F36007944BE /* light.json in Resources */,
 				504B96721E33B6F1000110C2 /* gameover.ttf in Resources */,
 				18C03EB01E34059D007944BE /* player_scream.mp3 in Resources */,
 				500C0E2C1E325B5800FCF079 /* LaunchScreen.storyboard in Resources */,
@@ -535,6 +542,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C03EB41E341FA1007944BE /* LightController.swift in Sources */,
 				504B96701E33A218000110C2 /* LabelsController.swift in Sources */,
 				500C0E5E1E326BBE00FCF079 /* GifUIImageView.swift in Sources */,
 				500C0E501E326BBD00FCF079 /* CGFloat.swift in Sources */,

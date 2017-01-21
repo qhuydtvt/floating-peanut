@@ -48,7 +48,7 @@ class EnemyController : SingleControler {
         view.physicsBody = SKPhysicsBody(rectangleOf: view.size.scale(by: 0.7))
         view.physicsBody?.collisionBitMask = Masks.ENEMY
         view.physicsBody?.categoryBitMask = Masks.ENEMY
-        view.physicsBody?.contactTestBitMask = Masks.PLAYER_SONIC | Masks.PLAYER_LAZER
+        view.physicsBody?.contactTestBitMask = Masks.PLAYER | Masks.PLAYER_SONIC | Masks.PLAYER_LAZER
         view.physicsBody?.velocity = CGVector(dx: -self.speed, dy: 0)
         view.physicsBody?.linearDamping = 0
         view.physicsBody?.fieldBitMask = 1
@@ -65,7 +65,7 @@ class EnemyController : SingleControler {
             print(">> EnemyController: contacted")
             
             guard self != nil else { return }
-            if !self!.exposed {
+            if ((other.physicsBody?.categoryBitMask)! & Masks.ENEMY_SONIC) != 0 && !self!.exposed {
                 self!.view.run(.sequence([.run{
                     self!.view.lightingBitMask = 0
                     self!.exposed = true
@@ -74,6 +74,7 @@ class EnemyController : SingleControler {
                         self!.exposed = false
                         self!.view.contacted = false
                 }
+                self?.view.contacted = false
             }
         }
     }
@@ -81,8 +82,6 @@ class EnemyController : SingleControler {
     func stopMoving() -> Void {
         self.view.physicsBody?.velocity = .zero
     }
-    
-    
     
     override func destroy() {
         super.destroy()

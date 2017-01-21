@@ -23,12 +23,14 @@ class PlayerController: SingleControler {
     var attacking : Bool = false
     
     var lightNode: SKLightNode!
-    var screamSound: SKAction!
+    
     
     let laserSkill = LaserSkill()
     let gravity = GravitySkill()
     let sonicSkill = SonicSkill()
     let shieldSkill = ShieldSkill()
+    
+    var lightController : LightController!
     
     static var instance: PlayerController!
     
@@ -51,9 +53,13 @@ class PlayerController: SingleControler {
         lightNode = SKLightNode()
         lightNode.categoryBitMask = 1
         lightNode.falloff = 4
+        lightNode.isEnabled = false
         player.addChild(lightNode)
         
-        screamSound = SKAction.playSoundFileNamed("player_scream.mp3", waitForCompletion: false)
+        
+        
+        lightController = LightController(jsonFile: "light")
+        lightController.lightNode = self.lightNode
         
         configPhysics()
     }
@@ -78,6 +84,11 @@ class PlayerController: SingleControler {
         }
     }
     
+    override func run(parent: SKNode, time: TimeInterval) {
+        super.run(parent: parent, time: time)
+        lightController.run(parent: parent, time: time)
+    }
+    
     override func config(position: CGPoint, parent: SKNode) {
         super.config(position: position, parent: parent)
         laserSkill.playerController = self
@@ -93,7 +104,7 @@ class PlayerController: SingleControler {
     override func destroy() {
         super.destroy()
         print("Player destroying")
-        self.parent.run(self.screamSound)
+        
     }
     
     @objc

@@ -1,0 +1,18 @@
+[
+  {
+  "time": 1,
+  "light": true
+  },
+  {
+  "time": 15,
+  "light": false
+  },
+  {
+  "time": 30,
+  "light": true
+ },
+ {
+ "time": 45,
+ "light": false
+ }
+]

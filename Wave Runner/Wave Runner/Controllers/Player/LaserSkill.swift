@@ -77,6 +77,21 @@ class LaserController: SingleControler {
         if type == .upward {
             view.zRotation = view.zRotation + CGFloat.pi / 6
         }
+        
+        configPhysics()
+    }
+    
+    func configPhysics() -> Void {
+        self.view.physicsBody = SKPhysicsBody(rectangleOf: self.laser.size)
+        self.view.physicsBody?.categoryBitMask = Masks.PLAYER_WAVE
+        self.view.physicsBody?.contactTestBitMask = Masks.ENEMY
+        self.view.physicsBody?.collisionBitMask = 0
+        self.view.lightingBitMask = 0
+        
+        self.view.handleContact = {
+            other in
+            other.destroy?()
+        }
     }
     
     override func config(position: CGPoint, parent: SKNode) {

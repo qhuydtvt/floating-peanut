@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		182595471E33010300481B37 /* BackgroundSoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182595461E33010300481B37 /* BackgroundSoundController.swift */; };
+		1825954A1E33660800481B37 /* EnemyBulletController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182595491E33660800481B37 /* EnemyBulletController.swift */; };
 		30106198D306146C017C546F /* Pods_Wave_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 558FE0BD98FE42AEB7C5C6C7 /* Pods_Wave_Runner.framework */; };
 		500C0E1C1E325B5800FCF079 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E1B1E325B5800FCF079 /* AppDelegate.swift */; };
 		500C0E1E1E325B5800FCF079 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 500C0E1D1E325B5800FCF079 /* GameScene.sks */; };
@@ -57,6 +58,7 @@
 
 /* Begin PBXFileReference section */
 		182595461E33010300481B37 /* BackgroundSoundController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundSoundController.swift; sourceTree = "<group>"; };
+		182595491E33660800481B37 /* EnemyBulletController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnemyBulletController.swift; path = EnemyBullets/EnemyBulletController.swift; sourceTree = "<group>"; };
 		500C0E181E325B5800FCF079 /* Wave Runner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wave Runner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		500C0E1B1E325B5800FCF079 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		500C0E1D1E325B5800FCF079 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -121,6 +123,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		182595481E3365EC00481B37 /* EnemyBullets */ = {
+			isa = PBXGroup;
+			children = (
+				182595491E33660800481B37 /* EnemyBulletController.swift */,
+			);
+			name = EnemyBullets;
+			sourceTree = "<group>";
+		};
 		500C0E0F1E325B5700FCF079 = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +250,7 @@
 		5066E85C1E32CF5F009771B6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				182595481E3365EC00481B37 /* EnemyBullets */,
 				5066E85F1E32CF5F009771B6 /* Enemies */,
 				5066E85D1E32CF5F009771B6 /* BackgroundController.swift */,
 				5066E85E1E32CF5F009771B6 /* Controller.swift */,
@@ -349,7 +360,7 @@
 				TargetAttributes = {
 					500C0E171E325B5700FCF079 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = Z3TDYH9DM8;
+						DevelopmentTeam = 3CJF6M3857;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -460,6 +471,7 @@
 				500C0E611E326BBE00FCF079 /* UIColorExtension.swift in Sources */,
 				5066E8791E32CF5F009771B6 /* WaveController.swift in Sources */,
 				500C0E551E326BBD00FCF079 /* GKGraphNode2D.swift in Sources */,
+				1825954A1E33660800481B37 /* EnemyBulletController.swift in Sources */,
 				500C0E601E326BBE00FCF079 /* UIColor.swift in Sources */,
 				5066E8781E32CF5F009771B6 /* SingleController.swift in Sources */,
 				5066E8731E32CF5F009771B6 /* EnemyControllerGenerator.swift in Sources */,
@@ -603,11 +615,11 @@
 			baseConfigurationReference = A262C3DE2D62DC763A39A564 /* Pods-Wave Runner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Z3TDYH9DM8;
+				DEVELOPMENT_TEAM = 3CJF6M3857;
 				INFOPLIST_FILE = "Wave Runner/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "duyanh2912.Wave-Runner";
+				PRODUCT_BUNDLE_IDENTIFIER = "vn.techkids.Wave-Runner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -618,11 +630,11 @@
 			baseConfigurationReference = 972D3FC7CC34502E45407B4F /* Pods-Wave Runner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Z3TDYH9DM8;
+				DEVELOPMENT_TEAM = 3CJF6M3857;
 				INFOPLIST_FILE = "Wave Runner/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "duyanh2912.Wave-Runner";
+				PRODUCT_BUNDLE_IDENTIFIER = "vn.techkids.Wave-Runner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

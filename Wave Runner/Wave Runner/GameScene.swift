@@ -36,7 +36,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func configPlayer() {
-        self.playerController = PlayerController()
+        self.playerController = PlayerController.instance
         playerController.config(position: CGPoint(x: 175, y: platformController.platform1.height + playerController.board.height * 1.5), parent: self)
     }
     

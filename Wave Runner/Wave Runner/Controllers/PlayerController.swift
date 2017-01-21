@@ -26,7 +26,9 @@ class PlayerController: SingleControler {
     var lightNode: SKLightNode!
     var laserUpwardAnimation = SKTextureAtlas(named: "goku_laser_upward").toTextures()
     
-    init() {
+    static let instance = PlayerController()
+    
+    private init() {
         super.init(view: View())
         self.player = View(image: #imageLiteral(resourceName: "goku_standing"))
         self.board = SKSpriteNode(image: #imageLiteral(resourceName: "hover_board"))

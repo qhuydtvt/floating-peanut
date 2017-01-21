@@ -8,11 +8,18 @@
 
 import SpriteKit
 
+enum EnemyState {
+    case NORMAL
+    case ATTACKING
+}
+
 class EnemyController : SingleControler {
     var lastTimeUpdate : Double = -1
+    var enemyState: EnemyState = EnemyState.NORMAL
+    var attackTime: Int = 0
     
     init() {
-        super.init(view: View(image: #imageLiteral(resourceName: "rock")))
+        super.init(view: View(image: #imageLiteral(resourceName: "enemy-1")))
     }
     
     override func config(position: CGPoint, parent: SKNode) {
@@ -39,15 +46,30 @@ class EnemyController : SingleControler {
         }
         
         let delta = time - lastTimeUpdate
-        if (delta > 3) {
-            self.attack()
-            lastTimeUpdate = time
-            print("Attack")
+        
+        switch self.enemyState {
+        case EnemyState.NORMAL:
+            if delta > 1 {
+                self.enemyState = EnemyState.ATTACKING
+                self.lastTimeUpdate = time
+                self.attackTime = 0
+            }
+            break
+        case EnemyState.ATTACKING:
+            if (delta > 0.2) {
+                self.attack()
+                attackTime += 1
+                lastTimeUpdate = time
+                if (attackTime > 3) {
+                    self.enemyState = EnemyState.NORMAL
+                }
+            }
+            break
         }
     }
     
     func attack() -> Void {
-        let waveController = WaveController()
+        let waveController = WaveController.createWaveLeft()
         waveController.config(position: self.position, parent: self.parent)
     }
     

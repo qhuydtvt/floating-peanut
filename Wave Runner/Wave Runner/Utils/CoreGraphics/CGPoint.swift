@@ -17,6 +17,10 @@ extension CGPoint {
         return CGPoint(x: self.x + dx, y: self.y + dy)
     }
     
+    func add(other: CGPoint) -> CGPoint {
+        return CGPoint(x: self.x + other.x, y: self.y + other.y)
+    }
+    
     func subtract(other: CGPoint) -> CGVector {
         return CGVector(dx: self.x - other.x, dy: self.y - other.y)
     }
@@ -43,6 +47,10 @@ extension CGPoint {
     
     func from(vector: CGVector) -> CGPoint {
         return CGPoint(x: vector.dx, y: vector.dy)
+    }
+    
+    func multiply(factor: CGFloat) -> CGPoint {
+        return CGPoint(x: self.x * factor, y: self.y * factor)
     }
 }
 

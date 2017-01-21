@@ -13,15 +13,27 @@ class WaveController: SingleControler {
     
     var lastTimeUpdate : Double = -1
     
-    init() {
-        super.init(view: View(image: #imageLiteral(resourceName: "wave_left")))
+    var speed : CGFloat!
+    
+    var lifeTime: TimeInterval!
+    
+//    init() {
+//        super.init(view: View(image: #imageLiteral(resourceName: "arc_left")))
+//    }
+    
+    init(view aView: View, speed: CGFloat, lifeTime: TimeInterval) {
+        super.init(view: aView)
+        self.speed = speed
+        self.lifeTime = lifeTime
     }
+    //-(Speed.ENEMY_VELOCITY * 1.5)
     
     override func config(position: CGPoint, parent: SKNode) {
         self.view.physicsBody = SKPhysicsBody(rectangleOf: self.view.size)
         self.view.physicsBody?.collisionBitMask = 0
         self.view.physicsBody?.affectedByGravity = false
-        self.view.physicsBody?.velocity = CGVector(dx: -(Speed.ENEMY_VELOCITY), dy: 0)
+        self.view.physicsBody?.linearDamping = 0
+        self.view.physicsBody?.velocity = CGVector(dx: speed, dy: 0)
         
         view.anchorPoint = CGPoint(x: 1, y: 0.5)
         
@@ -31,12 +43,21 @@ class WaveController: SingleControler {
         self.view.xScale = 0.1
         self.view.yScale = 0.1
         super.config(position: position, parent: parent)
-        self.view.run(.sequence([.scaleX(to: 1, y: 1, duration: 2), .removeFromParent()]))
+        
+        self.view.run(.sequence([.scaleX(to: CGFloat(lifeTime / Double(3)), y: CGFloat(lifeTime / Double(3)), duration: lifeTime), .removeFromParent()]))
     }
     
     override func run(parent: SKNode, time: TimeInterval) {
         if lastTimeUpdate == -1 {
             lastTimeUpdate = time
         }
+    }
+    
+    static func createWaveLeft() -> WaveController {
+        return WaveController(view: View(image: #imageLiteral(resourceName: "arc_left")), speed: -(Speed.ENEMY_VELOCITY * 1.5), lifeTime: 3)
+    }
+    
+    static func createWaveRight() -> WaveController {
+        return WaveController(view: View(image: #imageLiteral(resourceName: "arc_right")), speed: (Speed.ENEMY_VELOCITY * 1.5), lifeTime: 0.5)
     }
 }

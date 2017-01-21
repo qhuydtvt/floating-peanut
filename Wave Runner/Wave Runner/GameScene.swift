@@ -16,6 +16,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var enemyManager : EnemyControllerManager!
     var playerController: PlayerController!
     var backgroundSoundController: BackgroundSoundController!
+    var labelsController: LabelsController!
     
     override func didMove(to view: SKView) {
         configPhysics()
@@ -31,6 +32,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         let (groundPosition, midAirPosition, highAirPosition) = platformController.startingPositions
         enemyManager.configStartingPositions(groundPosition: groundPosition, midAirPosition: midAirPosition, highAirPosition: highAirPosition)
+        
+        configLabels()
+    }
+    
+    func configLabels() {
+        self.labelsController = LabelsController(scene: self)
+        LabelsController.shared = labelsController
+        labelsController.addLabels()
     }
     
     func configGesture() {

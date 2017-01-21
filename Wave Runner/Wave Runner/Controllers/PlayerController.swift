@@ -22,8 +22,9 @@ class PlayerController: SingleControler {
     var attacking : Bool = false
     
     var attackAnimation = SKTextureAtlas(named: "goku_attack").toTextures()
-    var laserAnimation = SKTextureAtlas(named: "goku_laser").toTextures()
+    var laserStraightAnimation = SKTextureAtlas(named: "goku_laser_straight").toTextures()
     var lightNode: SKLightNode!
+    var laserUpwardAnimation = SKTextureAtlas(named: "goku_laser_upward").toTextures()
     
     init() {
         super.init(view: View())
@@ -61,12 +62,28 @@ class PlayerController: SingleControler {
                 self.attacking = false
             }
             self.player.run(.sequence([animateAction, endAttack]))
-//            self.scan()
+            //            self.scan()
         }
     }
+    
+    func fireUpwardLaser() {
+        var anim = laserUpwardAnimation
+        anim.append(SKTexture(image: #imageLiteral(resourceName: "goku_standing")))
+        
+        let animateAction = SKAction.animate(with: anim, timePerFrame: 0.1, resize: true, restore: false)
+        let shootAction = SKAction.run { [unowned self] in
+            let laser = LaserController(type: .upward)
+            laser.config(position: CGPoint(x: laser.laser.width/2.5 + self.player.width/3, y: laser.laser.width / 3.5), parent: self.player)
+            laser.move(speed: 1200)
+        }
+        let delay = SKAction.wait(forDuration: 0.2)
+        let sequence = SKAction.sequence([delay, shootAction])
+        player.run(.group([animateAction, sequence]))
+    }
+    
     @objc
-    func fireLaser() {
-        var anim = laserAnimation
+    func fireStraightLaser() {
+        var anim = laserStraightAnimation
         anim.append(SKTexture(image: #imageLiteral(resourceName: "goku_standing")))
         
         let animateAction = SKAction.animate(with: anim, timePerFrame: 0.1, resize: true, restore: false)
@@ -82,26 +99,30 @@ class PlayerController: SingleControler {
     
     func attack(attackType: AttackType) -> Void {
         if !attacking {
-            var anim = attackAnimation
-            anim.append(player.texture!)
-            attacking = true
-            let animateAction = SKAction.animate(with: anim, timePerFrame: 0.15, resize: true, restore: false)
-            let endAttack = SKAction.run {
-                self.attacking = false
-            }
-            
-            self.player.run(.sequence([animateAction, endAttack]))
             switch attackType {
             case AttackType.SONIC:
-                for _ in 0..<2 {
-                    self.scan(angle: CGFloat(M_PI_4 / 2))
-                    self.scan(angle: 0)
-                    self.scan(angle: -CGFloat(M_PI_4 / 2))
-                }
-                break
+                sonicAttack()
+            case AttackType.LAZER: break
             default:
                 break
             }
+        }
+    }
+    
+    func sonicAttack() {
+        var anim = attackAnimation
+        anim.append(SKTexture(image: #imageLiteral(resourceName: "goku_standing")))
+        attacking = true
+        let animateAction = SKAction.animate(with: anim, timePerFrame: 0.15, resize: true, restore: false)
+        let endAttack = SKAction.run {
+            self.attacking = false
+        }
+        
+        self.player.run(.sequence([animateAction, endAttack]))
+        for _ in 0..<2 {
+            self.scan(angle: CGFloat(M_PI_4 / 2))
+            self.scan(angle: 0)
+            self.scan(angle: -CGFloat(M_PI_4 / 2))
         }
     }
     

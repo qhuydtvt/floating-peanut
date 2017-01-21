@@ -30,7 +30,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func configGesture() {
-        let gesture = UISwipeGestureRecognizer(target: playerController, action: #selector(PlayerController.fireLaser))
+        let gesture = UISwipeGestureRecognizer(target: playerController, action: #selector(PlayerController.fireStraightLaser))
         gesture.direction = .right
         view?.addGestureRecognizer(gesture)
     }
@@ -105,6 +105,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        GestureController.shared.touchesEnded(at: touches.first!.location(in: self.view!))
+        if GestureController.shared.touchesEnded(at: touches.first!.location(in: self.view!)) == "laser_upward" {
+            playerController.fireUpwardLaser()
+        }
     }
 }

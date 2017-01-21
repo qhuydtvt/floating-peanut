@@ -28,6 +28,10 @@ class LaserController: SingleControler {
         view.addChild(cropNode)
         
         laser.position = CGPoint(x: -laser.width, y: 0)
+        
+        if type == .upward {
+            view.zRotation = view.zRotation + CGFloat.pi / 6
+        }
     }
     
     override func config(position: CGPoint, parent: SKNode) {

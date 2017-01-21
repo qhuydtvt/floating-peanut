@@ -14,6 +14,11 @@ class EnemyControllerManager: Controller {
     let enemyGenerator: EnemyControllerGenerator
     var enemies : [EnemyController]
     
+    var groundPosition: CGPoint!
+    var midAirPosition: CGPoint!
+    var highAirPosition: CGPoint!
+    
+    
     init(enemyGenerator: EnemyControllerGenerator) {
         self.enemyGenerator = enemyGenerator
         enemies = []
@@ -23,10 +28,23 @@ class EnemyControllerManager: Controller {
         
     }
     
+    func configStartingPositions(groundPosition: CGPoint, midAirPosition: CGPoint, highAirPosition: CGPoint) -> Void {
+        self.groundPosition = groundPosition
+        self.midAirPosition = midAirPosition
+        self.highAirPosition = highAirPosition
+    }
+    
     override func run(parent: SKNode, time: TimeInterval) {
-        if let enemyController = enemyGenerator.generate(time: time) {
-            let enemyPosition = CGPoint(x: parent.frame.size.width, y: parent.frame.size.height / 2 + 20)
-            enemyController.config(position: enemyPosition, parent: parent)
+        let (enemyControllerOpt, type) = enemyGenerator.generate(time: time)
+        if let enemyController = enemyControllerOpt {
+            if (type == 1) {
+                enemyController.config(position: self.midAirPosition, parent: parent)
+            } else if(type == 3) {
+                enemyController.config(position: self.highAirPosition.add(dx: 0, dy: -enemyController.size.height), parent: parent)
+            } else if (type == 4) {
+                enemyController.config(position: self.groundPosition.add(dx: 0, dy: enemyController.size.height), parent: parent)
+            }
+            
             enemies.append(enemyController)
         }
         

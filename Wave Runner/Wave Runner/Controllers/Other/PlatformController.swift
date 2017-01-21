@@ -27,9 +27,18 @@ class PlatformController: Controller {
         platform2.lightingBitMask = 1
     }
     
+    var startingPositions : (CGPoint, CGPoint, CGPoint) {
+        let activeZoneHeight = self.parent.frame.height - self.platform1.size.height
+        let groundPoint = CGPoint(x: self.parent.frame.size.width, y: self.platform1.frame.size.height)
+        let midAirPoint = CGPoint(x: self.parent.frame.size.width, y: self.platform1.frame.size.height + activeZoneHeight / 2)
+        let highAirPoint = CGPoint(x: self.parent.frame.size.width, y: self.parent.frame.size.height)
+        return (groundPoint, midAirPoint, highAirPoint)
+    }
+    
     override func config(position: CGPoint, parent: SKNode) -> Void {
-        platform1.size.height = parent.frame.height / 3
-        platform2.size.height = parent.frame.height / 3
+        super.config(position: position, parent: parent)
+        platform1.size.height = parent.frame.height / PLATFORM_SCALE
+        platform2.size.height = parent.frame.height / PLATFORM_SCALE
         
         platform1.physicsBody = SKPhysicsBody(rectangleOf: platform1.size)
         platform1.physicsBody?.affectedByGravity = false

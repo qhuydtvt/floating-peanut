@@ -28,6 +28,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         configPlayer()
         configGesture()
+        
+        let (groundPosition, midAirPosition, highAirPosition) = platformController.startingPositions
+        enemyManager.configStartingPositions(groundPosition: groundPosition, midAirPosition: midAirPosition, highAirPosition: highAirPosition)
     }
     
     func configGesture() {

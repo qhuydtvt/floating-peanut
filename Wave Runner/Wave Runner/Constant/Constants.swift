@@ -8,9 +8,9 @@
 
 import SpriteKit
 
-let PLAYER_SCALE : CGFloat = 3
-
-let PLAYER_ANIMATION_TIME_FER_FRAME : Double = 0.15
+let PLAYER_SCALE : CGFloat                      = 3
+let PLATFORM_SCALE : CGFloat                    = 3
+let PLAYER_ANIMATION_TIME_FER_FRAME : Double    = 0.15
 
 struct Masks {
     static let PLAYER          =   UInt32(1 << 0)

@@ -23,6 +23,7 @@ class EnemyController : SingleControler {
     init(textures: [SKTexture]) {
         super.init(view: View(texture: textures[0]))
         self.textures = textures
+        view.lightingBitMask = 1
     }
     
     override func config(position: CGPoint, parent: SKNode) {

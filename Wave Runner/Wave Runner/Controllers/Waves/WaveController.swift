@@ -71,6 +71,6 @@ class WaveController: SingleControler {
 //    }
     
     static func create(angle: CGFloat) -> WaveController {
-        return WaveController(view: View(texture: Textures.arc), speed: (Speed.ENEMY_VELOCITY * 2), lifeTime: 1.5, angle: angle)
+        return WaveController(view: View(texture: Textures.arc), speed: (Speed.ENEMY_VELOCITY * 2), lifeTime: 2, angle: angle)
     }
 }

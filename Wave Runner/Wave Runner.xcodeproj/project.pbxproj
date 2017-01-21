@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		182595471E33010300481B37 /* BackgroundSoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182595461E33010300481B37 /* BackgroundSoundController.swift */; };
 		30106198D306146C017C546F /* Pods_Wave_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 558FE0BD98FE42AEB7C5C6C7 /* Pods_Wave_Runner.framework */; };
 		500C0E1C1E325B5800FCF079 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E1B1E325B5800FCF079 /* AppDelegate.swift */; };
 		500C0E1E1E325B5800FCF079 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 500C0E1D1E325B5800FCF079 /* GameScene.sks */; };
@@ -55,6 +56,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		182595461E33010300481B37 /* BackgroundSoundController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundSoundController.swift; sourceTree = "<group>"; };
 		500C0E181E325B5800FCF079 /* Wave Runner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wave Runner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		500C0E1B1E325B5800FCF079 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		500C0E1D1E325B5800FCF079 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				50B24C6F1E333E52008CBE19 /* LaserController.swift */,
 				5066E8661E32CF5F009771B6 /* SingleController.swift */,
 				5066E8671E32CF5F009771B6 /* Waves */,
+				182595461E33010300481B37 /* BackgroundSoundController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 				50B24C701E333E52008CBE19 /* LaserController.swift in Sources */,
 				500C0E591E326BBE00FCF079 /* SKTextureAtlas.swift in Sources */,
 				500C0E581E326BBE00FCF079 /* SKSpriteNode.swift in Sources */,
+				182595471E33010300481B37 /* BackgroundSoundController.swift in Sources */,
 				500C0E631E326BBE00FCF079 /* UIImageView.swift in Sources */,
 				5066E8711E32CF5F009771B6 /* Controller.swift in Sources */,
 				5066E8761E32CF5F009771B6 /* PlatformController.swift in Sources */,

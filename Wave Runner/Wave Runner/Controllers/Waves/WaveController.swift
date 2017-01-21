@@ -17,23 +17,30 @@ class WaveController: SingleControler {
     
     var lifeTime: TimeInterval!
     
+    var angle : CGFloat = 0
+    
 //    init() {
 //        super.init(view: View(image: #imageLiteral(resourceName: "arc_left")))
 //    }
     
-    init(view aView: View, speed: CGFloat, lifeTime: TimeInterval) {
+    init(view aView: View, speed: CGFloat, lifeTime: TimeInterval, angle: CGFloat) {
         super.init(view: aView)
         self.speed = speed
         self.lifeTime = lifeTime
+        self.angle = angle
     }
     //-(Speed.ENEMY_VELOCITY * 1.5)
     
     override func config(position: CGPoint, parent: SKNode) {
         self.view.physicsBody = SKPhysicsBody(rectangleOf: self.view.size)
         self.view.physicsBody?.collisionBitMask = 0
+        self.view.physicsBody?.categoryBitMask = Masks.PLAYER_WAVE
+        self.view.physicsBody?.contactTestBitMask = Masks.ENEMY
         self.view.physicsBody?.affectedByGravity = false
         self.view.physicsBody?.linearDamping = 0
-        self.view.physicsBody?.velocity = CGVector(dx: speed, dy: 0)
+        
+        self.view.zRotation = CGFloat(angle)
+        self.view.physicsBody?.velocity = CGVector(dx: speed * cos(angle), dy: speed * sin(angle))
         
         view.anchorPoint = CGPoint(x: 1, y: 0.5)
         
@@ -44,7 +51,12 @@ class WaveController: SingleControler {
         self.view.yScale = 0.1
         super.config(position: position, parent: parent)
         
-        self.view.run(.sequence([.scaleX(to: CGFloat(lifeTime / Double(3)), y: CGFloat(lifeTime / Double(3)), duration: lifeTime), .removeFromParent()]))
+        self.view.run(.sequence([.scaleX(to: CGFloat(lifeTime / Double(4)), y: CGFloat(lifeTime / Double(4)), duration: lifeTime), .removeFromParent()]))
+        
+        self.view.handleContact = {
+            other in
+            print(">>WaveController: Contacted")
+        }
     }
     
     override func run(parent: SKNode, time: TimeInterval) {
@@ -53,11 +65,11 @@ class WaveController: SingleControler {
         }
     }
     
-    static func createWaveLeft() -> WaveController {
-        return WaveController(view: View(image: #imageLiteral(resourceName: "arc_left")), speed: -(Speed.ENEMY_VELOCITY * 1.5), lifeTime: 3)
-    }
+//    static func createWaveLeft() -> WaveController {
+//        return WaveController(view: View(image: #imageLiteral(resourceName: "arc_left")), speed: -(Speed.ENEMY_VELOCITY * 1.5), lifeTime: 3)
+//    }
     
-    static func createWaveRight() -> WaveController {
-        return WaveController(view: View(image: #imageLiteral(resourceName: "arc_right")), speed: (Speed.ENEMY_VELOCITY * 1.5), lifeTime: 0.5)
+    static func create(angle: CGFloat) -> WaveController {
+        return WaveController(view: View(image: #imageLiteral(resourceName: "arc_right")), speed: (Speed.ENEMY_VELOCITY * 2), lifeTime: 1.5, angle: angle)
     }
 }

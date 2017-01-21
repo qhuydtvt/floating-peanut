@@ -9,14 +9,19 @@
 import Foundation
 import SpriteKit
 
+enum AttackType {
+    case SONIC
+    case LAZER
+    case PUSH
+    case PULL
+}
+
 class PlayerController: SingleControler {
     var player: View!
     var board: SKSpriteNode!
     var attacking : Bool = false
-    var lightNode: SKLightNode!
     
     var attackAnimation = SKTextureAtlas(named: "goku_attack").toTextures()
-    var laserAnimation = SKTextureAtlas(named: "goku_laser").toTextures()
     
     init() {
         super.init(view: View())
@@ -34,58 +39,57 @@ class PlayerController: SingleControler {
         player.physicsBody?.categoryBitMask = Masks.PLAYER
         player.physicsBody?.collisionBitMask = 0
         
-        lightNode = SKLightNode()
-        lightNode.categoryBitMask = 1
-        lightNode.falloff = 4
-        player.addChild(lightNode)
     }
     
     override func config(position: CGPoint, parent: SKNode) {
         super.config(position: position, parent: parent)
-        
-        player.run(.repeatForever(.sequence([.run({
-            self.fireLaser()
-        }), SKAction.wait(forDuration: 3)])))
     }
     
-    func fireLaser() {
-        var anim = laserAnimation
-        anim.append(SKTexture(image: #imageLiteral(resourceName: "goku_standing")))
-        
-        let animateAction = SKAction.animate(with: anim, timePerFrame: 0.1, resize: true, restore: false)
-        let shootAction = SKAction.run { [unowned self] in
-            let laser = LaserController(type: .straight)
-            laser.config(position: CGPoint(x: laser.laser.width/2 + self.player.width*3/4, y: 0), parent: self.player)
-            laser.move(speed: 1200)
+    func attack() {
+        if !attacking {
+            var anim = attackAnimation
+            anim.append(player.texture!)
+            attacking = true
+            let animateAction = SKAction.animate(with: anim, timePerFrame: PLAYER_ANIMATION_TIME_FER_FRAME, resize: true, restore: false)
+            let endAttack = SKAction.run {
+                self.attacking = false
+            }
+            self.player.run(.sequence([animateAction, endAttack]))
+//            self.scan()
         }
-        let delay = SKAction.wait(forDuration: 0.2)
-        let sequence = SKAction.sequence([delay, shootAction])
+    }
+    
+    func attack(attackType: AttackType) -> Void {
+        if !attacking {
+            var anim = attackAnimation
+            anim.append(player.texture!)
+            attacking = true
+            let animateAction = SKAction.animate(with: anim, timePerFrame: 0.15, resize: true, restore: false)
+            let endAttack = SKAction.run {
+                self.attacking = false
+            }
             
-        player.run(.group([animateAction, sequence]))
-    }
-
-
-func attack() {
-    if !attacking {
-        var anim = attackAnimation
-        anim.append(player.texture!)
-        attacking = true
-        let animateAction = SKAction.animate(with: anim, timePerFrame: 0.15, resize: true, restore: false)
-        let endAttack = SKAction.run {
-            self.attacking = false
+            self.player.run(.sequence([animateAction, endAttack]))
+            switch attackType {
+            case AttackType.SONIC:
+                for _ in 0..<2 {
+                    self.scan(angle: CGFloat(M_PI_4 / 2))
+                    self.scan(angle: 0)
+                    self.scan(angle: -CGFloat(M_PI_4 / 2))
+                }
+                break
+            default:
+                break
+            }
         }
-        self.player.run(.sequence([animateAction, endAttack]))
-        self.kame()
-    }
-}
-
-
-func kame() -> Void {
-    let kameAction = SKAction.run{
-        let waveController = WaveController.createWaveRight()
-        waveController.config(position: self.view.position.add(other: self.player.position.multiply(factor: PLAYER_SCALE)), parent: self.parent)
     }
     
-    self.view.run(.repeat(.sequence([kameAction, .wait(forDuration: 0.1)]), count: 3))
-}
+    func scan(angle: CGFloat) -> Void {
+        let kameAction = SKAction.run{
+            let waveController = WaveController.create(angle: angle)
+            waveController.config(position: self.view.position.add(other: self.player.position.multiply(factor: PLAYER_SCALE)), parent: self.parent)
+        }
+        
+        self.view.run(.repeat(.sequence([kameAction, .wait(forDuration: 0.1)]), count: 3))
+    }
 }

@@ -15,11 +15,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var platformController: PlatformController!
     var enemyManager : EnemyControllerManager!
     var playerController: PlayerController!
+    var backgroundSoundController: BackgroundSoundController!
     
     override func didMove(to view: SKView) {
         configPhysics()
         configBackground()
         configPlatform()
+        configSound()
         
         enemyManager = EnemyControllerManager(enemyGenerator: EnemyControllerGenerator(jsonFile: "stage1"))
         
@@ -39,6 +41,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func configBackground() -> Void {
         self.backgroundController = BackgroundController()
         self.backgroundController.config(position: .zero, parent: self)
+    }
+    
+    func configSound() {
+        self.backgroundSoundController = BackgroundSoundController()
+        self.backgroundSoundController.config(position: .zero, parent: self)
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -82,7 +89,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        playerController.attack()
+        playerController.attack(attackType: AttackType.SONIC)
         GestureController.shared.touchesBegan(at: touches.first!.location(in: self.view!))
     }
     
@@ -91,16 +98,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let skill = GestureController.shared.touchesEnded(at: touches.first!.location(in: self.view!)){
-            if skill == "sound" {
-                playerController.attack()
-            }
-            if skill == "push" {
-                playerController.view.run(.move(by: CGVector(dx:0,dy:100), duration: 0.5))
-            }
-            if skill == "pull" {
-                playerController.view.run(.move(by: CGVector(dx:0,dy:-100), duration: 0.5))
-            }
-        }
+        GestureController.shared.touchesEnded(at: touches.first!.location(in: self.view!))
     }
 }

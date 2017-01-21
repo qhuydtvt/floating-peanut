@@ -47,11 +47,11 @@ class SonicWallController : SingleControler {
         self.view.physicsBody?.categoryBitMask = Masks.ENEMY_SONIC
         self.view.physicsBody?.contactTestBitMask = Masks.PLAYER_SONIC
         
-        self.view.handleContact = {
+        self.view.handleContact = { [unowned view = self.view] 
             other in
             print("XXX")
             other.destroy?()
-            self.view.contacted = false
+            view.contacted = false
         }
     }
 }

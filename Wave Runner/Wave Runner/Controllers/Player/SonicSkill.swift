@@ -12,7 +12,7 @@ import SpriteKit
 class SonicSkill {
     var coolDownTime: Double = CoolDown.SONIC
     var isCoolingDown = false
-    lazy var playerController = PlayerController.instance
+    weak var playerController: PlayerController!
     
     func createWaves() {
         guard isCoolingDown == false else { return }

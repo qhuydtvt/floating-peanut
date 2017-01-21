@@ -39,10 +39,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func claimVictory() -> Void {
         print("Victory")
+        VictoryScene.present(with: view!)
     }
     
     func defeat() -> Void {
         print("Defeated")
+        GameOverScene.present(with: view!)
     }
     
     func configLabels() {
@@ -83,7 +85,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func configPlayer() {
-        self.playerController = PlayerController.instance
+        self.playerController = PlayerController()
+        PlayerController.instance = playerController
         playerController.config(position: CGPoint(x: 175, y: platformController.platform1.height + playerController.board.height * 1.5), parent: self)
         playerController.didDestroy = self.defeat
     }
@@ -141,5 +144,24 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func configPhysics() -> Void {
         self.physicsWorld.gravity = .zero
         self.physicsWorld.contactDelegate = self
+    }
+    
+    static func present(with view: SKView) {
+        let scene = SKScene(fileNamed: "GameScene")!
+        // Set the scale mode to scale to fit the window
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            let width = scene.size.width
+            let height = width * 9 / 16
+            scene.size = CGSize(width: width, height: height)
+        }
+        
+        scene.scaleMode = .aspectFill
+        
+        // Present the scene
+        view.presentScene(scene)
+    }
+    
+    deinit {
+        print("GameScene deinit")
     }
 }

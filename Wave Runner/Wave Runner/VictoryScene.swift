@@ -32,7 +32,7 @@ class VictoryScene: SKScene {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let location = touches.first!.location(in: self)
         if nodes(at: location).contains(replayLabel) {
-            // new game
+            GameScene.present(with: view!)
         }
     }
     

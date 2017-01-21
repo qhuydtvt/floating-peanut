@@ -30,6 +30,10 @@ class PlayerController: SingleControler {
     
     static let instance = PlayerController()
     
+    var center : CGPoint {
+        return self.view.position.add(other: self.player.position.multiply(factor: PLAYER_SCALE))
+    }
+    
     private init() {
         super.init(view: View())
         self.player = View(image: #imageLiteral(resourceName: "goku_standing"))

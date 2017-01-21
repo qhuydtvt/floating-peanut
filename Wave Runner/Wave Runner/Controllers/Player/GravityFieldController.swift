@@ -40,7 +40,7 @@ class GravityFieldController {
         
         for enemy in EnemyControllerManager.shared.enemies {
             enemy.view.physicsBody?.velocity = .zero
-            let constraint = SKConstraint.positionX(SKRange(lowerLimit: position.x-20, upperLimit: .infinity))
+            let constraint = SKConstraint.positionX(SKRange(lowerLimit: position.x-20, upperLimit: .infinity), y: SKRange(lowerLimit: position.y - 300, upperLimit: position.y + 300))
             enemy.view.constraints = [constraint]
         }
         
@@ -53,5 +53,8 @@ class GravityFieldController {
     
     func removeField() {
         gravityNode.removeFromParent()
+        for enemy in EnemyControllerManager.shared.enemies {
+            enemy.view.constraints?.removeAll()
+        }
     }
 }

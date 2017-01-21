@@ -292,12 +292,8 @@
 		5066E85C1E32CF5F009771B6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-
 				182595481E3365EC00481B37 /* EnemyMissles */,
-
 				504B965E1E3384AF000110C2 /* Other */,
-
-
 				5066E85F1E32CF5F009771B6 /* Enemies */,
 				504B96571E33848B000110C2 /* Player */,
 				5066E8671E32CF5F009771B6 /* Waves */,
@@ -400,7 +396,7 @@
 				TargetAttributes = {
 					500C0E171E325B5700FCF079 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 3CJF6M3857;
+						DevelopmentTeam = Z3TDYH9DM8;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -660,11 +656,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 3CJF6M3857;
+				DEVELOPMENT_TEAM = Z3TDYH9DM8;
 				INFOPLIST_FILE = "Wave Runner/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "vn.techkids.Wave-Runner";
+				PRODUCT_BUNDLE_IDENTIFIER = "duyanh2912.Wave-Runner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -676,11 +672,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 3CJF6M3857;
+				DEVELOPMENT_TEAM = Z3TDYH9DM8;
 				INFOPLIST_FILE = "Wave Runner/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "vn.techkids.Wave-Runner";
+				PRODUCT_BUNDLE_IDENTIFIER = "duyanh2912.Wave-Runner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

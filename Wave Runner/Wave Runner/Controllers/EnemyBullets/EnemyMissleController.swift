@@ -26,5 +26,6 @@ class EnemyMissleController: SingleControler {
         if !self.moveTowards(destination: PlayerController.instance.center, speed: 20) {
             self.destroy()
         }
+        view.zPosition = 5
     }
 }

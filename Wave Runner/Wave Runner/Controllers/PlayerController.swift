@@ -27,7 +27,6 @@ class PlayerController: SingleControler {
     var laserUpwardAnimation = SKTextureAtlas(named: "goku_laser_upward").toTextures()
     
     let gravity = GravityFieldController()
-    
     static let instance = PlayerController()
     
     private init() {
@@ -112,6 +111,14 @@ class PlayerController: SingleControler {
             default:
                 break
             }
+        }
+    }
+    
+    @objc
+    func pushEnemies() {
+        gravity.gravityNode.removeFromParent()
+        for enemy in EnemyControllerManager.shared.enemies {
+            enemy.view.physicsBody?.velocity = CGVector(dx: 1200, dy: 0)
         }
     }
     

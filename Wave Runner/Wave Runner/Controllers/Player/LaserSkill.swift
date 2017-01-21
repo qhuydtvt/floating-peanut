@@ -19,7 +19,7 @@ class LaserSkill {
         var anim = Textures.laserUpwardAnimation
         anim.append(SKTexture(image: #imageLiteral(resourceName: "goku_standing")))
         
-        let animateAction = SKAction.animate(with: anim, timePerFrame: 0.1, resize: true, restore: false)
+        let animateAction = SKAction.animate(with: anim, timePerFrame: 0.05, resize: true, restore: false)
         let shootAction = SKAction.run { [unowned self] in
             let laser = LaserController()
             laser.config(position: .zero, parent: self.playerController.player)

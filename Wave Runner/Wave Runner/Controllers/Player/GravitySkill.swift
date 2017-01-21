@@ -26,15 +26,17 @@ class GravitySkill {
     func config(position: CGPoint, parent: SKNode) {
         gravityNode.position = position
         self.parent = parent
+        
+        let emitter = SKEmitterNode(fileNamed: "GravityEmmiter")!
+        gravityNode.addChild(emitter)
         parent.addChild(gravityNode)
-        //        gravityNode.region = SKRegion(radius: 400)
     }
     
     func createField() {
         guard !isCoolingDown else { return }
         if self.gravityNode.parent != nil { gravityNode.removeFromParent() }
         
-        let position = playerController.view.position.add(other: playerController.player.position.multiply(factor: 3)).add(dx: 150, dy: 0)
+        let position = playerController.view.position.add(other: playerController.player.position.multiply(factor: 3)).add(dx: 300, dy: 0)
         self.config(position: position, parent: playerController.parent)
         
         for enemy in EnemyControllerManager.shared.enemies {

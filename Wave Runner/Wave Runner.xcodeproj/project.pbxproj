@@ -10,7 +10,6 @@
 		1825954A1E33660800481B37 /* EnemyMissleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182595491E33660800481B37 /* EnemyMissleController.swift */; };
 		182595591E3380CC00481B37 /* missle_trail.sks in Resources */ = {isa = PBXBuildFile; fileRef = 182595581E3380CC00481B37 /* missle_trail.sks */; };
 		18B12BED1E33A84A007721FB /* enemy_explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 18B12BEB1E33A84A007721FB /* enemy_explosion.sks */; };
-		18B12BEE1E33A84A007721FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B12BEC1E33A84A007721FB /* Assets.xcassets */; };
 		18B12BF01E33AADE007721FB /* ExplosionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B12BEF1E33AADE007721FB /* ExplosionController.swift */; };
 		30106198D306146C017C546F /* Pods_Wave_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 558FE0BD98FE42AEB7C5C6C7 /* Pods_Wave_Runner.framework */; };
 		500C0E1C1E325B5800FCF079 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E1B1E325B5800FCF079 /* AppDelegate.swift */; };
@@ -62,13 +61,13 @@
 		5066E87E1E32CF75009771B6 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066E87D1E32CF75009771B6 /* View.swift */; };
 		5066E8A01E32E06E009771B6 /* Gestures.json in Resources */ = {isa = PBXBuildFile; fileRef = 5066E89F1E32E06E009771B6 /* Gestures.json */; };
 		5066E8A21E32E206009771B6 /* SwiftUnistroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066E8A11E32E206009771B6 /* SwiftUnistroke.swift */; };
+		5075C6B31E33D37E00B5B3B5 /* GravityEmmiter.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5075C6B11E33D37E00B5B3B5 /* GravityEmmiter.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		182595491E33660800481B37 /* EnemyMissleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnemyMissleController.swift; path = EnemyBullets/EnemyMissleController.swift; sourceTree = "<group>"; };
 		182595581E3380CC00481B37 /* missle_trail.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = missle_trail.sks; sourceTree = "<group>"; };
 		18B12BEB1E33A84A007721FB /* enemy_explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = enemy_explosion.sks; path = Emitters/enemy_explosion.sks; sourceTree = "<group>"; };
-		18B12BEC1E33A84A007721FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Emitters/Assets.xcassets; sourceTree = "<group>"; };
 		18B12BEF1E33AADE007721FB /* ExplosionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplosionController.swift; sourceTree = "<group>"; };
 		500C0E181E325B5800FCF079 /* Wave Runner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wave Runner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		500C0E1B1E325B5800FCF079 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +121,7 @@
 		5066E87D1E32CF75009771B6 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		5066E89F1E32E06E009771B6 /* Gestures.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Gestures.json; sourceTree = "<group>"; };
 		5066E8A11E32E206009771B6 /* SwiftUnistroke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUnistroke.swift; sourceTree = "<group>"; };
+		5075C6B11E33D37E00B5B3B5 /* GravityEmmiter.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GravityEmmiter.sks; sourceTree = "<group>"; };
 		558FE0BD98FE42AEB7C5C6C7 /* Pods_Wave_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wave_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		972D3FC7CC34502E45407B4F /* Pods-Wave Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wave Runner.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wave Runner/Pods-Wave Runner.release.xcconfig"; sourceTree = "<group>"; };
 		A262C3DE2D62DC763A39A564 /* Pods-Wave Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wave Runner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wave Runner/Pods-Wave Runner.debug.xcconfig"; sourceTree = "<group>"; };
@@ -195,7 +195,6 @@
 				500C0E2A1E325B5800FCF079 /* LaunchScreen.storyboard */,
 				500C0E2D1E325B5800FCF079 /* Info.plist */,
 				500C0E331E326BBD00FCF079 /* Utils */,
-				18B12BEC1E33A84A007721FB /* Assets.xcassets */,
 			);
 			path = "Wave Runner";
 			sourceTree = "<group>";
@@ -272,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				504B966D1E338B46000110C2 /* GravitySkill.swift */,
+				5075C6B11E33D37E00B5B3B5 /* GravityEmmiter.sks */,
 				504B96591E33848B000110C2 /* LaserSkill.swift */,
 				504B966B1E338A3C000110C2 /* SonicSkill.swift */,
 				504B965A1E33848B000110C2 /* PlayerController.swift */,
@@ -440,12 +440,12 @@
 				500C0E1E1E325B5800FCF079 /* GameScene.sks in Resources */,
 				500C0E291E325B5800FCF079 /* Assets.xcassets in Resources */,
 				18B12BED1E33A84A007721FB /* enemy_explosion.sks in Resources */,
-				18B12BEE1E33A84A007721FB /* Assets.xcassets in Resources */,
 				504B96721E33B6F1000110C2 /* gameover.ttf in Resources */,
 				500C0E2C1E325B5800FCF079 /* LaunchScreen.storyboard in Resources */,
 				5066E87C1E32CF5F009771B6 /* background.mp3 in Resources */,
 				5066E8A01E32E06E009771B6 /* Gestures.json in Resources */,
 				5066E87A1E32CF5F009771B6 /* stage1.json in Resources */,
+				5075C6B31E33D37E00B5B3B5 /* GravityEmmiter.sks in Resources */,
 				182595591E3380CC00481B37 /* missle_trail.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -51,7 +51,7 @@ class LabelsController {
         pushLabel.fontSize = fontSize
         pushLabel.horizontalAlignmentMode = .left
         pushLabel.verticalAlignmentMode = .bottom
-        pushLabel.text = "Push"
+        pushLabel.text = "Gravity"
         pushLabel.zPosition = zPosition
         pushLabel.position = CGPoint(x: 8, y: 8)
         gameScene.addChild(pushLabel)

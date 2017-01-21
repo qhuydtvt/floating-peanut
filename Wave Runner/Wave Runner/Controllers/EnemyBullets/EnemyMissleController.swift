@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class EnemyBulletController: SingleControler {
+class EnemyMissleController: SingleControler {
     init() {
         super.init(view: View(image: #imageLiteral(resourceName: "missle_small")))
     }
@@ -19,6 +19,6 @@ class EnemyBulletController: SingleControler {
     
     override func run(parent: SKNode, time: TimeInterval) {
         super.run(parent: parent, time: time)
-        let _ = self.moveTowards(destination: PlayerController.instance.position, speed: 3)
+        let _ = self.moveTowards(destination: PlayerController.instance.position, speed: 30)
     }
 }

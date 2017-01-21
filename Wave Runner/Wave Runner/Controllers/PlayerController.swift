@@ -66,6 +66,7 @@ class PlayerController: SingleControler {
         }
     }
     
+    @objc
     func fireUpwardLaser() {
         var anim = laserUpwardAnimation
         anim.append(SKTexture(image: #imageLiteral(resourceName: "goku_standing")))
@@ -73,7 +74,7 @@ class PlayerController: SingleControler {
         let animateAction = SKAction.animate(with: anim, timePerFrame: 0.1, resize: true, restore: false)
         let shootAction = SKAction.run { [unowned self] in
             let laser = LaserController(type: .upward)
-            laser.config(position: CGPoint(x: laser.laser.width/2.5 + self.player.width/3, y: laser.laser.width / 3.5), parent: self.player)
+            laser.config(position: CGPoint(x: laser.laser.width/2.5 + self.player.width/3, y: laser.laser.width / 4.2), parent: self.player)
             laser.move(speed: 1200)
         }
         let delay = SKAction.wait(forDuration: 0.2)
@@ -109,12 +110,15 @@ class PlayerController: SingleControler {
         }
     }
     
+    @objc
     func sonicAttack() {
+        guard attacking == false else { return }
+        
         var anim = attackAnimation
         anim.append(SKTexture(image: #imageLiteral(resourceName: "goku_standing")))
         attacking = true
         let animateAction = SKAction.animate(with: anim, timePerFrame: 0.15, resize: true, restore: false)
-        let endAttack = SKAction.run {
+        let endAttack = SKAction.run { [unowned self] in
             self.attacking = false
         }
         
@@ -127,7 +131,7 @@ class PlayerController: SingleControler {
     }
     
     func scan(angle: CGFloat) -> Void {
-        let kameAction = SKAction.run{
+        let kameAction = SKAction.run { [unowned self] in
             let waveController = WaveController.create(angle: angle)
             waveController.config(position: self.view.position.add(other: self.player.position.multiply(factor: PLAYER_SCALE)), parent: self.parent)
         }

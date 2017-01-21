@@ -30,9 +30,27 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func configGesture() {
-        let gesture = UISwipeGestureRecognizer(target: playerController, action: #selector(PlayerController.fireStraightLaser))
-        gesture.direction = .right
+        let gesture: UIGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(fireLaser))
         view?.addGestureRecognizer(gesture)
+        
+        let gesture2 = UISwipeGestureRecognizer(target: playerController, action: #selector(PlayerController.sonicAttack))
+        gesture2.direction = .right
+        view?.addGestureRecognizer(gesture2)
+    }
+    
+    func fireLaser(gesture: UIGestureRecognizer) {
+        var destination = gesture.location(in: view!).multiply(factor: self.frame.width / view!.width)
+        destination.y = -destination.y
+        let position = playerController.view.position.add(other: playerController.player.position.multiply(factor: 3))
+        let vector = destination.add(other: position.multiply(factor: -1))
+        if vector.x > 0 {
+            let angle = atan(vector.y / vector.x)
+            if angle >= CGFloat.pi / 12 {
+                playerController.fireUpwardLaser()
+            } else {
+                playerController.fireStraightLaser()
+            }
+        }
     }
     
     func configPlayer() {
@@ -96,7 +114,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        playerController.attack(attackType: AttackType.SONIC)
+//        playerController.attack(attackType: AttackType.SONIC)
         GestureController.shared.touchesBegan(at: touches.first!.location(in: self.view!))
     }
     
@@ -105,8 +123,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if GestureController.shared.touchesEnded(at: touches.first!.location(in: self.view!)) == "laser_upward" {
-            playerController.fireUpwardLaser()
+        if let skill = GestureController.shared.touchesEnded(at: touches.first!.location(in: self.view!)) {
+             if skill == "laser_upward" {
+                playerController.fireUpwardLaser()
+            }
         }
     }
 }

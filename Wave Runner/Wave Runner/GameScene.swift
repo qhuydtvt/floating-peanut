@@ -86,6 +86,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     func fireLaser(gesture: UIGestureRecognizer) {
+        guard view != nil else {
+            return
+        }
         var destination = gesture.location(in: view!).multiply(factor: self.frame.width / view!.width)
         destination.y = self.frame.height - destination.y
         playerController.shootLaser(at: destination)

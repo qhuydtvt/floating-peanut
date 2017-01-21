@@ -41,8 +41,8 @@ class EnemyControllerManager: Controller {
                 enemyController.config(position: self.midAirPosition, parent: parent)
             } else if(type == 3) {
                 enemyController.config(position: self.highAirPosition.add(dx: 0, dy: -enemyController.size.height), parent: parent)
-            } else if (type == 4) {
-                enemyController.config(position: self.groundPosition.add(dx: 0, dy: enemyController.size.height), parent: parent)
+            } else if (type == 2 || type == 4) {
+                enemyController.config(position: self.groundPosition.add(dx: 0, dy: enemyController.size.height / 2), parent: parent)
             }
             
             enemies.append(enemyController)

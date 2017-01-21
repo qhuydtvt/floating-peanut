@@ -45,15 +45,24 @@ class PlayerController: SingleControler {
         
         player.position = CGPoint(x: 10.05, y: 24.5)
         
-        player.physicsBody = SKPhysicsBody(rectangleOf: player.frame.size.scale(by: 0.9))
-        player.physicsBody?.categoryBitMask = Masks.PLAYER
-        player.physicsBody?.collisionBitMask = 0
-        player.physicsBody?.fieldBitMask = 0
-        
         lightNode = SKLightNode()
         lightNode.categoryBitMask = 1
         lightNode.falloff = 4
         player.addChild(lightNode)
+        
+        configPhysics()
+    }
+    
+    func configPhysics() -> Void {
+        player.physicsBody = SKPhysicsBody(rectangleOf: player.frame.size.scale(by: 0.9))
+        player.physicsBody?.categoryBitMask = Masks.PLAYER
+        player.physicsBody?.contactTestBitMask = Masks.ENEMY | Masks.ENEMY_WAVE
+        player.physicsBody?.collisionBitMask = 0
+        player.physicsBody?.fieldBitMask = 0
+        player.handleContact = {
+            other in
+            print("Contacted")
+        }
     }
     
     override func config(position: CGPoint, parent: SKNode) {

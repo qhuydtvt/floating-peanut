@@ -10,9 +10,9 @@ import SpriteKit
 
 class ExplosionController: Controller {
     var explosionNode : SKEmitterNode!
-    override init() {
+    init(fileName: String) {
         super.init()
-        explosionNode = SKEmitterNode(fileNamed: "enemy_explosion.sks")!
+        explosionNode = SKEmitterNode(fileNamed: fileName)!
     }
     
     override func config(position: CGPoint, parent: SKNode) {

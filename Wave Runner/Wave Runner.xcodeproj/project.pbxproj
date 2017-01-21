@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1825954A1E33660800481B37 /* EnemyMissleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182595491E33660800481B37 /* EnemyMissleController.swift */; };
-		182595591E3380CC00481B37 /* missle_trail.sks in Resources */ = {isa = PBXBuildFile; fileRef = 182595581E3380CC00481B37 /* missle_trail.sks */; };
 		18B12BED1E33A84A007721FB /* enemy_explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 18B12BEB1E33A84A007721FB /* enemy_explosion.sks */; };
 		18B12BF01E33AADE007721FB /* ExplosionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B12BEF1E33AADE007721FB /* ExplosionController.swift */; };
+		18B12BF31E33CACF007721FB /* missle_trail.sks in Resources */ = {isa = PBXBuildFile; fileRef = 18B12BF21E33CACF007721FB /* missle_trail.sks */; };
+		18B12BF51E33CAEF007721FB /* missle_explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 18B12BF41E33CAEF007721FB /* missle_explosion.sks */; };
 		30106198D306146C017C546F /* Pods_Wave_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 558FE0BD98FE42AEB7C5C6C7 /* Pods_Wave_Runner.framework */; };
 		500C0E1C1E325B5800FCF079 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E1B1E325B5800FCF079 /* AppDelegate.swift */; };
 		500C0E1E1E325B5800FCF079 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 500C0E1D1E325B5800FCF079 /* GameScene.sks */; };
@@ -66,9 +67,10 @@
 
 /* Begin PBXFileReference section */
 		182595491E33660800481B37 /* EnemyMissleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnemyMissleController.swift; path = EnemyBullets/EnemyMissleController.swift; sourceTree = "<group>"; };
-		182595581E3380CC00481B37 /* missle_trail.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = missle_trail.sks; sourceTree = "<group>"; };
 		18B12BEB1E33A84A007721FB /* enemy_explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = enemy_explosion.sks; path = Emitters/enemy_explosion.sks; sourceTree = "<group>"; };
 		18B12BEF1E33AADE007721FB /* ExplosionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplosionController.swift; sourceTree = "<group>"; };
+		18B12BF21E33CACF007721FB /* missle_trail.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = missle_trail.sks; path = Emitters/missle_trail.sks; sourceTree = "<group>"; };
+		18B12BF41E33CAEF007721FB /* missle_explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = missle_explosion.sks; path = Emitters/missle_explosion.sks; sourceTree = "<group>"; };
 		500C0E181E325B5800FCF079 /* Wave Runner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wave Runner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		500C0E1B1E325B5800FCF079 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		500C0E1D1E325B5800FCF079 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -150,8 +152,9 @@
 		1825954B1E337ECE00481B37 /* Emitters */ = {
 			isa = PBXGroup;
 			children = (
+				18B12BF41E33CAEF007721FB /* missle_explosion.sks */,
+				18B12BF21E33CACF007721FB /* missle_trail.sks */,
 				18B12BEB1E33A84A007721FB /* enemy_explosion.sks */,
-				182595581E3380CC00481B37 /* missle_trail.sks */,
 			);
 			name = Emitters;
 			sourceTree = "<group>";
@@ -440,13 +443,14 @@
 				500C0E1E1E325B5800FCF079 /* GameScene.sks in Resources */,
 				500C0E291E325B5800FCF079 /* Assets.xcassets in Resources */,
 				18B12BED1E33A84A007721FB /* enemy_explosion.sks in Resources */,
+				18B12BF51E33CAEF007721FB /* missle_explosion.sks in Resources */,
 				504B96721E33B6F1000110C2 /* gameover.ttf in Resources */,
 				500C0E2C1E325B5800FCF079 /* LaunchScreen.storyboard in Resources */,
 				5066E87C1E32CF5F009771B6 /* background.mp3 in Resources */,
 				5066E8A01E32E06E009771B6 /* Gestures.json in Resources */,
+				18B12BF31E33CACF007721FB /* missle_trail.sks in Resources */,
 				5066E87A1E32CF5F009771B6 /* stage1.json in Resources */,
 				5075C6B31E33D37E00B5B3B5 /* GravityEmmiter.sks in Resources */,
-				182595591E3380CC00481B37 /* missle_trail.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

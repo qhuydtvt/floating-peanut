@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		182595471E33010300481B37 /* BackgroundSoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182595461E33010300481B37 /* BackgroundSoundController.swift */; };
-		1825954A1E33660800481B37 /* EnemyBulletController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182595491E33660800481B37 /* EnemyBulletController.swift */; };
+		1825954A1E33660800481B37 /* EnemyMissleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182595491E33660800481B37 /* EnemyMissleController.swift */; };
 		30106198D306146C017C546F /* Pods_Wave_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 558FE0BD98FE42AEB7C5C6C7 /* Pods_Wave_Runner.framework */; };
 		500C0E1C1E325B5800FCF079 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E1B1E325B5800FCF079 /* AppDelegate.swift */; };
 		500C0E1E1E325B5800FCF079 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 500C0E1D1E325B5800FCF079 /* GameScene.sks */; };
@@ -59,7 +59,7 @@
 
 /* Begin PBXFileReference section */
 		182595461E33010300481B37 /* BackgroundSoundController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundSoundController.swift; sourceTree = "<group>"; };
-		182595491E33660800481B37 /* EnemyBulletController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnemyBulletController.swift; path = EnemyBullets/EnemyBulletController.swift; sourceTree = "<group>"; };
+		182595491E33660800481B37 /* EnemyMissleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnemyMissleController.swift; path = EnemyBullets/EnemyMissleController.swift; sourceTree = "<group>"; };
 		500C0E181E325B5800FCF079 /* Wave Runner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wave Runner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		500C0E1B1E325B5800FCF079 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		500C0E1D1E325B5800FCF079 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 		182595481E3365EC00481B37 /* EnemyBullets */ = {
 			isa = PBXGroup;
 			children = (
-				182595491E33660800481B37 /* EnemyBulletController.swift */,
+				182595491E33660800481B37 /* EnemyMissleController.swift */,
 			);
 			name = EnemyBullets;
 			sourceTree = "<group>";
@@ -474,7 +474,7 @@
 				500C0E611E326BBE00FCF079 /* UIColorExtension.swift in Sources */,
 				5066E8791E32CF5F009771B6 /* WaveController.swift in Sources */,
 				500C0E551E326BBD00FCF079 /* GKGraphNode2D.swift in Sources */,
-				1825954A1E33660800481B37 /* EnemyBulletController.swift in Sources */,
+				1825954A1E33660800481B37 /* EnemyMissleController.swift in Sources */,
 				500C0E601E326BBE00FCF079 /* UIColor.swift in Sources */,
 				5066E8781E32CF5F009771B6 /* SingleController.swift in Sources */,
 				504B96561E3371D2000110C2 /* GravityFieldController.swift in Sources */,

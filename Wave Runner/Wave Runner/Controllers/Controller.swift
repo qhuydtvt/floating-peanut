@@ -25,7 +25,9 @@ class Controller {
     }
     
     func run(parent: SKNode, time: TimeInterval) -> Void {
-        
+        for child in self.children {
+            child.run(parent: parent, time: time)
+        }
     }
     
     func destroy() -> Void {

@@ -13,6 +13,8 @@ enum EnemyState {
     case ATTACKING
 }
 
+typealias AttackActionType = (EnemyController, CGPoint) -> ()
+
 class EnemyController : SingleControler {
     var lastTimeUpdate : Double = -1
     var enemyState: EnemyState = EnemyState.NORMAL
@@ -21,6 +23,8 @@ class EnemyController : SingleControler {
     var textures: [SKTexture]!
     
     var exposed : Bool = false
+    
+    var attackAction: AttackActionType?
     
     init(textures: [SKTexture]) {
         super.init(view: View(texture: textures[0]))
@@ -78,18 +82,18 @@ class EnemyController : SingleControler {
         
         switch self.enemyState {
         case EnemyState.NORMAL:
-            if delta > 1 {
+            if delta > 0.5 {
                 self.enemyState = EnemyState.ATTACKING
                 self.lastTimeUpdate = time
                 self.attackTime = 0
             }
             break
         case EnemyState.ATTACKING:
-            if (delta > 0.2) {
+            if (delta > 1) {
                 self.attack()
                 attackTime += 1
                 lastTimeUpdate = time
-                if (attackTime > 3) {
+                if (attackTime > 2) {
                     self.enemyState = EnemyState.NORMAL
                 }
             }
@@ -98,6 +102,7 @@ class EnemyController : SingleControler {
     }
     
     func attack() -> Void {
+        self.attackAction?(self, PlayerController.instance.position)
 //        let waveController = WaveController.createWaveLeft()
 //        waveController.config(position: self.position, parent: self.parent)
     }
@@ -108,7 +113,15 @@ class EnemyController : SingleControler {
         } else if type == 2 {
             return EnemyController(textures: SKTextureAtlas(named: "enemy_4").toTextures())
         } else if type == 3 {
-            return EnemyController(textures: SKTextureAtlas(named: "enemy_3").toTextures())
+            let enemyController = EnemyController(textures: SKTextureAtlas(named: "enemy_3").toTextures())
+            enemyController.attackAction = {
+                controller, target in
+                let missleController = EnemyMissleController()
+                missleController.config(position: controller.position, parent: controller.parent)
+                controller.children.append(missleController)
+            }
+            return enemyController
+            
         }
         return EnemyController(textures: SKTextureAtlas(named: "enemy_1").toTextures())
     }

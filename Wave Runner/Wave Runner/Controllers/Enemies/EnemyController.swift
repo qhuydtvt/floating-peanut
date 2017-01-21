@@ -13,18 +13,20 @@ enum EnemyState {
     case ATTACKING
 }
 
-typealias AttackActionType = (EnemyController, CGPoint) -> ()
+typealias AttackActionType = (EnemyController, TimeInterval, CGPoint) -> ()
+typealias AttackLoopType = (EnemyController, CGPoint) -> ()
 
 class EnemyController : SingleControler {
     var lastTimeUpdate : Double = -1
     var enemyState: EnemyState = EnemyState.NORMAL
     var attackTime: Int = 0
-//    var textures = SKTextureAtlas(named: "enemy_1").toTextures()
+    //    var textures = SKTextureAtlas(named: "enemy_1").toTextures()
     var textures: [SKTexture]!
     
     var exposed : Bool = false
     
     var attackAction: AttackActionType?
+    var attackLoop : AttackLoopType?
     
     init(textures: [SKTexture]) {
         super.init(view: View(texture: textures[0]))
@@ -45,7 +47,7 @@ class EnemyController : SingleControler {
         view.physicsBody?.linearDamping = 0
         view.physicsBody?.fieldBitMask = 1
         
-//        view.physicsBody?.affectedByGravity = false
+        //        view.physicsBody?.affectedByGravity = false
         
         
         self.view.lightingBitMask = 0
@@ -70,6 +72,8 @@ class EnemyController : SingleControler {
         }
     }
     
+    
+    
     override func destroy() {
         super.destroy()
         let explosionController = ExplosionController()
@@ -83,52 +87,66 @@ class EnemyController : SingleControler {
             self.view.removeFromParent()
         }
         
-        if lastTimeUpdate == -1 {
-            lastTimeUpdate = time
-        }
+        //        if lastTimeUpdate == -1 {
+        //            lastTimeUpdate = time
+        //        }
         
-        let delta = time - lastTimeUpdate
+        //        let delta = time - lastTimeUpdate
         
-        switch self.enemyState {
-        case EnemyState.NORMAL:
-            if delta > 0.5 {
-                self.enemyState = EnemyState.ATTACKING
-                self.lastTimeUpdate = time
-                self.attackTime = 0
-            }
-            break
-        case EnemyState.ATTACKING:
-            if (delta > 1) {
-                self.attack()
-                attackTime += 1
-                lastTimeUpdate = time
-                if (attackTime > 2) {
-                    self.enemyState = EnemyState.NORMAL
-                }
-            }
-            break
-        }
+        self.attackAction?(self, time, PlayerController.instance.center)
+        
     }
     
     func attack() -> Void {
-        self.attackAction?(self, PlayerController.instance.position)
-//        let waveController = WaveController.createWaveLeft()
-//        waveController.config(position: self.position, parent: self.parent)
+        //        let waveController = WaveController.createWaveLeft()
+        //        waveController.config(position: self.position, parent: self.parent)
     }
     
     static func create(type: Int) -> EnemyController {
         if type == 1 {
-            return EnemyController(textures: SKTextureAtlas(named: "enemy_1").toTextures())
+            let enemyController = EnemyController(textures: SKTextureAtlas(named: "enemy_1").toTextures())
+            enemyController.attackAction = {
+                controller, time, target in
+                controller.moveTowards(destination: target, speed: 10)
+            }
+            return enemyController
         } else if type == 2 {
             return EnemyController(textures: SKTextureAtlas(named: "enemy_4").toTextures())
         } else if type == 3 {
             let enemyController = EnemyController(textures: SKTextureAtlas(named: "enemy_3").toTextures())
+            var lastTimeUpdate : Double = -1
+            var attackTime = 0
             enemyController.attackAction = {
-                controller, target in
-                let missleController = EnemyMissleController()
-                missleController.config(position: controller.position, parent: controller.parent)
-                controller.children.append(missleController)
+                controller, time, target in
+                
+                if (lastTimeUpdate == -1) {
+                    lastTimeUpdate = time
+                }
+                
+                let delta = time - lastTimeUpdate
+                switch controller.enemyState {
+                case EnemyState.NORMAL:
+                    if delta > 0.5 {
+                        controller.enemyState = EnemyState.ATTACKING
+                        controller.lastTimeUpdate = time
+                        controller.attackTime = 0
+                    }
+                    break
+                case EnemyState.ATTACKING:
+                    if (delta > 1) {
+                        let missleController = EnemyMissleController()
+                        missleController.config(position: controller.position, parent: controller.parent)
+                        controller.children.append(missleController)
+                        attackTime += 1
+                        lastTimeUpdate = time
+                        if (attackTime > 2) {
+                            controller.enemyState = EnemyState.NORMAL
+                        }
+                    }
+                    break
+                }
             }
+            
             return enemyController
             
         }

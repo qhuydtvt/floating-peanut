@@ -32,6 +32,12 @@ class EnemyMissleController: SingleControler {
         self.view.physicsBody?.fieldBitMask = 1
     }
     
+    override func destroy() {
+        super.destroy()
+        let explosionController = ExplosionController(fileName: "missle_explosion.sks")
+        explosionController.config(position: self.position, parent: self.parent)
+    }
+    
     override func run(parent: SKNode, time: TimeInterval) {
         super.run(parent: parent, time: time)
         if !self.moveTowards(destination: PlayerController.instance.center, speed: 20) {

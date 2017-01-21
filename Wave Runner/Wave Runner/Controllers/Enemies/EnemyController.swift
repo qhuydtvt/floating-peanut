@@ -76,7 +76,7 @@ class EnemyController : SingleControler {
     
     override func destroy() {
         super.destroy()
-        let explosionController = ExplosionController()
+        let explosionController = ExplosionController(fileName: "enemy_explosion.sks")
         explosionController.config(position: self.position, parent: self.parent)
     }
     
@@ -107,10 +107,10 @@ class EnemyController : SingleControler {
             let enemyController = EnemyController(textures: SKTextureAtlas(named: "enemy_1").toTextures())
             enemyController.attackAction = {
                 controller, time, target in
-                controller.moveTowards(destination: target, speed: 10)
+                let _ = controller.moveTowards(destination: target, speed: 10)
             }
             return enemyController
-        } else if type == 2 {
+        } else if type == 2 || type == 4 {
             return EnemyController(textures: SKTextureAtlas(named: "enemy_4").toTextures())
         } else if type == 3 {
             let enemyController = EnemyController(textures: SKTextureAtlas(named: "enemy_3").toTextures())

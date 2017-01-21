@@ -38,7 +38,7 @@ class EnemyController : SingleControler {
         self.view.zPosition = 10
         //view.run(.moveTo(x: 0, duration: 5))
         view.physicsBody = SKPhysicsBody(rectangleOf: view.size.scale(by: 0.7))
-        view.physicsBody?.collisionBitMask = Masks.ENEMY
+        view.physicsBody?.collisionBitMask = Masks.ENEMY | Masks.ENEMY_WAVE
         view.physicsBody?.categoryBitMask = Masks.ENEMY
         view.physicsBody?.contactTestBitMask = Masks.PLAYER_WAVE
         view.physicsBody?.velocity = CGVector(dx: -Speed.ENEMY_VELOCITY, dy: 0)

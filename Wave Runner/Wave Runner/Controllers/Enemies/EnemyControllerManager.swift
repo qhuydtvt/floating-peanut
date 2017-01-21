@@ -9,6 +9,7 @@
 import SpriteKit
 
 class EnemyControllerManager: Controller {
+    static var shared: EnemyControllerManager!
     
     let enemyGenerator: EnemyControllerGenerator
     var enemies : [EnemyController]

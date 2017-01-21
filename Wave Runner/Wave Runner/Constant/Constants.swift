@@ -31,3 +31,7 @@ struct Speed {
 enum Element {
     case wind, water, thunder, light
 }
+
+struct Textures {
+    static let arc = SKTexture(image: #imageLiteral(resourceName: "arc_right"))
+}

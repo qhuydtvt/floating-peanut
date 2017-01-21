@@ -69,7 +69,7 @@ class LaserController: SingleControler {
         self.laser.physicsBody?.collisionBitMask = 0
         self.laser.lightingBitMask = 0
         
-        self.laser.handleContact = { [unowned laser = self.laser] in
+        self.laser.handleContact = { [unowned laser = self.laser!]
             other in
             other.destroy?()
             laser.contacted = false

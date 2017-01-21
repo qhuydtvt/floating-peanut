@@ -33,6 +33,7 @@ class SonicSkill {
         }
         
         playerController.player.run(.sequence([.wait(forDuration: coolDownTime), endAttack]))
+        LabelsController.shared.startCountDown(type: .SONIC)
     }
     
     func scan(angle: CGFloat) -> Void {

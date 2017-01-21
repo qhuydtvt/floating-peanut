@@ -55,6 +55,7 @@ class LaserSkill {
         DispatchQueue.main.asyncAfter(deadline: .now() + coolDownTime) {
             self.isCoolingDown = false
         }
+        LabelsController.shared.startCountDown(type: .LAZER)
     }
 }
 
@@ -82,13 +83,13 @@ class LaserController: SingleControler {
     }
     
     func configPhysics() -> Void {
-        self.view.physicsBody = SKPhysicsBody(rectangleOf: self.laser.size)
-        self.view.physicsBody?.categoryBitMask = Masks.PLAYER_WAVE
-        self.view.physicsBody?.contactTestBitMask = Masks.ENEMY
-        self.view.physicsBody?.collisionBitMask = 0
-        self.view.lightingBitMask = 0
+        self.laser.physicsBody = SKPhysicsBody(rectangleOf: self.laser.size)
+        self.laser.physicsBody?.categoryBitMask = Masks.PLAYER_WAVE
+        self.laser.physicsBody?.contactTestBitMask = Masks.ENEMY
+        self.laser.physicsBody?.collisionBitMask = 0
+        self.laser.lightingBitMask = 0
         
-        self.view.handleContact = {
+        self.laser.handleContact = {
             other in
             other.destroy?()
         }

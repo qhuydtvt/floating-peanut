@@ -52,6 +52,7 @@
 		504B966C1E338A3C000110C2 /* SonicSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504B966B1E338A3C000110C2 /* SonicSkill.swift */; };
 		504B966E1E338B46000110C2 /* PushSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504B966D1E338B46000110C2 /* PushSkill.swift */; };
 		504B96701E33A218000110C2 /* LabelsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504B966F1E33A218000110C2 /* LabelsController.swift */; };
+		504B96721E33B6F1000110C2 /* gameover.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 504B96711E33B5BD000110C2 /* gameover.ttf */; };
 		5066E86F1E32CF5F009771B6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066E85B1E32CF5F009771B6 /* Constants.swift */; };
 		5066E8721E32CF5F009771B6 /* EnemyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066E8601E32CF5F009771B6 /* EnemyController.swift */; };
 		5066E8731E32CF5F009771B6 /* EnemyControllerGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066E8611E32CF5F009771B6 /* EnemyControllerGenerator.swift */; };
@@ -112,6 +113,7 @@
 		504B966B1E338A3C000110C2 /* SonicSkill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SonicSkill.swift; sourceTree = "<group>"; };
 		504B966D1E338B46000110C2 /* PushSkill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushSkill.swift; sourceTree = "<group>"; };
 		504B966F1E33A218000110C2 /* LabelsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelsController.swift; sourceTree = "<group>"; };
+		504B96711E33B5BD000110C2 /* gameover.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gameover.ttf; sourceTree = "<group>"; };
 		5066E85B1E32CF5F009771B6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5066E8601E32CF5F009771B6 /* EnemyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyController.swift; sourceTree = "<group>"; };
 		5066E8611E32CF5F009771B6 /* EnemyControllerGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyControllerGenerator.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				5066E8691E32CF5F009771B6 /* Data */,
 				5066E86B1E32CF5F009771B6 /* Gesture Recognizer */,
 				5066E86D1E32CF5F009771B6 /* Sounds */,
+				504B96711E33B5BD000110C2 /* gameover.ttf */,
 				500C0E1B1E325B5800FCF079 /* AppDelegate.swift */,
 				500C0E1D1E325B5800FCF079 /* GameScene.sks */,
 				500C0E211E325B5800FCF079 /* GameScene.swift */,
@@ -441,6 +444,7 @@
 				500C0E291E325B5800FCF079 /* Assets.xcassets in Resources */,
 				18B12BED1E33A84A007721FB /* enemy_explosion.sks in Resources */,
 				18B12BEE1E33A84A007721FB /* Assets.xcassets in Resources */,
+				504B96721E33B6F1000110C2 /* gameover.ttf in Resources */,
 				500C0E2C1E325B5800FCF079 /* LaunchScreen.storyboard in Resources */,
 				5066E87C1E32CF5F009771B6 /* background.mp3 in Resources */,
 				5066E8A01E32E06E009771B6 /* Gestures.json in Resources */,

@@ -49,6 +49,7 @@ class GravityFieldController {
             self.isCoolingDown = false
             }]))
         self.isCoolingDown = true
+        LabelsController.shared.startCountDown(type: .PULL)
     }
     
     func removeField() {

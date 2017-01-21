@@ -13,8 +13,8 @@ class LabelsController {
     static var shared: LabelsController!
     let gameScene: SKScene
     
-    let fontName = "Times New Roman"
-    let fontSize: CGFloat = 68
+    let fontName = "Game Over Regular"
+    let fontSize: CGFloat = 140
     let zPosition: CGFloat = 5
     let distanceBetweenLabels: CGFloat = 8
     
@@ -68,6 +68,7 @@ class LabelsController {
         pullContainer.position = pullLabel.position.add(dx: 200 + barSize.width / 2, dy: barSize.height / 2)
         pullContainer.zPosition = 5
         pullCrop.zPosition = 1
+        gameScene.addChild(pullContainer)
         
         let pushLabel = SKLabelNode(fontNamed: fontName)
         pushLabel.fontSize = fontSize
@@ -79,7 +80,7 @@ class LabelsController {
         gameScene.addChild(pushLabel)
         
         let pushContainer = SKNode()
-        let pushUnfill = SKSpriteNode(color: UIColor.init(colorLiteralRed: 207/255, green: 193/255, blue: 33/255, alpha: 1), size: barSize)
+        let pushUnfill = SKSpriteNode(color: UIColor.init(colorLiteralRed: 138/255, green: 129/255, blue: 28/255, alpha: 1), size: barSize)
         pushFill = SKSpriteNode(color: UIColor.init(colorLiteralRed: 222/255, green: 209/255, blue: 119/255, alpha: 1), size: barSize)
         let pushCrop = SKCropNode()
         pushCrop.maskNode = SKSpriteNode(color: .white, size: barSize)
@@ -89,6 +90,7 @@ class LabelsController {
         pushContainer.position = pushLabel.position.add(dx: 200 + barSize.width / 2, dy: barSize.height / 2)
         pushContainer.zPosition = 5
         pushCrop.zPosition = 1
+        gameScene.addChild(pushContainer)
         
         let laserLabel = SKLabelNode(fontNamed: fontName)
         laserLabel.fontSize = fontSize
@@ -131,5 +133,7 @@ class LabelsController {
         sonicContainer.position = sonicLabel.position.add(dx: 200 + barSize.width / 2, dy: barSize.height / 2)
         sonicContainer.zPosition = 5
         sonicCrop.zPosition = 1
+        
+        gameScene.addChild(sonicContainer)
     }
 }

@@ -42,5 +42,13 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>LSApplicationCategoryType</key>
+	<array>
+		<string></string>
+	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>gameover.ttf</string>
+	</array>
 </dict>
 </plist>

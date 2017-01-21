@@ -25,20 +25,18 @@ class PlayerController: SingleControler {
     var lightNode: SKLightNode!
     var screamSound: SKAction!
     
-    
-    
     let laserSkill = LaserSkill()
     let gravity = GravitySkill()
     let sonicSkill = SonicSkill()
     let shieldSkill = ShieldSkill()
     
-    static let instance = PlayerController()
+    static var instance: PlayerController!
     
     var center : CGPoint {
         return self.view.position.add(other: self.player.position.multiply(factor: PLAYER_SCALE))
     }
     
-    private init() {
+    init() {
         super.init(view: View())
         self.player = View(image: #imageLiteral(resourceName: "goku_standing"))
         self.board = SKSpriteNode(image: #imageLiteral(resourceName: "hover_board"))
@@ -82,6 +80,10 @@ class PlayerController: SingleControler {
     
     override func config(position: CGPoint, parent: SKNode) {
         super.config(position: position, parent: parent)
+        laserSkill.playerController = self
+        sonicSkill.playerController = self
+        gravity.playerController = self
+        shieldSkill.playerController = self
     }
     
     func shootLaser(at dest: CGPoint) {

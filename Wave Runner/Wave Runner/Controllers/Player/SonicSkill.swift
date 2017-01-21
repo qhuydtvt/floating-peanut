@@ -12,7 +12,7 @@ import SpriteKit
 class SonicSkill {
     var coolDownTime: Double = CoolDown.SONIC
     var isCoolingDown = false
-    lazy var playerController = PlayerController.instance
+    weak var playerController: PlayerController!
     
     func createWaves() {
         guard isCoolingDown == false else { return }
@@ -43,6 +43,7 @@ class SonicSkill {
         }
         
         playerController.view.run(.repeat(.sequence([kameAction, .wait(forDuration: 0.1)]), count: 3))
+        playerController.parent.run(.playSoundFileNamed("sonic_sound", waitForCompletion: false))
     }
     
 }

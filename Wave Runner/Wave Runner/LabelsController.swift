@@ -11,7 +11,7 @@ import SpriteKit
 
 class LabelsController {
     static var shared: LabelsController!
-    let gameScene: SKScene
+    weak var gameScene: SKScene!
     
     let fontName = "Game Over Regular"
     let fontSize: CGFloat = 140

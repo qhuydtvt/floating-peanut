@@ -12,7 +12,7 @@ import SpriteKit
 class ShieldSkill {
     var coolDownTime: Double = CoolDown.SHIELD
     var isCoolingDown = false
-    lazy var playerController = PlayerController.instance
+    weak var playerController: PlayerController!
     
     func activeShield() {
         guard isCoolingDown == false else { return }
@@ -32,7 +32,7 @@ class ShieldSkill {
         playerController.player.run(.sequence([.wait(forDuration: EffectTime.SHIELD), .run({
             shield.removeFromParent()
         })]))
-        playerController.player.run(.sequence([.wait(forDuration: coolDownTime), .run({
+        playerController.player.run(.sequence([.wait(forDuration: coolDownTime), .run({ [unowned self] in
             self.isCoolingDown = false
         })]))
         

@@ -32,8 +32,22 @@ class VictoryScene: SKScene {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let location = touches.first!.location(in: self)
         if nodes(at: location).contains(replayLabel) {
-            // new game
+            GameScene.present(with: view!)
         }
     }
     
+    static func present(with view: SKView) {
+        let scene = SKScene(fileNamed: "VictoryScene")!
+        // Set the scale mode to scale to fit the window
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            let width = scene.size.width
+            let height = width * 9 / 16
+            scene.size = CGSize(width: width, height: height)
+        }
+        
+        scene.scaleMode = .aspectFill
+        
+        // Present the scene
+        view.presentScene(scene)
+    }
 }

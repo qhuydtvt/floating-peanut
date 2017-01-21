@@ -14,8 +14,8 @@ class GravitySkill {
     var isCoolingDown = false
     
     var gravityNode: SKFieldNode!
-    var parent: SKNode!
-    lazy var playerController = PlayerController.instance
+    weak var parent: SKNode!
+    weak var playerController: PlayerController!
     
     init() {
         gravityNode = SKFieldNode.radialGravityField()

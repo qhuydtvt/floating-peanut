@@ -17,7 +17,7 @@ class GravityFieldController {
         gravityNode = SKFieldNode.radialGravityField()
         gravityNode.categoryBitMask = 1
         gravityNode.strength = 10
-        gravityNode.falloff = 1
+        gravityNode.falloff = 0
     }
     
     func config(position: CGPoint, parent: SKNode) {

@@ -115,8 +115,21 @@ class PlayerController: SingleControler {
         }
     }
     
+    @objc
     func createGravityField() {
-        gravity.config(position: self.view.position.add(other: self.player.position.multiply(factor: 3)).add(dx: 100, dy: 0), parent: self.parent)
+        guard gravity.gravityNode.parent == nil else { return }
+        let position = self.view.position.add(other: self.player.position.multiply(factor: 3)).add(dx: 150, dy: 0)
+        gravity.config(position: position, parent: self.parent)
+        
+        for enemy in EnemyControllerManager.shared.enemies {
+            enemy.view.physicsBody?.velocity = .zero
+            let constraint = SKConstraint.positionX(SKRange(lowerLimit: position.x-20, upperLimit: .infinity))
+            enemy.view.constraints = [constraint]
+        }
+        
+        parent.run(.sequence([.wait(forDuration: 2),.run { [unowned self] in
+            self.gravity.gravityNode.removeFromParent()
+            }]))
     }
     
     @objc

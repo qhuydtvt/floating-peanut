@@ -24,6 +24,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         configSound()
         
         enemyManager = EnemyControllerManager(enemyGenerator: EnemyControllerGenerator(jsonFile: "stage1"))
+        EnemyControllerManager.shared = enemyManager
         
         configPlayer()
         configGesture()
@@ -36,6 +37,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let gesture2 = UISwipeGestureRecognizer(target: playerController, action: #selector(PlayerController.sonicAttack))
         gesture2.direction = .right
         view?.addGestureRecognizer(gesture2)
+        
+        let gesture3 = UISwipeGestureRecognizer(target: playerController, action: #selector(PlayerController.createGravityField))
+        gesture3.direction = .left
+        gesture3.numberOfTouchesRequired = 2
+        view?.addGestureRecognizer(gesture3)
     }
     
     func fireLaser(gesture: UIGestureRecognizer) {

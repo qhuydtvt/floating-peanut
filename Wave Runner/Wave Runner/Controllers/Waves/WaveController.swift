@@ -34,6 +34,8 @@ class WaveController: SingleControler {
     override func config(position: CGPoint, parent: SKNode) {
         self.view.physicsBody = SKPhysicsBody(rectangleOf: self.view.size)
         self.view.physicsBody?.collisionBitMask = 0
+        self.view.physicsBody?.categoryBitMask = Masks.PLAYER_WAVE
+        self.view.physicsBody?.contactTestBitMask = Masks.ENEMY
         self.view.physicsBody?.affectedByGravity = false
         self.view.physicsBody?.linearDamping = 0
         
@@ -50,6 +52,11 @@ class WaveController: SingleControler {
         super.config(position: position, parent: parent)
         
         self.view.run(.sequence([.scaleX(to: CGFloat(lifeTime / Double(4)), y: CGFloat(lifeTime / Double(4)), duration: lifeTime), .removeFromParent()]))
+        
+        self.view.handleContact = {
+            other in
+            print(">>WaveController: Contacted")
+        }
     }
     
     override func run(parent: SKNode, time: TimeInterval) {

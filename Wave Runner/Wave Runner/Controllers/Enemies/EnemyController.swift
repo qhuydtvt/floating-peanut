@@ -32,13 +32,21 @@ class EnemyController : SingleControler {
         //view.run(.moveTo(x: 0, duration: 5))
         view.physicsBody = SKPhysicsBody(rectangleOf: view.size)
         view.physicsBody?.collisionBitMask = 0
+        view.physicsBody?.categoryBitMask = Masks.ENEMY
+        view.physicsBody?.contactTestBitMask = Masks.PLAYER_WAVE
         view.physicsBody?.velocity = CGVector(dx: -Speed.ENEMY_VELOCITY, dy: 0)
         view.physicsBody?.linearDamping = 0
+        
 //        view.physicsBody?.affectedByGravity = false
         
         let animateAction = SKAction.animate(with: textures, timePerFrame: 0.15, resize: true, restore: false)
         
         self.view.run(.repeatForever(animateAction))
+        
+        self.view.handleContact = {
+            other in
+            print(">> EnemyController: contacted")
+        }
     }
     
     override func run(parent: SKNode, time: TimeInterval) {

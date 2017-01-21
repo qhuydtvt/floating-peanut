@@ -10,7 +10,7 @@ import Foundation
 import SpriteKit
 
 class GravityFieldController {
-    var coolDownTime: Double = 3
+    var coolDownTime: Double = CoolDown.PULL
     var isCoolingDown = false
     
     var gravityNode: SKFieldNode!
@@ -45,7 +45,7 @@ class GravityFieldController {
         }
         
         parent.run(.sequence([.wait(forDuration: coolDownTime),.run { [unowned self] in
-            self.gravityNode.removeFromParent()
+            self.removeField()
             self.isCoolingDown = false
             }]))
         self.isCoolingDown = true

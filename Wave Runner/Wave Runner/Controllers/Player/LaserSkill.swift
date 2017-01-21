@@ -14,7 +14,7 @@ enum LaserType {
 }
 
 class LaserSkill {
-    var coolDownTime: Double = 1
+    var coolDownTime: Double = CoolDown.LASER
     var isCoolingDown = false
     lazy var playerController = PlayerController.instance
     

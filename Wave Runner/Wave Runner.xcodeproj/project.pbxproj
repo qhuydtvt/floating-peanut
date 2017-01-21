@@ -48,6 +48,7 @@
 		504B966A1E3384AF000110C2 /* SingleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504B96641E3384AF000110C2 /* SingleController.swift */; };
 		504B966C1E338A3C000110C2 /* SonicSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504B966B1E338A3C000110C2 /* SonicSkill.swift */; };
 		504B966E1E338B46000110C2 /* PushSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504B966D1E338B46000110C2 /* PushSkill.swift */; };
+		504B96701E33A218000110C2 /* LabelsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504B966F1E33A218000110C2 /* LabelsController.swift */; };
 		5066E86F1E32CF5F009771B6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066E85B1E32CF5F009771B6 /* Constants.swift */; };
 		5066E8721E32CF5F009771B6 /* EnemyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066E8601E32CF5F009771B6 /* EnemyController.swift */; };
 		5066E8731E32CF5F009771B6 /* EnemyControllerGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066E8611E32CF5F009771B6 /* EnemyControllerGenerator.swift */; };
@@ -104,6 +105,7 @@
 		504B96641E3384AF000110C2 /* SingleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleController.swift; sourceTree = "<group>"; };
 		504B966B1E338A3C000110C2 /* SonicSkill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SonicSkill.swift; sourceTree = "<group>"; };
 		504B966D1E338B46000110C2 /* PushSkill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushSkill.swift; sourceTree = "<group>"; };
+		504B966F1E33A218000110C2 /* LabelsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelsController.swift; sourceTree = "<group>"; };
 		5066E85B1E32CF5F009771B6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5066E8601E32CF5F009771B6 /* EnemyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyController.swift; sourceTree = "<group>"; };
 		5066E8611E32CF5F009771B6 /* EnemyControllerGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyControllerGenerator.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				500C0E1B1E325B5800FCF079 /* AppDelegate.swift */,
 				500C0E1D1E325B5800FCF079 /* GameScene.sks */,
 				500C0E211E325B5800FCF079 /* GameScene.swift */,
+				504B966F1E33A218000110C2 /* LabelsController.swift */,
 				500C0E231E325B5800FCF079 /* GameViewController.swift */,
 				500C0E251E325B5800FCF079 /* Main.storyboard */,
 				500C0E281E325B5800FCF079 /* Assets.xcassets */,
@@ -396,7 +399,7 @@
 				TargetAttributes = {
 					500C0E171E325B5700FCF079 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 3CJF6M3857;
+						DevelopmentTeam = Z3TDYH9DM8;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -490,6 +493,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				504B96701E33A218000110C2 /* LabelsController.swift in Sources */,
 				500C0E5E1E326BBE00FCF079 /* GifUIImageView.swift in Sources */,
 				500C0E501E326BBD00FCF079 /* CGFloat.swift in Sources */,
 				500C0E521E326BBD00FCF079 /* CGRect.swift in Sources */,
@@ -656,11 +660,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 3CJF6M3857;
+				DEVELOPMENT_TEAM = Z3TDYH9DM8;
 				INFOPLIST_FILE = "Wave Runner/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "vn.techkids.Wave-Runner";
+				PRODUCT_BUNDLE_IDENTIFIER = "duyanh2912.Wave-Runner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -672,11 +676,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 3CJF6M3857;
+				DEVELOPMENT_TEAM = Z3TDYH9DM8;
 				INFOPLIST_FILE = "Wave Runner/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "vn.techkids.Wave-Runner";
+				PRODUCT_BUNDLE_IDENTIFIER = "duyanh2912.Wave-Runner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

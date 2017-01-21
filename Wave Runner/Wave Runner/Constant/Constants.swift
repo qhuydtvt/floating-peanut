@@ -34,6 +34,7 @@ enum Element {
 
 struct Textures {
     static let arc = SKTexture(image: #imageLiteral(resourceName: "arc_right"))
+    static let missle_small = SKTexture(image: #imageLiteral(resourceName: "missle_small"))
     static let laserStraightAnimation = SKTextureAtlas(named: "goku_laser_straight").toTextures()
     static let laserUpwardAnimation = SKTextureAtlas(named: "goku_laser_upward").toTextures()
     static let attackAnimation = SKTextureAtlas(named: "goku_attack").toTextures()

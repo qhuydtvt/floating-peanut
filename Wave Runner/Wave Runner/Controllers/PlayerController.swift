@@ -9,6 +9,13 @@
 import Foundation
 import SpriteKit
 
+enum AttackType {
+    case SONIC
+    case LAZER
+    case PUSH
+    case PULL
+}
+
 class PlayerController: SingleControler {
     var player: View!
     var board: SKSpriteNode!
@@ -43,19 +50,43 @@ class PlayerController: SingleControler {
             var anim = attackAnimation
             anim.append(player.texture!)
             attacking = true
-            let animateAction = SKAction.animate(with: anim, timePerFrame: 0.15, resize: true, restore: false)
+            let animateAction = SKAction.animate(with: anim, timePerFrame: PLAYER_ANIMATION_TIME_FER_FRAME, resize: true, restore: false)
             let endAttack = SKAction.run {
-                 self.attacking = false
+                self.attacking = false
             }
             self.player.run(.sequence([animateAction, endAttack]))
-            self.kame()
+//            self.scan()
         }
     }
     
+    func attack(attackType: AttackType) -> Void {
+        if !attacking {
+            var anim = attackAnimation
+            anim.append(player.texture!)
+            attacking = true
+            let animateAction = SKAction.animate(with: anim, timePerFrame: 0.15, resize: true, restore: false)
+            let endAttack = SKAction.run {
+                self.attacking = false
+            }
+            
+            self.player.run(.sequence([animateAction, endAttack]))
+            switch attackType {
+            case AttackType.SONIC:
+                for _ in 0..<2 {
+                    self.scan(angle: CGFloat(M_PI_4 / 2))
+                    self.scan(angle: 0)
+                    self.scan(angle: -CGFloat(M_PI_4 / 2))
+                }
+                break
+            default:
+                break
+            }
+        }
+    }
     
-    func kame() -> Void {
+    func scan(angle: CGFloat) -> Void {
         let kameAction = SKAction.run{
-            let waveController = WaveController.createWaveRight()
+            let waveController = WaveController.create(angle: angle)
             waveController.config(position: self.view.position.add(other: self.player.position.multiply(factor: PLAYER_SCALE)), parent: self.parent)
         }
         

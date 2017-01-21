@@ -89,7 +89,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        playerController.attack()
+        playerController.attack(attackType: AttackType.SONIC)
         GestureController.shared.touchesBegan(at: touches.first!.location(in: self.view!))
     }
     

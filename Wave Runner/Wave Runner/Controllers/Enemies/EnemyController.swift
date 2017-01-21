@@ -76,8 +76,8 @@ class EnemyController : SingleControler {
     }
     
     func attack() -> Void {
-        let waveController = WaveController.createWaveLeft()
-        waveController.config(position: self.position, parent: self.parent)
+//        let waveController = WaveController.createWaveLeft()
+//        waveController.config(position: self.position, parent: self.parent)
     }
     
     static func create(type: Int) -> EnemyController {

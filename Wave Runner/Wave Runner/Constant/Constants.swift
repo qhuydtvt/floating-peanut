@@ -20,9 +20,10 @@ struct Masks {
     static let ENEMY           =   UInt32(1 << 3)
     static let ENEMY_MISSLE    =   UInt32(1 << 4)
     static let ENEMY_SONIC      =   UInt32(1 << 5)
-    
     static let PLATFORM        =   UInt32(1 << 6)
     static let LASER           =   UInt32(1 << 7)
+    static let SHIELD          =   UInt32(1 << 8)
+
 }
 
 struct Speed {
@@ -41,11 +42,18 @@ struct Textures {
     static let laserStraightAnimation = SKTextureAtlas(named: "goku_laser_straight").toTextures()
     static let laserUpwardAnimation = SKTextureAtlas(named: "goku_laser_upward").toTextures()
     static let attackAnimation = SKTextureAtlas(named: "goku_attack").toTextures()
+    static let shield = SKTexture(image: #imageLiteral(resourceName: "shield"))
+    static let goku_standing = SKTexture(image: #imageLiteral(resourceName: "goku_standing"))
+    static let goku_powerup = SKTextureAtlas(named: "goku_powerup").toTextures()
 }
 
 struct CoolDown {
     static let SONIC: Double = 1
     static let LASER: Double = 1
     static let PUSH: Double = 3
-    static let PULL: Double = 3
+    static let SHIELD: Double = 5
+}
+
+struct EffectTime {
+    static let SHIELD: Double = 2
 }

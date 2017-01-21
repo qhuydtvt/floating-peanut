@@ -47,9 +47,10 @@
 		5066E8781E32CF5F009771B6 /* SingleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066E8661E32CF5F009771B6 /* SingleController.swift */; };
 		5066E8791E32CF5F009771B6 /* WaveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066E8681E32CF5F009771B6 /* WaveController.swift */; };
 		5066E87A1E32CF5F009771B6 /* stage1.json in Resources */ = {isa = PBXBuildFile; fileRef = 5066E86A1E32CF5F009771B6 /* stage1.json */; };
-		5066E87B1E32CF5F009771B6 /* DBPathRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066E86C1E32CF5F009771B6 /* DBPathRecognizer.swift */; };
 		5066E87C1E32CF5F009771B6 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5066E86E1E32CF5F009771B6 /* background.mp3 */; };
 		5066E87E1E32CF75009771B6 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066E87D1E32CF75009771B6 /* View.swift */; };
+		5066E8A01E32E06E009771B6 /* Gestures.json in Resources */ = {isa = PBXBuildFile; fileRef = 5066E89F1E32E06E009771B6 /* Gestures.json */; };
+		5066E8A21E32E206009771B6 /* SwiftUnistroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066E8A11E32E206009771B6 /* SwiftUnistroke.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,9 +96,10 @@
 		5066E8661E32CF5F009771B6 /* SingleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleController.swift; sourceTree = "<group>"; };
 		5066E8681E32CF5F009771B6 /* WaveController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveController.swift; sourceTree = "<group>"; };
 		5066E86A1E32CF5F009771B6 /* stage1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stage1.json; sourceTree = "<group>"; };
-		5066E86C1E32CF5F009771B6 /* DBPathRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBPathRecognizer.swift; sourceTree = "<group>"; };
 		5066E86E1E32CF5F009771B6 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
 		5066E87D1E32CF75009771B6 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		5066E89F1E32E06E009771B6 /* Gestures.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Gestures.json; sourceTree = "<group>"; };
+		5066E8A11E32E206009771B6 /* SwiftUnistroke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUnistroke.swift; sourceTree = "<group>"; };
 		558FE0BD98FE42AEB7C5C6C7 /* Pods_Wave_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wave_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		972D3FC7CC34502E45407B4F /* Pods-Wave Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wave Runner.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wave Runner/Pods-Wave Runner.release.xcconfig"; sourceTree = "<group>"; };
 		A262C3DE2D62DC763A39A564 /* Pods-Wave Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wave Runner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wave Runner/Pods-Wave Runner.debug.xcconfig"; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				5066E86A1E32CF5F009771B6 /* stage1.json */,
+				5066E89F1E32E06E009771B6 /* Gestures.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -275,7 +278,7 @@
 		5066E86B1E32CF5F009771B6 /* Gesture Recognizer */ = {
 			isa = PBXGroup;
 			children = (
-				5066E86C1E32CF5F009771B6 /* DBPathRecognizer.swift */,
+				5066E8A11E32E206009771B6 /* SwiftUnistroke.swift */,
 			);
 			path = "Gesture Recognizer";
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				500C0E291E325B5800FCF079 /* Assets.xcassets in Resources */,
 				500C0E2C1E325B5800FCF079 /* LaunchScreen.storyboard in Resources */,
 				5066E87C1E32CF5F009771B6 /* background.mp3 in Resources */,
+				5066E8A01E32E06E009771B6 /* Gestures.json in Resources */,
 				5066E87A1E32CF5F009771B6 /* stage1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,7 +445,6 @@
 				500C0E581E326BBE00FCF079 /* SKSpriteNode.swift in Sources */,
 				500C0E631E326BBE00FCF079 /* UIImageView.swift in Sources */,
 				5066E8711E32CF5F009771B6 /* Controller.swift in Sources */,
-				5066E87B1E32CF5F009771B6 /* DBPathRecognizer.swift in Sources */,
 				5066E8761E32CF5F009771B6 /* PlatformController.swift in Sources */,
 				500C0E641E326BBE00FCF079 /* UIView.swift in Sources */,
 				500C0E621E326BBE00FCF079 /* UIImage.swift in Sources */,
@@ -453,6 +456,7 @@
 				5066E8781E32CF5F009771B6 /* SingleController.swift in Sources */,
 				5066E8731E32CF5F009771B6 /* EnemyControllerGenerator.swift in Sources */,
 				500C0E5A1E326BBE00FCF079 /* Configuration.swift in Sources */,
+				5066E8A21E32E206009771B6 /* SwiftUnistroke.swift in Sources */,
 				500C0E571E326BBE00FCF079 /* SKNode.swift in Sources */,
 				5066E8741E32CF5F009771B6 /* EnemyControllerManager.swift in Sources */,
 				500C0E5D1E326BBE00FCF079 /* Visualizer.swift in Sources */,

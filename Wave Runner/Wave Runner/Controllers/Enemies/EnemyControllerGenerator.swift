@@ -22,7 +22,6 @@ class EnemyControllerGenerator {
                 for jsonItem in json.array! {
                     let time = jsonItem["time"].double!
                     let type = jsonItem["type"].int!
-                    print("\(time) \(type)")
                     self.enemyDataList.append(EnemyData(time: time, type: type))
                 }
             }
@@ -39,7 +38,6 @@ class EnemyControllerGenerator {
         if (enemyCurrentIndex < enemyDataList.count) {
             
             let enemyData = enemyDataList[enemyCurrentIndex]
-            print("Generator running: \(enemyData.time)")
             if delta >= enemyData.time {
                 let enemyController = EnemyController.create(type: enemyData.type)
                 let enemyPosition = CGPoint(x: parent.frame.size.width, y: parent.frame.size.height / 2 + 20)
@@ -59,7 +57,6 @@ class EnemyControllerGenerator {
         if (enemyCurrentIndex < enemyDataList.count) {
             
             let enemyData = enemyDataList[enemyCurrentIndex]
-            print("Generator running: \(enemyData.time)")
             if delta >= enemyData.time {
                 enemyCurrentIndex += 1
                 return EnemyController.create(type: enemyData.type)

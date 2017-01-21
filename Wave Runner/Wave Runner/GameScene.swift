@@ -45,7 +45,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         backgroundController.run(parent: self, time: currentTime)
         platformController.run(parent: self)
         enemyManager.run(parent: self, time: currentTime)
-        print("currentTime: \(currentTime)")
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
@@ -84,5 +83,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         playerController.attack()
+        GestureController.shared.touchesBegan(at: touches.first!.location(in: self.view!))
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        GestureController.shared.touchesMoved(at: touches.first!.location(in: self.view!))
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        GestureController.shared.touchesEnded(at: touches.first!.location(in: self.view!))
     }
 }

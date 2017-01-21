@@ -1,5 +1,5 @@
 //
-//  GravityFieldController.swift
+//  PushSkill.swift
 //  Wave Runner
 //
 //  Created by Duy Anh on 1/21/17.
@@ -9,7 +9,7 @@
 import Foundation
 import SpriteKit
 
-class GravityFieldController {
+class GravitySkill {
     var coolDownTime: Double = CoolDown.PULL
     var isCoolingDown = false
     
@@ -23,7 +23,6 @@ class GravityFieldController {
         gravityNode.strength = 10
         gravityNode.falloff = 0
     }
-    
     func config(position: CGPoint, parent: SKNode) {
         gravityNode.position = position
         self.parent = parent
@@ -49,7 +48,7 @@ class GravityFieldController {
             self.isCoolingDown = false
             }]))
         self.isCoolingDown = true
-        LabelsController.shared.startCountDown(type: .PULL)
+        LabelsController.shared.startCountDown(type: .PUSH)
     }
     
     func removeField() {
@@ -57,5 +56,18 @@ class GravityFieldController {
         for enemy in EnemyControllerManager.shared.enemies {
             enemy.view.constraints?.removeAll()
         }
+    }
+    
+    func pushEnemies() {
+        guard isCoolingDown == false else { return }
+        playerController.gravity.removeField()
+        for enemy in EnemyControllerManager.shared.enemies {
+            enemy.view.physicsBody?.velocity = CGVector(dx: 1200, dy: 0)
+        }
+        self.isCoolingDown = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + coolDownTime) {
+            self.isCoolingDown = false
+        }
+        LabelsController.shared.startCountDown(type: .PUSH)
     }
 }

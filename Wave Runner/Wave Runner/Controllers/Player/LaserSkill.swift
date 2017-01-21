@@ -65,7 +65,7 @@ class LaserController: SingleControler {
     func configPhysics() -> Void {
         self.laser.physicsBody = SKPhysicsBody(rectangleOf: self.laser.size)
         self.laser.physicsBody?.categoryBitMask = Masks.PLAYER_WAVE
-        self.laser.physicsBody?.contactTestBitMask = Masks.ENEMY
+        self.laser.physicsBody?.contactTestBitMask = Masks.ENEMY | Masks.ENEMY_WAVE
         self.laser.physicsBody?.collisionBitMask = 0
         self.laser.lightingBitMask = 0
         

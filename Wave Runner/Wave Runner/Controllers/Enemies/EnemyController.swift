@@ -50,8 +50,6 @@ class EnemyController : SingleControler {
         //        view.physicsBody?.affectedByGravity = false
         
         
-        self.view.lightingBitMask = 0
-        
         let animateAction = SKAction.animate(with: textures, timePerFrame: 0.15, resize: true, restore: false)
         
         self.view.run(.repeatForever(animateAction))

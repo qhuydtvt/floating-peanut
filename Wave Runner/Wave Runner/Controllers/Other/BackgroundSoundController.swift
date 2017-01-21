@@ -14,7 +14,7 @@ class BackgroundSoundController: Controller {
     }
     
     override func config(position: CGPoint, parent: SKNode) {
-        let sound = SKAction.playSoundFileNamed("background.mp3", waitForCompletion: false)
-        parent.run(sound)
+        let sound = SKAction.playSoundFileNamed("background.mp3", waitForCompletion: true)
+        parent.run(.repeatForever(sound))
     }
 }

@@ -28,12 +28,16 @@ class EnemyController : SingleControler {
     
     var speed : CGFloat!
     
+    var explosionSound : SKAction!
+    
     
     init(textures: [SKTexture], speed: CGFloat = Speed.ENEMY_VELOCITY) {
         super.init(view: View(texture: textures[0]))
         self.textures = textures
         view.lightingBitMask = 1
         self.speed = speed
+        
+        self.explosionSound = SKAction.playSoundFileNamed("explosion.mp3", waitForCompletion: false)
     }
     
     override func config(position: CGPoint, parent: SKNode) {
@@ -59,6 +63,7 @@ class EnemyController : SingleControler {
         self.view.handleContact = { [weak self]
             other in
             print(">> EnemyController: contacted")
+            
             guard self != nil else { return }
             if !self!.exposed {
                 self!.view.run(.sequence([.run{
@@ -81,6 +86,7 @@ class EnemyController : SingleControler {
     
     override func destroy() {
         super.destroy()
+        self.parent.run(self.explosionSound)
         let explosionController = ExplosionController(fileName: "enemy_explosion.sks")
         explosionController.config(position: self.position, parent: self.parent)
     }

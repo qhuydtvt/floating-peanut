@@ -21,10 +21,10 @@ class PlayerController: SingleControler {
     var board: SKSpriteNode!
     var attacking : Bool = false
     
-    var attackAnimation = SKTextureAtlas(named: "goku_attack").toTextures()
-    var laserStraightAnimation = SKTextureAtlas(named: "goku_laser_straight").toTextures()
     var lightNode: SKLightNode!
-    var laserUpwardAnimation = SKTextureAtlas(named: "goku_laser_upward").toTextures()
+    var attackAnimation = SKTextureAtlas(named: "goku_attack").toTextures()
+    
+    let laserSkill = LaserSkill()
     
     let gravity = GravityFieldController()
     static let instance = PlayerController()
@@ -56,50 +56,14 @@ class PlayerController: SingleControler {
         super.config(position: position, parent: parent)
     }
     
-    func attack() {
-        if !attacking {
-            var anim = attackAnimation
-            anim.append(player.texture!)
-            attacking = true
-            let animateAction = SKAction.animate(with: anim, timePerFrame: PLAYER_ANIMATION_TIME_FER_FRAME, resize: true, restore: false)
-            let endAttack = SKAction.run {
-                self.attacking = false
-            }
-            self.player.run(.sequence([animateAction, endAttack]))
-            //            self.scan()
-        }
-    }
-    
     @objc
     func fireUpwardLaser() {
-        var anim = laserUpwardAnimation
-        anim.append(SKTexture(image: #imageLiteral(resourceName: "goku_standing")))
-        
-        let animateAction = SKAction.animate(with: anim, timePerFrame: 0.1, resize: true, restore: false)
-        let shootAction = SKAction.run { [unowned self] in
-            let laser = LaserController(type: .upward)
-            laser.config(position: CGPoint(x: laser.laser.width/2.5 + self.player.width/3, y: laser.laser.width / 4.2), parent: self.player)
-            laser.move(speed: 1200)
-        }
-        let delay = SKAction.wait(forDuration: 0.2)
-        let sequence = SKAction.sequence([delay, shootAction])
-        player.run(.group([animateAction, sequence]))
+        laserSkill.spawn(type: .upward)
     }
     
     @objc
     func fireStraightLaser() {
-        var anim = laserStraightAnimation
-        anim.append(SKTexture(image: #imageLiteral(resourceName: "goku_standing")))
-        
-        let animateAction = SKAction.animate(with: anim, timePerFrame: 0.1, resize: true, restore: false)
-        let shootAction = SKAction.run { [unowned self] in
-            let laser = LaserController(type: .straight)
-            laser.config(position: CGPoint(x: laser.laser.width/2 + self.player.width/3, y: -0.5), parent: self.player)
-            laser.move(speed: 1200)
-        }
-        let delay = SKAction.wait(forDuration: 0.2)
-        let sequence = SKAction.sequence([delay, shootAction])
-        player.run(.group([animateAction, sequence]))
+        laserSkill.spawn(type: .straight)
     }
     
     func attack(attackType: AttackType) -> Void {

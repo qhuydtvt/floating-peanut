@@ -16,8 +16,40 @@ enum LaserType {
 class LaserSkill {
     var coolDownTime: Int = 1
     var isCoolingDown = false
+    var playerController = PlayerController.instance
     
-    
+    func spawn(type: LaserType) {
+        switch type {
+        case .straight:
+            var anim = Textures.laserStraightAnimation
+            anim.append(SKTexture(image: #imageLiteral(resourceName: "goku_standing")))
+            
+            let animateAction = SKAction.animate(with: anim, timePerFrame: 0.1, resize: true, restore: false)
+            let shootAction = SKAction.run { [unowned self] in
+                let laser = LaserController(type: .straight)
+                laser.config(position: CGPoint(x: laser.laser.width/2 + self.playerController.player.width/3, y: -0.5), parent: self.playerController.player)
+                laser.move(speed: 1200)
+            }
+            let delay = SKAction.wait(forDuration: 0.2)
+            let sequence = SKAction.sequence([delay, shootAction])
+            playerController.player.run(.group([animateAction, sequence]))
+            
+        case .upward:
+            var anim = Textures.laserUpwardAnimation
+            anim.append(SKTexture(image: #imageLiteral(resourceName: "goku_standing")))
+            
+            let animateAction = SKAction.animate(with: anim, timePerFrame: 0.1, resize: true, restore: false)
+            let shootAction = SKAction.run { [unowned self] in
+                let laser = LaserController(type: .upward)
+                laser.config(position: CGPoint(x: laser.laser.width/2.5 + self.playerController.player.width/3, y: laser.laser.width / 4.2), parent: self.playerController.player)
+                laser.move(speed: 1200)
+            }
+            let delay = SKAction.wait(forDuration: 0.2)
+            let sequence = SKAction.sequence([delay, shootAction])
+            playerController.player.run(.group([animateAction, sequence]))
+        default: break
+        }
+    }
 }
 
 class LaserController: SingleControler {

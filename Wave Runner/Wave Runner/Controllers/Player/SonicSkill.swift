@@ -20,7 +20,7 @@ class SonicSkill {
         var anim = Textures.attackAnimation
         anim.append(SKTexture(image: #imageLiteral(resourceName: "goku_standing")))
         isCoolingDown = true
-        let animateAction = SKAction.animate(with: anim, timePerFrame: 0.15, resize: true, restore: false)
+        let animateAction = SKAction.animate(with: anim, timePerFrame: 0.05, resize: true, restore: false)
         let endAttack = SKAction.run { [unowned self] in
             self.isCoolingDown = false
         }

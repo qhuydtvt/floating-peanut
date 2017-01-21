@@ -50,7 +50,7 @@ class LabelsController {
         let pushLabel = SKLabelNode(fontNamed: fontName)
         pushLabel.fontSize = fontSize
         pushLabel.horizontalAlignmentMode = .left
-        pushLabel.verticalAlignmentMode = .bottom
+        pushLabel.verticalAlignmentMode = .baseline
         pushLabel.text = "Gravity"
         pushLabel.zPosition = zPosition
         pushLabel.position = CGPoint(x: 8, y: 8)

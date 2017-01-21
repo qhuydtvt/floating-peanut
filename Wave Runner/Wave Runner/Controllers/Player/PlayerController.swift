@@ -32,6 +32,8 @@ class PlayerController: SingleControler {
     
     var lightController : LightController!
     
+    var screamSound: SKAction!
+    
     static var instance: PlayerController!
     
     var center : CGPoint {
@@ -56,12 +58,12 @@ class PlayerController: SingleControler {
         lightNode.isEnabled = false
         player.addChild(lightNode)
         
-        
-        
         lightController = LightController(jsonFile: "light")
         lightController.lightNode = self.lightNode
         
         configPhysics()
+        
+        screamSound = SKAction.playSoundFileNamed("player_scream.mp3", waitForCompletion: false)
     }
     
     @objc
@@ -102,9 +104,11 @@ class PlayerController: SingleControler {
     }
     
     override func destroy() {
-        super.destroy()
-        print("Player destroying")
-        
+        self.lightNode.isEnabled = false
+        self.parent.run(.sequence([screamSound, .wait(forDuration: 1)])) {
+                super.destroy()
+                print("Player destroying")
+        }
     }
     
     @objc

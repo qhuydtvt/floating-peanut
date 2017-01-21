@@ -18,7 +18,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var backgroundSoundController: BackgroundSoundController!
     var labelsController: LabelsController!
     
-    var screamSound: SKAction!
     
     override func didMove(to view: SKView) {
         configPhysics()
@@ -38,7 +37,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         configLabels()
         
-        screamSound = SKAction.playSoundFileNamed("player_scream.mp3", waitForCompletion: false)
+        
     }
     
     func claimVictory() -> Void {
@@ -48,9 +47,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func defeat() -> Void {
         print("Defeated")
-        self.run(self.screamSound) {
-            GameOverScene.present(with: self.view!)
-        }
+        
+        GameOverScene.present(with: self.view!)
+        
         
     }
     

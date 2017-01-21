@@ -124,8 +124,12 @@ class EnemyController : SingleControler {
         } else if type == 2 || type == 4 {
             let enemyController = EnemyController(textures: SKTextureAtlas(named: "enemy_4").toTextures())
             var lastTimeUpdate : TimeInterval = -1
+            var attacked = false
             enemyController.attackAction = {
                 controller, time, target in
+                if attacked {
+                    return
+                }
                 if lastTimeUpdate == -1 {
                     lastTimeUpdate = time
                 }
@@ -136,6 +140,7 @@ class EnemyController : SingleControler {
                     let sonicWallController = SonicWallController()
                     sonicWallController.config(position: CGPoint(x: 0, y: -controller.height / 2), parent: controller.view)
                     lastTimeUpdate = time
+                    attacked = true
                 }
             }
             return enemyController

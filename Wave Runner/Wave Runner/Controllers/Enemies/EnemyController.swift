@@ -54,17 +54,18 @@ class EnemyController : SingleControler {
         
         self.view.run(.repeatForever(animateAction))
         
-        self.view.handleContact = {
+        self.view.handleContact = { [weak self]
             other in
             print(">> EnemyController: contacted")
-            if !self.exposed {
-                self.view.run(.sequence([.run{
-                    self.view.lightingBitMask = 0
-                    self.exposed = true
+            guard self != nil else { return }
+            if !self!.exposed {
+                self!.view.run(.sequence([.run{
+                    self!.view.lightingBitMask = 0
+                    self!.exposed = true
                     }, .wait(forDuration: 0.3)])) {
-                        self.view.lightingBitMask = 1
-                        self.exposed = false
-                        self.view.contacted = false
+                        self!.view.lightingBitMask = 1
+                        self!.exposed = false
+                        self!.view.contacted = false
                 }
             }
         }

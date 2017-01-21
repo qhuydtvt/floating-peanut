@@ -40,6 +40,8 @@ struct Textures {
     static let laserUpwardAnimation = SKTextureAtlas(named: "goku_laser_upward").toTextures()
     static let attackAnimation = SKTextureAtlas(named: "goku_attack").toTextures()
     static let shield = SKTexture(image: #imageLiteral(resourceName: "shield"))
+    static let goku_standing = SKTexture(image: #imageLiteral(resourceName: "goku_standing"))
+    static let goku_powerup = SKTextureAtlas(named: "goku_powerup").toTextures()
 }
 
 struct CoolDown {

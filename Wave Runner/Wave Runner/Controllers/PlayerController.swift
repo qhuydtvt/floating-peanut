@@ -26,6 +26,8 @@ class PlayerController: SingleControler {
     var lightNode: SKLightNode!
     var laserUpwardAnimation = SKTextureAtlas(named: "goku_laser_upward").toTextures()
     
+    let gravity = GravityFieldController()
+    
     static let instance = PlayerController()
     
     private init() {
@@ -43,6 +45,7 @@ class PlayerController: SingleControler {
         player.physicsBody = SKPhysicsBody(rectangleOf: player.frame.size.scale(by: 0.9))
         player.physicsBody?.categoryBitMask = Masks.PLAYER
         player.physicsBody?.collisionBitMask = 0
+        player.physicsBody?.fieldBitMask = 0
         
         lightNode = SKLightNode()
         lightNode.categoryBitMask = 1
@@ -110,6 +113,10 @@ class PlayerController: SingleControler {
                 break
             }
         }
+    }
+    
+    func createGravityField() {
+        gravity.config(position: self.view.position.add(other: self.player.position.multiply(factor: 3)).add(dx: 100, dy: 0), parent: self.parent)
     }
     
     @objc

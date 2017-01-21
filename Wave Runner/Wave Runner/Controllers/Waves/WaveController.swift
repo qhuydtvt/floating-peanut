@@ -38,6 +38,7 @@ class WaveController: SingleControler {
         self.view.physicsBody?.contactTestBitMask = Masks.ENEMY
         self.view.physicsBody?.affectedByGravity = false
         self.view.physicsBody?.linearDamping = 0
+        view.physicsBody?.fieldBitMask = 0
         
         self.view.zRotation = CGFloat(angle)
         self.view.physicsBody?.velocity = CGVector(dx: speed * cos(angle), dy: speed * sin(angle))

@@ -41,6 +41,9 @@ class PlatformController: Controller {
         platform2.physicsBody?.categoryBitMask = Masks.PLATFORM
         platform2.physicsBody?.collisionBitMask = 0
         
+        platform1.physicsBody?.fieldBitMask = 0
+        platform2.physicsBody?.fieldBitMask = 0
+        
         platform1.position = CGPoint(x: platform1.width / 2, y: platform2.height / 2)
         platform2.position = CGPoint(x: platform1.position.x + platform1.size.width - 5, y: platform1.position.y)
         

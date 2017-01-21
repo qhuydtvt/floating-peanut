@@ -39,6 +39,7 @@ class EnemyController : SingleControler {
         view.physicsBody?.contactTestBitMask = Masks.PLAYER_WAVE
         view.physicsBody?.velocity = CGVector(dx: -Speed.ENEMY_VELOCITY, dy: 0)
         view.physicsBody?.linearDamping = 0
+        view.physicsBody?.fieldBitMask = 1
         
 //        view.physicsBody?.affectedByGravity = false
         

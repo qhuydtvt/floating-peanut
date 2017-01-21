@@ -15,11 +15,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var platformController: PlatformController!
     var enemyManager : EnemyControllerManager!
     var playerController: PlayerController!
+    var backgroundSoundController: BackgroundSoundController!
     
     override func didMove(to view: SKView) {
         configPhysics()
         configBackground()
         configPlatform()
+        configSound()
         
         enemyManager = EnemyControllerManager(enemyGenerator: EnemyControllerGenerator(jsonFile: "stage1"))
         
@@ -39,6 +41,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func configBackground() -> Void {
         self.backgroundController = BackgroundController()
         self.backgroundController.config(position: .zero, parent: self)
+    }
+    
+    func configSound() {
+        self.backgroundSoundController = BackgroundSoundController()
+        self.backgroundSoundController.config(position: .zero, parent: self)
     }
     
     override func update(_ currentTime: TimeInterval) {

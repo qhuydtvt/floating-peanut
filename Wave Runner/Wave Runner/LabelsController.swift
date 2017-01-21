@@ -23,7 +23,6 @@ class LabelsController {
     var sonicFill: SKSpriteNode!
     var laserFill: SKSpriteNode!
     var pushFill: SKSpriteNode!
-    var pullFill: SKSpriteNode!
     
     init(scene: SKScene) {
         self.gameScene = scene
@@ -38,7 +37,7 @@ class LabelsController {
         case .PUSH:
             countDown(node: pushFill, duration: CoolDown.PUSH)
         case .PULL:
-            countDown(node: pullFill, duration: CoolDown.PULL)
+            break
         }
     }
     
@@ -48,35 +47,13 @@ class LabelsController {
     }
     
     func addLabels() {
-        let pullLabel = SKLabelNode(fontNamed: fontName)
-        pullLabel.fontSize = fontSize
-        pullLabel.horizontalAlignmentMode = .left
-        pullLabel.verticalAlignmentMode = .bottom
-        pullLabel.text = "Pull"
-        pullLabel.zPosition = zPosition
-        pullLabel.position = CGPoint(x: 8, y: 8)
-        gameScene.addChild(pullLabel)
-        
-        let pullContainer = SKNode()
-        let pullUnfill = SKSpriteNode(color: UIColor.init(colorLiteralRed: 53/255, green: 144/255, blue: 63/255, alpha: 1), size: barSize)
-        pullFill = SKSpriteNode(color: UIColor.init(colorLiteralRed: 53/255, green: 183/255, blue: 126/255, alpha: 1), size: barSize)
-        let pullCrop = SKCropNode()
-        pullCrop.maskNode = SKSpriteNode(color: .white, size: barSize)
-        pullCrop.addChild(pullFill)
-        pullContainer.addChild(pullCrop)
-        pullContainer.addChild(pullUnfill)
-        pullContainer.position = pullLabel.position.add(dx: 200 + barSize.width / 2, dy: barSize.height / 2)
-        pullContainer.zPosition = 5
-        pullCrop.zPosition = 1
-        gameScene.addChild(pullContainer)
-        
         let pushLabel = SKLabelNode(fontNamed: fontName)
         pushLabel.fontSize = fontSize
         pushLabel.horizontalAlignmentMode = .left
         pushLabel.verticalAlignmentMode = .bottom
         pushLabel.text = "Push"
         pushLabel.zPosition = zPosition
-        pushLabel.position = pullLabel.position.add(dx: 0, dy: pullLabel.frame.height + distanceBetweenLabels)
+        pushLabel.position = CGPoint(x: 8, y: 8)
         gameScene.addChild(pushLabel)
         
         let pushContainer = SKNode()

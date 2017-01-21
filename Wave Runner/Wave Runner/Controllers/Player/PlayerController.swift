@@ -24,9 +24,8 @@ class PlayerController: SingleControler {
     var lightNode: SKLightNode!
     
     let laserSkill = LaserSkill()
-    let gravity = GravityFieldController()
+    let gravity = GravitySkill()
     let sonicSkill = SonicSkill()
-    let pushSkill = PushSkill()
     
     static let instance = PlayerController()
     
@@ -67,7 +66,7 @@ class PlayerController: SingleControler {
     
     @objc
     func pushEnemies() {
-       pushSkill.pushEnemies()
+       gravity.pushEnemies()
     }
     
     @objc

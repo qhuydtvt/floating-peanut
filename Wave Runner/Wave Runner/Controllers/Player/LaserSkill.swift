@@ -9,47 +9,32 @@
 import Foundation
 import SpriteKit
 
-enum LaserType {
-    case straight, upward, downward
-}
-
 class LaserSkill {
     var coolDownTime: Double = CoolDown.LASER
     var isCoolingDown = false
     lazy var playerController = PlayerController.instance
     
-    func spawn(type: LaserType) {
+    func spawn(aimAt dest: CGPoint) {
         guard isCoolingDown == false else { return }
-        switch type {
-        case .straight:
-            var anim = Textures.laserStraightAnimation
-            anim.append(SKTexture(image: #imageLiteral(resourceName: "goku_standing")))
+        var anim = Textures.laserUpwardAnimation
+        anim.append(SKTexture(image: #imageLiteral(resourceName: "goku_standing")))
+        
+        let animateAction = SKAction.animate(with: anim, timePerFrame: 0.1, resize: true, restore: false)
+        let shootAction = SKAction.run { [unowned self] in
+            let laser = LaserController()
+            laser.config(position: .zero, parent: self.playerController.player)
             
-            let animateAction = SKAction.animate(with: anim, timePerFrame: 0.1, resize: true, restore: false)
-            let shootAction = SKAction.run { [unowned self] in
-                let laser = LaserController(type: .straight)
-                laser.config(position: CGPoint(x: laser.laser.width/2 + self.playerController.player.width/3, y: -0.5), parent: self.playerController.player)
-                laser.move(speed: 1200)
+            let vector = dest.subtract(other: self.playerController.center)
+            if vector.dx > 0 {
+            let angle = atan(vector.dy / vector.dx)
+            laser.view.zRotation = CGFloat(angle)
             }
-            let delay = SKAction.wait(forDuration: 0.2)
-            let sequence = SKAction.sequence([delay, shootAction])
-            playerController.player.run(.group([animateAction, sequence]))
             
-        case .upward:
-            var anim = Textures.laserUpwardAnimation
-            anim.append(SKTexture(image: #imageLiteral(resourceName: "goku_standing")))
-            
-            let animateAction = SKAction.animate(with: anim, timePerFrame: 0.1, resize: true, restore: false)
-            let shootAction = SKAction.run { [unowned self] in
-                let laser = LaserController(type: .upward)
-                laser.config(position: CGPoint(x: laser.laser.width/2.5 + self.playerController.player.width/3, y: laser.laser.width / 4.2), parent: self.playerController.player)
-                laser.move(speed: 1200)
-            }
-            let delay = SKAction.wait(forDuration: 0.2)
-            let sequence = SKAction.sequence([delay, shootAction])
-            playerController.player.run(.group([animateAction, sequence]))
-        default: break
+            laser.move(speed: 1200)
         }
+        let delay = SKAction.wait(forDuration: 0.2)
+        let sequence = SKAction.sequence([delay, shootAction])
+        playerController.player.run(.group([animateAction, sequence]))
         
         self.isCoolingDown = true
         DispatchQueue.main.asyncAfter(deadline: .now() + coolDownTime) {
@@ -60,24 +45,19 @@ class LaserSkill {
 }
 
 class LaserController: SingleControler {
-    var type: LaserType!
     var cropNode: SKCropNode!
     var laser: View!
     
-    init(type: LaserType) {
+    init() {
         super.init(view: View())
-        self.type = type
         self.laser = View(image: #imageLiteral(resourceName: "laser"))
         self.cropNode = SKCropNode()
         cropNode.maskNode = SKSpriteNode(image: #imageLiteral(resourceName: "laser"))
         cropNode.addChild(laser)
         view.addChild(cropNode)
         
+        cropNode.position = CGPoint(x: laser.width/2, y: 0)
         laser.position = CGPoint(x: -laser.width, y: 0)
-        
-        if type == .upward {
-            view.zRotation = view.zRotation + CGFloat.pi / 6
-        }
         
         configPhysics()
     }
@@ -89,9 +69,10 @@ class LaserController: SingleControler {
         self.laser.physicsBody?.collisionBitMask = 0
         self.laser.lightingBitMask = 0
         
-        self.laser.handleContact = {
+        self.laser.handleContact = { [unowned laser = self.laser!]
             other in
             other.destroy?()
+            laser.contacted = false
         }
     }
     

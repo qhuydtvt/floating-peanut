@@ -61,14 +61,8 @@ class PlayerController: SingleControler {
         super.config(position: position, parent: parent)
     }
     
-    @objc
-    func fireUpwardLaser() {
-        laserSkill.spawn(type: .upward)
-    }
-    
-    @objc
-    func fireStraightLaser() {
-        laserSkill.spawn(type: .straight)
+    func shootLaser(at dest: CGPoint) {
+        laserSkill.spawn(aimAt: dest)
     }
     
     @objc

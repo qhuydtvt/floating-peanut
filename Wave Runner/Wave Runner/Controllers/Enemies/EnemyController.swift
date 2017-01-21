@@ -14,7 +14,6 @@ enum EnemyState {
 }
 
 typealias AttackActionType = (EnemyController, TimeInterval, CGPoint) -> ()
-typealias AttackLoopType = (EnemyController, CGPoint) -> ()
 
 class EnemyController : SingleControler {
     var lastTimeUpdate : Double = -1
@@ -26,12 +25,15 @@ class EnemyController : SingleControler {
     var exposed : Bool = false
     
     var attackAction: AttackActionType?
-    var attackLoop : AttackLoopType?
     
-    init(textures: [SKTexture]) {
+    var speed : CGFloat!
+    
+    
+    init(textures: [SKTexture], speed: CGFloat = Speed.ENEMY_VELOCITY) {
         super.init(view: View(texture: textures[0]))
         self.textures = textures
         view.lightingBitMask = 1
+        self.speed = speed
     }
     
     override func config(position: CGPoint, parent: SKNode) {
@@ -42,8 +44,8 @@ class EnemyController : SingleControler {
         view.physicsBody = SKPhysicsBody(rectangleOf: view.size.scale(by: 0.7))
         view.physicsBody?.collisionBitMask = Masks.ENEMY
         view.physicsBody?.categoryBitMask = Masks.ENEMY
-        view.physicsBody?.contactTestBitMask = Masks.PLAYER_WAVE
-        view.physicsBody?.velocity = CGVector(dx: -Speed.ENEMY_VELOCITY, dy: 0)
+        view.physicsBody?.contactTestBitMask = Masks.PLAYER_SONIC | Masks.PLAYER_LAZER
+        view.physicsBody?.velocity = CGVector(dx: -self.speed, dy: 0)
         view.physicsBody?.linearDamping = 0
         view.physicsBody?.fieldBitMask = 1
         
@@ -70,6 +72,10 @@ class EnemyController : SingleControler {
         }
     }
     
+    func stopMoving() -> Void {
+        self.view.physicsBody?.velocity = .zero
+    }
+    
     
     
     override func destroy() {
@@ -83,6 +89,7 @@ class EnemyController : SingleControler {
         
         if self.view.position.x < 0 {
             self.view.removeFromParent()
+            return
         }
         
         //        if lastTimeUpdate == -1 {
@@ -109,7 +116,23 @@ class EnemyController : SingleControler {
             }
             return enemyController
         } else if type == 2 || type == 4 {
-            return EnemyController(textures: SKTextureAtlas(named: "enemy_4").toTextures())
+            let enemyController = EnemyController(textures: SKTextureAtlas(named: "enemy_4").toTextures())
+            var lastTimeUpdate : TimeInterval = -1
+            enemyController.attackAction = {
+                controller, time, target in
+                if lastTimeUpdate == -1 {
+                    lastTimeUpdate = time
+                }
+                
+                let delta = time - lastTimeUpdate
+                if delta > 2 {
+                    controller.stopMoving()
+                    let sonicWallController = SonicWallController()
+                    sonicWallController.config(position: CGPoint(x: 0, y: -controller.height / 2), parent: controller.view)
+                    lastTimeUpdate = time
+                }
+            }
+            return enemyController
         } else if type == 3 {
             let enemyController = EnemyController(textures: SKTextureAtlas(named: "enemy_3").toTextures())
             var lastTimeUpdate : Double = -1

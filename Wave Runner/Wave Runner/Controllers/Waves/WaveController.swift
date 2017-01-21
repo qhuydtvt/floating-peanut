@@ -32,10 +32,12 @@ class WaveController: SingleControler {
     //-(Speed.ENEMY_VELOCITY * 1.5)
     
     override func config(position: CGPoint, parent: SKNode) {
+        super.config(position: position, parent: parent)
+        
         self.view.physicsBody = SKPhysicsBody(rectangleOf: self.view.size)
         self.view.physicsBody?.collisionBitMask = 0
-        self.view.physicsBody?.categoryBitMask = Masks.PLAYER_WAVE
-        self.view.physicsBody?.contactTestBitMask = Masks.ENEMY
+        self.view.physicsBody?.categoryBitMask = Masks.PLAYER_SONIC
+        self.view.physicsBody?.contactTestBitMask = Masks.ENEMY | Masks.ENEMY_SONIC
         self.view.physicsBody?.affectedByGravity = false
         self.view.physicsBody?.linearDamping = 0
         view.physicsBody?.fieldBitMask = 0
@@ -50,7 +52,6 @@ class WaveController: SingleControler {
         self.view.colorBlendFactor = 0.5
         self.view.xScale = 0.1
         self.view.yScale = 0.1
-        super.config(position: position, parent: parent)
         
         self.view.run(.sequence([.scaleX(to: CGFloat(lifeTime / Double(4)), y: CGFloat(lifeTime / Double(4)), duration: lifeTime), .removeFromParent()]))
         

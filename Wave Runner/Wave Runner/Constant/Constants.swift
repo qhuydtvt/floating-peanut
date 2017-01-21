@@ -14,13 +14,15 @@ let PLAYER_ANIMATION_TIME_FER_FRAME : Double    = 0.15
 
 struct Masks {
     static let PLAYER          =   UInt32(1 << 0)
-    static let PLAYER_WAVE     =   UInt32(1 << 1)
+    static let PLAYER_LAZER    =   UInt32(1 << 1)
+    static let PLAYER_SONIC     =   UInt32(1 << 2)
     
-    static let ENEMY           =   UInt32(1 << 2)
-    static let ENEMY_WAVE      =   UInt32(1 << 3)
+    static let ENEMY           =   UInt32(1 << 3)
+    static let ENEMY_MISSLE    =   UInt32(1 << 4)
+    static let ENEMY_SONIC      =   UInt32(1 << 5)
     
-    static let PLATFORM        =   UInt32(1 << 4)
-    static let LASER           =   UInt32(1 << 5)
+    static let PLATFORM        =   UInt32(1 << 6)
+    static let LASER           =   UInt32(1 << 7)
 }
 
 struct Speed {
@@ -35,6 +37,7 @@ enum Element {
 struct Textures {
     static let arc = SKTexture(image: #imageLiteral(resourceName: "arc_right"))
     static let missle_small = SKTexture(image: #imageLiteral(resourceName: "missle_small"))
+    static let sonic_wall = SKTexture(image: #imageLiteral(resourceName: "sonic_wall"))
     static let laserStraightAnimation = SKTextureAtlas(named: "goku_laser_straight").toTextures()
     static let laserUpwardAnimation = SKTextureAtlas(named: "goku_laser_upward").toTextures()
     static let attackAnimation = SKTextureAtlas(named: "goku_attack").toTextures()

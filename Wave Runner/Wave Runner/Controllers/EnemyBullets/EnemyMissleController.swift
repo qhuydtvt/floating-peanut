@@ -26,8 +26,8 @@ class EnemyMissleController: SingleControler {
     func configPhysics() -> Void {
         self.view.physicsBody = SKPhysicsBody(rectangleOf: self.size)
         self.view.physicsBody?.affectedByGravity = false
-        self.view.physicsBody?.collisionBitMask = Masks.ENEMY_WAVE
-        self.view.physicsBody?.categoryBitMask = Masks.ENEMY_WAVE
+        self.view.physicsBody?.collisionBitMask = Masks.ENEMY_MISSLE
+        self.view.physicsBody?.categoryBitMask = Masks.ENEMY_MISSLE
         self.view.physicsBody?.linearDamping = 0
         self.view.physicsBody?.fieldBitMask = 1
     }

@@ -56,7 +56,7 @@ class PlayerController: SingleControler {
     func configPhysics() -> Void {
         player.physicsBody = SKPhysicsBody(rectangleOf: player.frame.size.scale(by: 0.9))
         player.physicsBody?.categoryBitMask = Masks.PLAYER
-        player.physicsBody?.contactTestBitMask = Masks.ENEMY | Masks.ENEMY_WAVE
+        player.physicsBody?.contactTestBitMask = Masks.ENEMY | Masks.ENEMY_MISSLE
         player.physicsBody?.collisionBitMask = 0
         player.physicsBody?.fieldBitMask = 0
         player.handleContact = {

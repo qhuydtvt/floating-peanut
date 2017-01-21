@@ -10,7 +10,7 @@ import Foundation
 import SpriteKit
 
 class GravitySkill {
-    var coolDownTime: Double = CoolDown.PULL
+    var coolDownTime: Double = CoolDown.PUSH
     var isCoolingDown = false
     
     var gravityNode: SKFieldNode!

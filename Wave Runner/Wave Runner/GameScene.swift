@@ -59,7 +59,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         gesture4.direction = .right
         gesture4.numberOfTouchesRequired = 2
         view?.addGestureRecognizer(gesture4)
+        
+        let gesture5 = UISwipeGestureRecognizer(target: playerController, action: #selector(PlayerController.activeShield))
+        gesture5.direction = .down
+        gesture5.numberOfTouchesRequired = 2
+        view?.addGestureRecognizer(gesture5)
     }
+    
     
     func fireLaser(gesture: UIGestureRecognizer) {
         var destination = gesture.location(in: view!).multiply(factor: self.frame.width / view!.width)

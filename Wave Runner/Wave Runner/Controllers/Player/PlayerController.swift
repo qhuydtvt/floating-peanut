@@ -14,6 +14,7 @@ enum AttackType {
     case LAZER
     case PUSH
     case PULL
+    case SHIELD
 }
 
 class PlayerController: SingleControler {
@@ -26,6 +27,7 @@ class PlayerController: SingleControler {
     let laserSkill = LaserSkill()
     let gravity = GravitySkill()
     let sonicSkill = SonicSkill()
+    let shieldSkill = ShieldSkill()
     
     static let instance = PlayerController()
     
@@ -51,6 +53,11 @@ class PlayerController: SingleControler {
         player.addChild(lightNode)
         
         configPhysics()
+    }
+    
+    @objc
+    func activeShield() {
+        shieldSkill.activeShield()
     }
     
     func configPhysics() -> Void {

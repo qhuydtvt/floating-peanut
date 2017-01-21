@@ -23,6 +23,7 @@ class LabelsController {
     var sonicFill: SKSpriteNode!
     var laserFill: SKSpriteNode!
     var pushFill: SKSpriteNode!
+    var shieldFill: SKSpriteNode!
     
     init(scene: SKScene) {
         self.gameScene = scene
@@ -38,6 +39,8 @@ class LabelsController {
             countDown(node: pushFill, duration: CoolDown.PUSH)
         case .PULL:
             break
+        case .SHIELD:
+            countDown(node: shieldFill, duration: CoolDown.SHIELD)
         }
     }
     
@@ -51,7 +54,7 @@ class LabelsController {
         pushLabel.fontSize = fontSize
         pushLabel.horizontalAlignmentMode = .left
         pushLabel.verticalAlignmentMode = .baseline
-        pushLabel.text = "Gravity"
+        pushLabel.text = "Grav"
         pushLabel.zPosition = zPosition
         pushLabel.position = CGPoint(x: 8, y: 8)
         gameScene.addChild(pushLabel)
@@ -112,5 +115,27 @@ class LabelsController {
         sonicCrop.zPosition = 1
         
         gameScene.addChild(sonicContainer)
+        
+        let shieldLabel = SKLabelNode(fontNamed: fontName)
+        shieldLabel.fontSize = fontSize
+        shieldLabel.horizontalAlignmentMode = .left
+        shieldLabel.text = "Shield"
+        shieldLabel.zPosition = zPosition
+        shieldLabel.position = sonicLabel.position.add(dx: 0, dy: sonicLabel.frame.height + distanceBetweenLabels)
+        gameScene.addChild(shieldLabel)
+        
+        let shieldContainer = SKNode()
+        let shieldUnfill = SKSpriteNode(color: UIColor.init(colorLiteralRed: 23/255, green: 76/255, blue: 163/255, alpha: 1), size: barSize)
+        shieldFill = SKSpriteNode(color: UIColor.init(colorLiteralRed: 38/255, green: 134/255, blue: 208/255, alpha: 1), size: barSize)
+        let shieldCrop = SKCropNode()
+        shieldCrop.maskNode = SKSpriteNode(color: .white, size: barSize)
+        shieldCrop.addChild(shieldFill)
+        shieldContainer.addChild(shieldCrop)
+        shieldContainer.addChild(shieldUnfill)
+        shieldContainer.position = shieldLabel.position.add(dx: 200 + barSize.width / 2, dy: barSize.height / 2)
+        shieldContainer.zPosition = 5
+        shieldCrop.zPosition = 1
+        
+        gameScene.addChild(shieldContainer)
     }
 }

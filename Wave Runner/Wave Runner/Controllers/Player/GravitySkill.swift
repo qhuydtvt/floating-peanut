@@ -17,12 +17,16 @@ class GravitySkill {
     weak var parent: SKNode!
     weak var playerController: PlayerController!
     
+    var gravityPullSound : SKAction!
+    
     init() {
         gravityNode = SKFieldNode.radialGravityField()
         gravityNode.categoryBitMask = 1
         gravityNode.strength = 10
         gravityNode.falloff = 0
+        gravityPullSound = SKAction.playSoundFileNamed("gravity_pull.wav", waitForCompletion: false)
     }
+    
     func config(position: CGPoint, parent: SKNode) {
         gravityNode.position = position
         self.parent = parent
@@ -35,6 +39,8 @@ class GravitySkill {
     func createField() {
         guard !isCoolingDown else { return }
         if self.gravityNode.parent != nil { gravityNode.removeFromParent() }
+        
+        self.playerController.view.run(self.gravityPullSound)
         
         let position = playerController.view.position.add(other: playerController.player.position.multiply(factor: 3)).add(dx: 300, dy: 0)
         self.config(position: position, parent: playerController.parent)

@@ -105,7 +105,7 @@ class PlayerController: SingleControler {
     
     override func destroy() {
         self.lightNode.isEnabled = false
-        self.parent.run(.sequence([screamSound, .wait(forDuration: 1)])) {
+        self.parent.run(.sequence([screamSound, .wait(forDuration: 0.5)])) {
                 super.destroy()
                 print("Player destroying")
         }

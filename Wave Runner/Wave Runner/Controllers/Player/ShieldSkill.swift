@@ -14,8 +14,16 @@ class ShieldSkill {
     var isCoolingDown = false
     weak var playerController: PlayerController!
     
+    var powerupSound : SKAction!
+    
+    init() {
+        self.powerupSound = SKAction.playSoundFileNamed("powerup.wav", waitForCompletion: false)
+    }
+    
     func activeShield() {
         guard isCoolingDown == false else { return }
+        
+        playerController.view.run(self.powerupSound)
         
         let shield = View(texture: Textures.shield)
         shield.physicsBody = SKPhysicsBody(circleOfRadius: 50)

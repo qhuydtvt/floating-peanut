@@ -73,6 +73,7 @@
 		5075C6BE1E34073600B5B3B5 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5075C6BD1E34073600B5B3B5 /* GameOverScene.swift */; };
 		5075C6C01E340E0100B5B3B5 /* VictoryScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5075C6BF1E340E0100B5B3B5 /* VictoryScene.sks */; };
 		5075C6C21E340E0C00B5B3B5 /* VictoryScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5075C6C11E340E0C00B5B3B5 /* VictoryScene.swift */; };
+		5075C6C41E3412F100B5B3B5 /* sonic_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5075C6C31E3412F100B5B3B5 /* sonic_sound.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -144,6 +145,7 @@
 		5075C6BD1E34073600B5B3B5 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		5075C6BF1E340E0100B5B3B5 /* VictoryScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = VictoryScene.sks; sourceTree = "<group>"; };
 		5075C6C11E340E0C00B5B3B5 /* VictoryScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VictoryScene.swift; sourceTree = "<group>"; };
+		5075C6C31E3412F100B5B3B5 /* sonic_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sonic_sound.wav; sourceTree = "<group>"; };
 		558FE0BD98FE42AEB7C5C6C7 /* Pods_Wave_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wave_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		972D3FC7CC34502E45407B4F /* Pods-Wave Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wave Runner.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wave Runner/Pods-Wave Runner.release.xcconfig"; sourceTree = "<group>"; };
 		A262C3DE2D62DC763A39A564 /* Pods-Wave Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wave Runner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wave Runner/Pods-Wave Runner.debug.xcconfig"; sourceTree = "<group>"; };
@@ -385,6 +387,7 @@
 				18B12BFC1E340119007721FB /* explosion.mp3 */,
 				18B12BFA1E33FE2C007721FB /* lazer.mp3 */,
 				5066E86E1E32CF5F009771B6 /* background.mp3 */,
+				5075C6C31E3412F100B5B3B5 /* sonic_sound.wav */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -483,6 +486,7 @@
 				5066E8A01E32E06E009771B6 /* Gestures.json in Resources */,
 				5075C6BC1E34071D00B5B3B5 /* GameOverScene.sks in Resources */,
 				18B12BF31E33CACF007721FB /* missle_trail.sks in Resources */,
+				5075C6C41E3412F100B5B3B5 /* sonic_sound.wav in Resources */,
 				5066E87A1E32CF5F009771B6 /* stage1.json in Resources */,
 				5075C6C01E340E0100B5B3B5 /* VictoryScene.sks in Resources */,
 				18B12BFB1E33FE2C007721FB /* lazer.mp3 in Resources */,

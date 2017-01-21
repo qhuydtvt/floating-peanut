@@ -35,4 +35,19 @@ class GameOverScene: SKScene {
             // new game
         }
     }
+    
+    static func present(with view: SKView) {
+        let scene = SKScene(fileNamed: "GameOverScene")!
+        // Set the scale mode to scale to fit the window
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            let width = scene.size.width
+            let height = width * 9 / 16
+            scene.size = CGSize(width: width, height: height)
+        }
+        
+        scene.scaleMode = .aspectFill
+        
+        // Present the scene
+        view.presentScene(scene)
+    }
 }

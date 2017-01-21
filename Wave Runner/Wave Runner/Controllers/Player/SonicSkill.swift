@@ -43,6 +43,7 @@ class SonicSkill {
         }
         
         playerController.view.run(.repeat(.sequence([kameAction, .wait(forDuration: 0.1)]), count: 3))
+        playerController.parent.run(.playSoundFileNamed("sonic_sound", waitForCompletion: false))
     }
     
 }

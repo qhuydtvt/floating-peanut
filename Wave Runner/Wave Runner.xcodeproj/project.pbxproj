@@ -14,6 +14,7 @@
 		18B12BF51E33CAEF007721FB /* missle_explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 18B12BF41E33CAEF007721FB /* missle_explosion.sks */; };
 		18B12BF71E33DD80007721FB /* SonicWallController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B12BF61E33DD80007721FB /* SonicWallController.swift */; };
 		18B12BFB1E33FE2C007721FB /* lazer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18B12BFA1E33FE2C007721FB /* lazer.mp3 */; };
+		18B12BFD1E340119007721FB /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 18B12BFC1E340119007721FB /* explosion.mp3 */; };
 		30106198D306146C017C546F /* Pods_Wave_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 558FE0BD98FE42AEB7C5C6C7 /* Pods_Wave_Runner.framework */; };
 		500C0E1C1E325B5800FCF079 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E1B1E325B5800FCF079 /* AppDelegate.swift */; };
 		500C0E1E1E325B5800FCF079 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 500C0E1D1E325B5800FCF079 /* GameScene.sks */; };
@@ -77,6 +78,7 @@
 		18B12BF41E33CAEF007721FB /* missle_explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = missle_explosion.sks; path = Emitters/missle_explosion.sks; sourceTree = "<group>"; };
 		18B12BF61E33DD80007721FB /* SonicWallController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SonicWallController.swift; sourceTree = "<group>"; };
 		18B12BFA1E33FE2C007721FB /* lazer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lazer.mp3; sourceTree = "<group>"; };
+		18B12BFC1E340119007721FB /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion.mp3; sourceTree = "<group>"; };
 		500C0E181E325B5800FCF079 /* Wave Runner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wave Runner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		500C0E1B1E325B5800FCF079 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		500C0E1D1E325B5800FCF079 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -365,6 +367,7 @@
 		5066E86D1E32CF5F009771B6 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				18B12BFC1E340119007721FB /* explosion.mp3 */,
 				18B12BFA1E33FE2C007721FB /* lazer.mp3 */,
 				5066E86E1E32CF5F009771B6 /* background.mp3 */,
 			);
@@ -460,6 +463,7 @@
 				504B96721E33B6F1000110C2 /* gameover.ttf in Resources */,
 				500C0E2C1E325B5800FCF079 /* LaunchScreen.storyboard in Resources */,
 				5066E87C1E32CF5F009771B6 /* background.mp3 in Resources */,
+				18B12BFD1E340119007721FB /* explosion.mp3 in Resources */,
 				5066E8A01E32E06E009771B6 /* Gestures.json in Resources */,
 				18B12BF31E33CACF007721FB /* missle_trail.sks in Resources */,
 				5066E87A1E32CF5F009771B6 /* stage1.json in Resources */,

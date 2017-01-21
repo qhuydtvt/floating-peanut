@@ -8,6 +8,8 @@
 
 import SpriteKit
 
+typealias NoEnemyLeftType = () -> ()
+
 class EnemyControllerManager: Controller {
     static var shared: EnemyControllerManager!
     
@@ -17,6 +19,7 @@ class EnemyControllerManager: Controller {
     var groundPosition: CGPoint!
     var midAirPosition: CGPoint!
     var highAirPosition: CGPoint!
+    var noEnemyLeft: NoEnemyLeftType?
     
     
     init(enemyGenerator: EnemyControllerGenerator) {
@@ -35,7 +38,9 @@ class EnemyControllerManager: Controller {
     }
     
     override func run(parent: SKNode, time: TimeInterval) {
-        let (enemyControllerOpt, type) = enemyGenerator.generate(time: time)
+        let (enemyControllerOpt, type, outOfEnemy) = enemyGenerator.generate(time: time)
+        
+        
         if let enemyController = enemyControllerOpt {
             if (type == 1) {
                 enemyController.config(position: self.midAirPosition, parent: parent)
@@ -51,6 +56,10 @@ class EnemyControllerManager: Controller {
         enemies = enemies.filter{
             enemy in
             return !enemy.viewDetached
+        }
+        
+        if outOfEnemy && enemies.count <= 0 {
+            self.noEnemyLeft?()
         }
         
         for enemyController in self.enemies {

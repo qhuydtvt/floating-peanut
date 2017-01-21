@@ -26,6 +26,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         enemyManager = EnemyControllerManager(enemyGenerator: EnemyControllerGenerator(jsonFile: "stage1"))
         EnemyControllerManager.shared = enemyManager
+        enemyManager.noEnemyLeft = self.claimVictory
         
         configPlayer()
         configGesture()
@@ -34,6 +35,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         enemyManager.configStartingPositions(groundPosition: groundPosition, midAirPosition: midAirPosition, highAirPosition: highAirPosition)
         
         configLabels()
+    }
+    
+    func claimVictory() -> Void {
+        print("Victory")
+    }
+    
+    func defeat() -> Void {
+        print("Defeated")
     }
     
     func configLabels() {
@@ -76,6 +85,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func configPlayer() {
         self.playerController = PlayerController.instance
         playerController.config(position: CGPoint(x: 175, y: platformController.platform1.height + playerController.board.height * 1.5), parent: self)
+        playerController.didDestroy = self.defeat
     }
     
     func configPlatform() {

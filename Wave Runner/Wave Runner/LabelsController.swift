@@ -125,8 +125,8 @@ class LabelsController {
         gameScene.addChild(shieldLabel)
         
         let shieldContainer = SKNode()
-        let shieldUnfill = SKSpriteNode(color: UIColor.init(colorLiteralRed: 23/255, green: 76/255, blue: 163/255, alpha: 1), size: barSize)
-        shieldFill = SKSpriteNode(color: UIColor.init(colorLiteralRed: 38/255, green: 134/255, blue: 208/255, alpha: 1), size: barSize)
+        let shieldUnfill = SKSpriteNode(color: UIColor.init(colorLiteralRed: 53/255, green: 144/255, blue: 63/255, alpha: 1), size: barSize)
+        shieldFill = SKSpriteNode(color: UIColor.init(colorLiteralRed: 53/255, green: 183/255, blue: 126/255, alpha: 1), size: barSize)
         let shieldCrop = SKCropNode()
         shieldCrop.maskNode = SKSpriteNode(color: .white, size: barSize)
         shieldCrop.addChild(shieldFill)

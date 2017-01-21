@@ -43,18 +43,20 @@ class GestureController {
         inputPoints.append(StrokePoint(point: point))
     }
     
-    func touchesEnded(at point: CGPoint) {
+    func touchesEnded(at point: CGPoint) -> String? {
         inputPoints.append(StrokePoint(point: point))
         let recognizer = SwiftUnistroke(points: inputPoints)
         do {
             let (template,distance) = try recognizer.recognizeIn(templates: self.templates, useProtractor:  false)
             if template != nil {
                 print("[FOUND] Template found is \(template!.name) with distance: \(distance!)")
+                return template!.name
             } else {
                 //                print("[FAILED] Template not found")
             }
-        } catch (let error as NSError) {
+        } catch ( _ as NSError) {
             //            print("[FAILED] Error: \(error.localizedDescription)")
         }
+        return nil
     }
 }

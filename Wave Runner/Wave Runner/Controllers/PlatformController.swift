@@ -22,6 +22,9 @@ class PlatformController: Controller {
 
         platform1.zPosition = 2
         platform2.zPosition = 2
+        
+        platform1.lightingBitMask = 1
+        platform2.lightingBitMask = 1
     }
     
     override func config(position: CGPoint, parent: SKNode) -> Void {

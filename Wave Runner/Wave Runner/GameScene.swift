@@ -82,7 +82,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        playerController.attack()
+//        playerController.attack()
         GestureController.shared.touchesBegan(at: touches.first!.location(in: self.view!))
     }
     
@@ -91,6 +91,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        GestureController.shared.touchesEnded(at: touches.first!.location(in: self.view!))
+        if let skill = GestureController.shared.touchesEnded(at: touches.first!.location(in: self.view!)){
+            if skill == "sound" {
+                playerController.attack()
+            }
+            if skill == "push" {
+                playerController.view.run(.move(by: CGVector(dx:0,dy:100), duration: 0.5))
+            }
+            if skill == "pull" {
+                playerController.view.run(.move(by: CGVector(dx:0,dy:-100), duration: 0.5))
+            }
+        }
     }
 }

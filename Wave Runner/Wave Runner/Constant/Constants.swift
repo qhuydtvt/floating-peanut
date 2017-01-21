@@ -18,6 +18,7 @@ struct Masks {
     static let ENEMY_WAVE      =   UInt32(1 << 3)
     
     static let PLATFORM        =   UInt32(1 << 4)
+    static let LASER           =   UInt32(1 << 5)
 }
 
 struct Speed {

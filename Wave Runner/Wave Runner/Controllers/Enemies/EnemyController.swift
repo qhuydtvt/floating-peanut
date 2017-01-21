@@ -20,6 +20,7 @@ class EnemyController : SingleControler {
     
     init() {
         super.init(view: View(image: #imageLiteral(resourceName: "enemy-1")))
+        view.lightingBitMask = 1
     }
     
     override func config(position: CGPoint, parent: SKNode) {

@@ -21,6 +21,9 @@ class BackgroundController : Controller {
         
         background1.anchorPoint = .zero
         background2.anchorPoint = .zero
+        
+        background1.lightingBitMask = 1
+        background2.lightingBitMask = 1
     }
     
     override func config(position: CGPoint, parent: SKNode) -> Void {

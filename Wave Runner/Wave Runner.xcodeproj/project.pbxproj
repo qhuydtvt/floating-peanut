@@ -51,6 +51,7 @@
 		5066E87E1E32CF75009771B6 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066E87D1E32CF75009771B6 /* View.swift */; };
 		5066E8A01E32E06E009771B6 /* Gestures.json in Resources */ = {isa = PBXBuildFile; fileRef = 5066E89F1E32E06E009771B6 /* Gestures.json */; };
 		5066E8A21E32E206009771B6 /* SwiftUnistroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066E8A11E32E206009771B6 /* SwiftUnistroke.swift */; };
+		50B24C701E333E52008CBE19 /* LaserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B24C6F1E333E52008CBE19 /* LaserController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,7 @@
 		5066E87D1E32CF75009771B6 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		5066E89F1E32E06E009771B6 /* Gestures.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Gestures.json; sourceTree = "<group>"; };
 		5066E8A11E32E206009771B6 /* SwiftUnistroke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUnistroke.swift; sourceTree = "<group>"; };
+		50B24C6F1E333E52008CBE19 /* LaserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaserController.swift; sourceTree = "<group>"; };
 		558FE0BD98FE42AEB7C5C6C7 /* Pods_Wave_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wave_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		972D3FC7CC34502E45407B4F /* Pods-Wave Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wave Runner.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wave Runner/Pods-Wave Runner.release.xcconfig"; sourceTree = "<group>"; };
 		A262C3DE2D62DC763A39A564 /* Pods-Wave Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wave Runner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wave Runner/Pods-Wave Runner.debug.xcconfig"; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 				5066E8631E32CF5F009771B6 /* GestureController.swift */,
 				5066E8641E32CF5F009771B6 /* PlatformController.swift */,
 				5066E8651E32CF5F009771B6 /* PlayerController.swift */,
+				50B24C6F1E333E52008CBE19 /* LaserController.swift */,
 				5066E8661E32CF5F009771B6 /* SingleController.swift */,
 				5066E8671E32CF5F009771B6 /* Waves */,
 			);
@@ -343,7 +346,7 @@
 				TargetAttributes = {
 					500C0E171E325B5700FCF079 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 3CJF6M3857;
+						DevelopmentTeam = Z3TDYH9DM8;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -441,6 +444,7 @@
 				5066E8771E32CF5F009771B6 /* PlayerController.swift in Sources */,
 				500C0E521E326BBD00FCF079 /* CGRect.swift in Sources */,
 				500C0E221E325B5800FCF079 /* GameScene.swift in Sources */,
+				50B24C701E333E52008CBE19 /* LaserController.swift in Sources */,
 				500C0E591E326BBE00FCF079 /* SKTextureAtlas.swift in Sources */,
 				500C0E581E326BBE00FCF079 /* SKSpriteNode.swift in Sources */,
 				500C0E631E326BBE00FCF079 /* UIImageView.swift in Sources */,
@@ -595,11 +599,11 @@
 			baseConfigurationReference = A262C3DE2D62DC763A39A564 /* Pods-Wave Runner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3CJF6M3857;
+				DEVELOPMENT_TEAM = Z3TDYH9DM8;
 				INFOPLIST_FILE = "Wave Runner/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "vn.techkids.Wave-Runner";
+				PRODUCT_BUNDLE_IDENTIFIER = "duyanh2912.Wave-Runner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -610,11 +614,11 @@
 			baseConfigurationReference = 972D3FC7CC34502E45407B4F /* Pods-Wave Runner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3CJF6M3857;
+				DEVELOPMENT_TEAM = Z3TDYH9DM8;
 				INFOPLIST_FILE = "Wave Runner/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "vn.techkids.Wave-Runner";
+				PRODUCT_BUNDLE_IDENTIFIER = "duyanh2912.Wave-Runner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

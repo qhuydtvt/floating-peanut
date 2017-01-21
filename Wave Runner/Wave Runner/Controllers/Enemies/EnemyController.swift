@@ -20,6 +20,8 @@ class EnemyController : SingleControler {
 //    var textures = SKTextureAtlas(named: "enemy_1").toTextures()
     var textures: [SKTexture]!
     
+    var exposed : Bool = false
+    
     init(textures: [SKTexture]) {
         super.init(view: View(texture: textures[0]))
         self.textures = textures
@@ -47,6 +49,16 @@ class EnemyController : SingleControler {
         self.view.handleContact = {
             other in
             print(">> EnemyController: contacted")
+            if !self.exposed {
+                self.view.run(.sequence([.run{
+                    self.view.lightingBitMask = 0
+                    self.exposed = true
+                    }, .wait(forDuration: 0.3)])) {
+                        self.view.lightingBitMask = 1
+                        self.exposed = false
+                        self.view.contacted = false
+                }
+            }
         }
     }
     

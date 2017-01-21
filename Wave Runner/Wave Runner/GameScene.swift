@@ -40,12 +40,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func fireLaser(gesture: UIGestureRecognizer) {
         var destination = gesture.location(in: view!).multiply(factor: self.frame.width / view!.width)
-        destination.y = -destination.y
         let position = playerController.view.position.add(other: playerController.player.position.multiply(factor: 3))
         let vector = destination.add(other: position.multiply(factor: -1))
         if vector.x > 0 {
             let angle = atan(vector.y / vector.x)
-            if angle >= CGFloat.pi / 12 {
+            if angle <= -CGFloat.pi / 12 {
                 playerController.fireUpwardLaser()
             } else {
                 playerController.fireStraightLaser()
@@ -54,7 +53,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func configPlayer() {
-        self.playerController = PlayerController()
+        self.playerController = PlayerController.instance
         playerController.config(position: CGPoint(x: 175, y: platformController.platform1.height + playerController.board.height * 1.5), parent: self)
     }
     

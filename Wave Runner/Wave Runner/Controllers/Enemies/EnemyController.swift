@@ -106,6 +106,8 @@ class EnemyController : SingleControler {
             return EnemyController(textures: SKTextureAtlas(named: "enemy_1").toTextures())
         } else if type == 2 {
             return EnemyController(textures: SKTextureAtlas(named: "enemy_4").toTextures())
+        } else if type == 3 {
+            return EnemyController(textures: SKTextureAtlas(named: "enemy_3").toTextures())
         }
         return EnemyController(textures: SKTextureAtlas(named: "enemy_1").toTextures())
     }

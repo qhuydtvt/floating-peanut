@@ -47,10 +47,10 @@ class EnemyControllerGenerator {
         }
     }
     
-    func generate(time: TimeInterval) -> (EnemyController?, Int) {
+    func generate(time: TimeInterval) -> (EnemyController?, Int, Bool) {
         if lastTimeGenerate == -1 {
             lastTimeGenerate = time
-            return (nil, 0)
+            return (nil, 0, false)
         }
         
         let delta = time - lastTimeGenerate
@@ -59,11 +59,13 @@ class EnemyControllerGenerator {
             let enemyData = enemyDataList[enemyCurrentIndex]
             if delta >= enemyData.time {
                 enemyCurrentIndex += 1
-                return (EnemyController.create(type: enemyData.type), enemyData.type)
+                return (EnemyController.create(type: enemyData.type), enemyData.type, false)
             }
+        } else {
+            return (nil, 0, true)
         }
         
-        return (nil, 0)
+        return (nil, 0, false)
     }
 }
 

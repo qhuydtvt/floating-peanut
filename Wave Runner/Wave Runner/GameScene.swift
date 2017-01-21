@@ -126,20 +126,4 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.physicsWorld.gravity = .zero
         self.physicsWorld.contactDelegate = self
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        GestureController.shared.touchesBegan(at: touches.first!.location(in: self.view!))
-    }
-    
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        GestureController.shared.touchesMoved(at: touches.first!.location(in: self.view!))
-    }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        if let skill = GestureController.shared.touchesEnded(at: touches.first!.location(in: self.view!)) {
-//             if skill == "laser_upward" {
-//                playerController.fireUpwardLaser()
-//            }
-//        }
-    }
 }

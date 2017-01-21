@@ -10,7 +10,7 @@ import Foundation
 import SpriteKit
 
 class PushSkill {
-    var coolDownTime: Double = 3
+    var coolDownTime: Double = CoolDown.PUSH
     var isCoolingDown = false
     lazy var playerController = PlayerController.instance
     

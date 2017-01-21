@@ -39,3 +39,10 @@ struct Textures {
     static let laserUpwardAnimation = SKTextureAtlas(named: "goku_laser_upward").toTextures()
     static let attackAnimation = SKTextureAtlas(named: "goku_attack").toTextures()
 }
+
+struct CoolDown {
+    static let SONIC: Double = 1
+    static let LASER: Double = 1
+    static let PUSH: Double = 3
+    static let PULL: Double = 3
+}

@@ -50,7 +50,12 @@ class PlayerController: SingleControler {
         lightNode = SKLightNode()
         lightNode.categoryBitMask = 1
         lightNode.falloff = 4
+        lightNode.isEnabled = false
         player.addChild(lightNode)
+    }
+    
+    var center : CGPoint {
+        return self.view.position.add(other: self.player.position.multiply(factor: PLAYER_SCALE))
     }
     
     override func config(position: CGPoint, parent: SKNode) {
@@ -142,7 +147,7 @@ class PlayerController: SingleControler {
     func scan(angle: CGFloat) -> Void {
         let kameAction = SKAction.run { [unowned self] in
             let waveController = WaveController.create(angle: angle)
-            waveController.config(position: self.view.position.add(other: self.player.position.multiply(factor: PLAYER_SCALE)), parent: self.parent)
+            waveController.config(position: self.center, parent: self.parent)
         }
         
         self.view.run(.repeat(.sequence([kameAction, .wait(forDuration: 0.1)]), count: 3))

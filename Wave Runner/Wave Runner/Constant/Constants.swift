@@ -34,4 +34,5 @@ enum Element {
 
 struct Textures {
     static let arc = SKTexture(image: #imageLiteral(resourceName: "arc_right"))
+    static let missle_small = SKTexture(image: #imageLiteral(resourceName: "missle_small"))
 }

@@ -10,8 +10,12 @@ import Foundation
 import SpriteKit
 
 class GravityFieldController {
+    var coolDownTime: Double = 3
+    var isCoolingDown = false
+    
     var gravityNode: SKFieldNode!
     var parent: SKNode!
+    lazy var playerController = PlayerController.instance
     
     init() {
         gravityNode = SKFieldNode.radialGravityField()
@@ -24,7 +28,30 @@ class GravityFieldController {
         gravityNode.position = position
         self.parent = parent
         parent.addChild(gravityNode)
+        //        gravityNode.region = SKRegion(radius: 400)
+    }
+    
+    func createField() {
+        guard !isCoolingDown else { return }
+        if self.gravityNode.parent != nil { gravityNode.removeFromParent() }
         
-//        gravityNode.region = SKRegion(radius: 400)
+        let position = playerController.view.position.add(other: playerController.player.position.multiply(factor: 3)).add(dx: 150, dy: 0)
+        self.config(position: position, parent: playerController.parent)
+        
+        for enemy in EnemyControllerManager.shared.enemies {
+            enemy.view.physicsBody?.velocity = .zero
+            let constraint = SKConstraint.positionX(SKRange(lowerLimit: position.x-20, upperLimit: .infinity))
+            enemy.view.constraints = [constraint]
+        }
+        
+        parent.run(.sequence([.wait(forDuration: coolDownTime),.run { [unowned self] in
+            self.gravityNode.removeFromParent()
+            self.isCoolingDown = false
+            }]))
+        self.isCoolingDown = true
+    }
+    
+    func removeField() {
+        gravityNode.removeFromParent()
     }
 }

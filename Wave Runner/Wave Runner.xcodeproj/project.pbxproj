@@ -37,7 +37,7 @@
 		500C0E631E326BBE00FCF079 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E4D1E326BBD00FCF079 /* UIImageView.swift */; };
 		500C0E641E326BBE00FCF079 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E4E1E326BBD00FCF079 /* UIView.swift */; };
 		504B965B1E33848B000110C2 /* GravityFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504B96581E33848B000110C2 /* GravityFieldController.swift */; };
-		504B965C1E33848B000110C2 /* LaserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504B96591E33848B000110C2 /* LaserController.swift */; };
+		504B965C1E33848B000110C2 /* LaserSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504B96591E33848B000110C2 /* LaserSkill.swift */; };
 		504B965D1E33848B000110C2 /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504B965A1E33848B000110C2 /* PlayerController.swift */; };
 		504B96651E3384AF000110C2 /* BackgroundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504B965F1E3384AF000110C2 /* BackgroundController.swift */; };
 		504B96661E3384AF000110C2 /* BackgroundSoundController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504B96601E3384AF000110C2 /* BackgroundSoundController.swift */; };
@@ -45,6 +45,8 @@
 		504B96681E3384AF000110C2 /* GestureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504B96621E3384AF000110C2 /* GestureController.swift */; };
 		504B96691E3384AF000110C2 /* PlatformController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504B96631E3384AF000110C2 /* PlatformController.swift */; };
 		504B966A1E3384AF000110C2 /* SingleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504B96641E3384AF000110C2 /* SingleController.swift */; };
+		504B966C1E338A3C000110C2 /* SonicSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504B966B1E338A3C000110C2 /* SonicSkill.swift */; };
+		504B966E1E338B46000110C2 /* PushSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504B966D1E338B46000110C2 /* PushSkill.swift */; };
 		5066E86F1E32CF5F009771B6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066E85B1E32CF5F009771B6 /* Constants.swift */; };
 		5066E8721E32CF5F009771B6 /* EnemyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066E8601E32CF5F009771B6 /* EnemyController.swift */; };
 		5066E8731E32CF5F009771B6 /* EnemyControllerGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5066E8611E32CF5F009771B6 /* EnemyControllerGenerator.swift */; };
@@ -90,7 +92,7 @@
 		500C0E4D1E326BBD00FCF079 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		500C0E4E1E326BBD00FCF079 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		504B96581E33848B000110C2 /* GravityFieldController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GravityFieldController.swift; sourceTree = "<group>"; };
-		504B96591E33848B000110C2 /* LaserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaserController.swift; sourceTree = "<group>"; };
+		504B96591E33848B000110C2 /* LaserSkill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaserSkill.swift; sourceTree = "<group>"; };
 		504B965A1E33848B000110C2 /* PlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
 		504B965F1E3384AF000110C2 /* BackgroundController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundController.swift; sourceTree = "<group>"; };
 		504B96601E3384AF000110C2 /* BackgroundSoundController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundSoundController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,8 @@
 		504B96621E3384AF000110C2 /* GestureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureController.swift; sourceTree = "<group>"; };
 		504B96631E3384AF000110C2 /* PlatformController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformController.swift; sourceTree = "<group>"; };
 		504B96641E3384AF000110C2 /* SingleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleController.swift; sourceTree = "<group>"; };
+		504B966B1E338A3C000110C2 /* SonicSkill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SonicSkill.swift; sourceTree = "<group>"; };
+		504B966D1E338B46000110C2 /* PushSkill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushSkill.swift; sourceTree = "<group>"; };
 		5066E85B1E32CF5F009771B6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5066E8601E32CF5F009771B6 /* EnemyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyController.swift; sourceTree = "<group>"; };
 		5066E8611E32CF5F009771B6 /* EnemyControllerGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyControllerGenerator.swift; sourceTree = "<group>"; };
@@ -245,7 +249,9 @@
 			isa = PBXGroup;
 			children = (
 				504B96581E33848B000110C2 /* GravityFieldController.swift */,
-				504B96591E33848B000110C2 /* LaserController.swift */,
+				504B966D1E338B46000110C2 /* PushSkill.swift */,
+				504B96591E33848B000110C2 /* LaserSkill.swift */,
+				504B966B1E338A3C000110C2 /* SonicSkill.swift */,
 				504B965A1E33848B000110C2 /* PlayerController.swift */,
 			);
 			path = Player;
@@ -477,6 +483,7 @@
 				500C0E521E326BBD00FCF079 /* CGRect.swift in Sources */,
 				504B96651E3384AF000110C2 /* BackgroundController.swift in Sources */,
 				500C0E221E325B5800FCF079 /* GameScene.swift in Sources */,
+				504B966C1E338A3C000110C2 /* SonicSkill.swift in Sources */,
 				500C0E591E326BBE00FCF079 /* SKTextureAtlas.swift in Sources */,
 				500C0E581E326BBE00FCF079 /* SKSpriteNode.swift in Sources */,
 				504B96661E3384AF000110C2 /* BackgroundSoundController.swift in Sources */,
@@ -504,10 +511,11 @@
 				500C0E5B1E326BBE00FCF079 /* TouchView.swift in Sources */,
 				500C0E511E326BBD00FCF079 /* CGPoint.swift in Sources */,
 				500C0E541E326BBD00FCF079 /* CGVector.swift in Sources */,
-				504B965C1E33848B000110C2 /* LaserController.swift in Sources */,
+				504B965C1E33848B000110C2 /* LaserSkill.swift in Sources */,
 				500C0E1C1E325B5800FCF079 /* AppDelegate.swift in Sources */,
 				504B965B1E33848B000110C2 /* GravityFieldController.swift in Sources */,
 				5066E87E1E32CF75009771B6 /* View.swift in Sources */,
+				504B966E1E338B46000110C2 /* PushSkill.swift in Sources */,
 				504B96671E3384AF000110C2 /* Controller.swift in Sources */,
 				500C0E5F1E326BBE00FCF079 /* UIButton.swift in Sources */,
 				5066E8721E32CF5F009771B6 /* EnemyController.swift in Sources */,

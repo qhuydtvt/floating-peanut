@@ -14,11 +14,12 @@ enum LaserType {
 }
 
 class LaserSkill {
-    var coolDownTime: Int = 1
+    var coolDownTime: Double = 1
     var isCoolingDown = false
-    var playerController = PlayerController.instance
+    lazy var playerController = PlayerController.instance
     
     func spawn(type: LaserType) {
+        guard isCoolingDown == false else { return }
         switch type {
         case .straight:
             var anim = Textures.laserStraightAnimation
@@ -48,6 +49,11 @@ class LaserSkill {
             let sequence = SKAction.sequence([delay, shootAction])
             playerController.player.run(.group([animateAction, sequence]))
         default: break
+        }
+        
+        self.isCoolingDown = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + coolDownTime) {
+            self.isCoolingDown = false
         }
     }
 }

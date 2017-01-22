@@ -47,13 +47,13 @@ class GravitySkill {
         
         for enemy in EnemyControllerManager.shared.enemies {
             enemy.view.physicsBody?.velocity = .zero
-            let constraint = SKConstraint.positionX(SKRange(lowerLimit: position.x-20, upperLimit: .infinity), y: SKRange(lowerLimit: position.y - 300, upperLimit: position.y + 300))
+            let constraint = SKConstraint.positionX(SKRange(lowerLimit: position.x-20, upperLimit: .infinity), y: SKRange(lowerLimit: position.y - 1000, upperLimit: position.y + 1000))
             enemy.view.constraints = [constraint]
         }
         
         for enemy in EnemyControllerManager.shared.missiles {
             enemy.view.physicsBody?.velocity = .zero
-            let constraint = SKConstraint.positionX(SKRange(lowerLimit: position.x-20, upperLimit: .infinity), y: SKRange(lowerLimit: position.y - 300, upperLimit: position.y + 300))
+            let constraint = SKConstraint.positionX(SKRange(lowerLimit: position.x-20, upperLimit: .infinity), y: SKRange(lowerLimit: position.y - 1000, upperLimit: position.y + 1000))
             enemy.view.constraints = [constraint]
         }
         

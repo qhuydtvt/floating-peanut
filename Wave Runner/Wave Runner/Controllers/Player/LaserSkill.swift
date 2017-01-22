@@ -91,9 +91,9 @@ class LaserController: SingleControler {
     func move(speed: CGFloat) {
         let distance = laser.width
         let time = distance / speed
-        laser.run(.move(by: CGVector(dx: distance, dy: 0), duration: TimeInterval(time))) { [unowned self] in
-            self.laser.run(.fadeAlpha(to: 0, duration: 0.15)) { [unowned self] in
-                self.view.removeFromParent()
+        laser.run(.move(by: CGVector(dx: distance, dy: 0), duration: TimeInterval(time))) { 
+            self.laser.run(.fadeAlpha(to: 0, duration: 0.15)) { [unowned view = self.view] in
+                view.removeFromParent()
             }
         }
     }

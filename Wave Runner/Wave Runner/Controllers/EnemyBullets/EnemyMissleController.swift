@@ -30,12 +30,18 @@ class EnemyMissleController: SingleControler {
         self.view.physicsBody?.categoryBitMask = Masks.ENEMY_MISSLE
         self.view.physicsBody?.linearDamping = 0
         self.view.physicsBody?.fieldBitMask = 1
+        
+        EnemyControllerManager.shared.missiles.append(self)
     }
     
     override func destroy() {
         super.destroy()
         let explosionController = ExplosionController(fileName: "missle_explosion.sks")
         explosionController.config(position: self.position, parent: self.parent)
+        
+        if let index = EnemyControllerManager.shared.missiles.index(where: { return $0 === self }) {
+            EnemyControllerManager.shared.missiles.remove(at: index)
+        }
     }
     
     override func run(parent: SKNode, time: TimeInterval) {

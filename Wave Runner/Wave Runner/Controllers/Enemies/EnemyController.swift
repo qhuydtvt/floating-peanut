@@ -121,7 +121,7 @@ class EnemyController : SingleControler {
             let enemyController = EnemyController(textures: SKTextureAtlas(named: "enemy_1").toTextures())
             enemyController.attackAction = {
                 controller, time, target in
-                let _ = controller.moveTowards(destination: target, speed: 10)
+                let _ = controller.moveTowards(destination: target, speed: 6)
             }
             return enemyController
         } else if type == 2 || type == 4 {

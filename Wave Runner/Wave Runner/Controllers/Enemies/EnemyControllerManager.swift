@@ -15,6 +15,7 @@ class EnemyControllerManager: Controller {
     
     let enemyGenerator: EnemyControllerGenerator
     var enemies : [EnemyController]
+    var missiles: [EnemyMissleController] = []
     
     var groundPosition: CGPoint!
     var midAirPosition: CGPoint!

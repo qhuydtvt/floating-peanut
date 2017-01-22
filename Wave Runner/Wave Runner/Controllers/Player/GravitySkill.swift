@@ -51,6 +51,12 @@ class GravitySkill {
             enemy.view.constraints = [constraint]
         }
         
+        for enemy in EnemyControllerManager.shared.missiles {
+            enemy.view.physicsBody?.velocity = .zero
+            let constraint = SKConstraint.positionX(SKRange(lowerLimit: position.x-20, upperLimit: .infinity), y: SKRange(lowerLimit: position.y - 300, upperLimit: position.y + 300))
+            enemy.view.constraints = [constraint]
+        }
+        
         parent.run(.sequence([.wait(forDuration: coolDownTime),.run { [unowned self] in
             self.removeField()
             self.isCoolingDown = false
@@ -68,6 +74,10 @@ class GravitySkill {
         for enemy in EnemyControllerManager.shared.enemies {
             enemy.view.constraints?.removeAll()
         }
+        
+        for enemy in EnemyControllerManager.shared.missiles {
+            enemy.view.constraints?.removeAll()
+        }
     }
     
     func pushEnemies() {
@@ -81,6 +91,7 @@ class GravitySkill {
         for enemy in EnemyControllerManager.shared.enemies {
             enemy.view.physicsBody?.velocity = CGVector(dx: 1200, dy: 0)
         }
+        
         self.isCoolingDown = true
         DispatchQueue.main.asyncAfter(deadline: .now() + coolDownTime) {
             self.isCoolingDown = false

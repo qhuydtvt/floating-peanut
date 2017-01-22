@@ -25,7 +25,6 @@
 		500C0E1E1E325B5800FCF079 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 500C0E1D1E325B5800FCF079 /* GameScene.sks */; };
 		500C0E221E325B5800FCF079 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E211E325B5800FCF079 /* GameScene.swift */; };
 		500C0E241E325B5800FCF079 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E231E325B5800FCF079 /* GameViewController.swift */; };
-		500C0E271E325B5800FCF079 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 500C0E251E325B5800FCF079 /* Main.storyboard */; };
 		500C0E291E325B5800FCF079 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 500C0E281E325B5800FCF079 /* Assets.xcassets */; };
 		500C0E2C1E325B5800FCF079 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 500C0E2A1E325B5800FCF079 /* LaunchScreen.storyboard */; };
 		500C0E501E326BBD00FCF079 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C0E351E326BBD00FCF079 /* CGFloat.swift */; };
@@ -76,6 +75,11 @@
 		5075C6C01E340E0100B5B3B5 /* VictoryScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5075C6BF1E340E0100B5B3B5 /* VictoryScene.sks */; };
 		5075C6C21E340E0C00B5B3B5 /* VictoryScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5075C6C11E340E0C00B5B3B5 /* VictoryScene.swift */; };
 		5075C6C41E3412F100B5B3B5 /* sonic_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5075C6C31E3412F100B5B3B5 /* sonic_sound.wav */; };
+		E13AC25B1E34324A0081687D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E13AC25A1E34324A0081687D /* Main.storyboard */; };
+		E13AC2611E34326B0081687D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13AC25D1E34326B0081687D /* DetailViewController.swift */; };
+		E13AC2621E34326B0081687D /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13AC25E1E34326B0081687D /* HelpViewController.swift */; };
+		E13AC2631E34326B0081687D /* IntroPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13AC25F1E34326B0081687D /* IntroPageViewController.swift */; };
+		E13AC2641E34326B0081687D /* TransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13AC2601E34326B0081687D /* TransitionAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,7 +101,6 @@
 		500C0E1D1E325B5800FCF079 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		500C0E211E325B5800FCF079 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		500C0E231E325B5800FCF079 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		500C0E261E325B5800FCF079 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		500C0E281E325B5800FCF079 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		500C0E2B1E325B5800FCF079 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		500C0E2D1E325B5800FCF079 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -153,6 +156,11 @@
 		558FE0BD98FE42AEB7C5C6C7 /* Pods_Wave_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wave_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		972D3FC7CC34502E45407B4F /* Pods-Wave Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wave Runner.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wave Runner/Pods-Wave Runner.release.xcconfig"; sourceTree = "<group>"; };
 		A262C3DE2D62DC763A39A564 /* Pods-Wave Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wave Runner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wave Runner/Pods-Wave Runner.debug.xcconfig"; sourceTree = "<group>"; };
+		E13AC25A1E34324A0081687D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E13AC25D1E34326B0081687D /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		E13AC25E1E34326B0081687D /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		E13AC25F1E34326B0081687D /* IntroPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroPageViewController.swift; sourceTree = "<group>"; };
+		E13AC2601E34326B0081687D /* TransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,8 +229,8 @@
 				5075C6BF1E340E0100B5B3B5 /* VictoryScene.sks */,
 				5075C6C11E340E0C00B5B3B5 /* VictoryScene.swift */,
 				504B966F1E33A218000110C2 /* LabelsController.swift */,
+				E13AC25A1E34324A0081687D /* Main.storyboard */,
 				500C0E231E325B5800FCF079 /* GameViewController.swift */,
-				500C0E251E325B5800FCF079 /* Main.storyboard */,
 				500C0E281E325B5800FCF079 /* Assets.xcassets */,
 				500C0E2A1E325B5800FCF079 /* LaunchScreen.storyboard */,
 				500C0E2D1E325B5800FCF079 /* Info.plist */,
@@ -339,6 +347,7 @@
 		5066E85C1E32CF5F009771B6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E13AC25C1E34326B0081687D /* Intro */,
 				182595481E3365EC00481B37 /* EnemyMissles */,
 				504B965E1E3384AF000110C2 /* Other */,
 				5066E85F1E32CF5F009771B6 /* Enemies */,
@@ -407,6 +416,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E13AC25C1E34326B0081687D /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				E13AC25D1E34326B0081687D /* DetailViewController.swift */,
+				E13AC25E1E34326B0081687D /* HelpViewController.swift */,
+				E13AC25F1E34326B0081687D /* IntroPageViewController.swift */,
+				E13AC2601E34326B0081687D /* TransitionAnimation.swift */,
+			);
+			path = Intro;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -442,7 +462,7 @@
 				TargetAttributes = {
 					500C0E171E325B5700FCF079 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 3CJF6M3857;
+						DevelopmentTeam = 3C7VUZNULA;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -471,7 +491,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5075C6B91E33E33600B5B3B5 /* ShieldEmitter.sks in Resources */,
-				500C0E271E325B5800FCF079 /* Main.storyboard in Resources */,
 				500C0E1E1E325B5800FCF079 /* GameScene.sks in Resources */,
 				500C0E291E325B5800FCF079 /* Assets.xcassets in Resources */,
 				18B12BED1E33A84A007721FB /* enemy_explosion.sks in Resources */,
@@ -482,6 +501,7 @@
 				500C0E2C1E325B5800FCF079 /* LaunchScreen.storyboard in Resources */,
 				5066E87C1E32CF5F009771B6 /* background.mp3 in Resources */,
 				18B12BFD1E340119007721FB /* explosion.mp3 in Resources */,
+				E13AC25B1E34324A0081687D /* Main.storyboard in Resources */,
 				5066E8A01E32E06E009771B6 /* Gestures.json in Resources */,
 				5075C6BC1E34071D00B5B3B5 /* GameOverScene.sks in Resources */,
 				18C03EB61E342BA2007944BE /* powerup.wav in Resources */,
@@ -557,6 +577,7 @@
 				5075C6C21E340E0C00B5B3B5 /* VictoryScene.swift in Sources */,
 				500C0E521E326BBD00FCF079 /* CGRect.swift in Sources */,
 				18B12BF01E33AADE007721FB /* ExplosionController.swift in Sources */,
+				E13AC2631E34326B0081687D /* IntroPageViewController.swift in Sources */,
 				504B96651E3384AF000110C2 /* BackgroundController.swift in Sources */,
 				500C0E221E325B5800FCF079 /* GameScene.swift in Sources */,
 				504B966C1E338A3C000110C2 /* SonicSkill.swift in Sources */,
@@ -566,6 +587,7 @@
 				500C0E631E326BBE00FCF079 /* UIImageView.swift in Sources */,
 				500C0E641E326BBE00FCF079 /* UIView.swift in Sources */,
 				500C0E621E326BBE00FCF079 /* UIImage.swift in Sources */,
+				E13AC2611E34326B0081687D /* DetailViewController.swift in Sources */,
 				500C0E531E326BBD00FCF079 /* CGSize.swift in Sources */,
 				500C0E611E326BBE00FCF079 /* UIColorExtension.swift in Sources */,
 				5066E8791E32CF5F009771B6 /* WaveController.swift in Sources */,
@@ -583,6 +605,7 @@
 				5066E8741E32CF5F009771B6 /* EnemyControllerManager.swift in Sources */,
 				500C0E5D1E326BBE00FCF079 /* Visualizer.swift in Sources */,
 				500C0E5C1E326BBE00FCF079 /* UIWindow+Swizzle.swift in Sources */,
+				E13AC2641E34326B0081687D /* TransitionAnimation.swift in Sources */,
 				500C0E241E325B5800FCF079 /* GameViewController.swift in Sources */,
 				500C0E5B1E326BBE00FCF079 /* TouchView.swift in Sources */,
 				500C0E511E326BBD00FCF079 /* CGPoint.swift in Sources */,
@@ -592,6 +615,7 @@
 				500C0E1C1E325B5800FCF079 /* AppDelegate.swift in Sources */,
 				5066E87E1E32CF75009771B6 /* View.swift in Sources */,
 				504B966E1E338B46000110C2 /* GravitySkill.swift in Sources */,
+				E13AC2621E34326B0081687D /* HelpViewController.swift in Sources */,
 				504B96671E3384AF000110C2 /* Controller.swift in Sources */,
 				500C0E5F1E326BBE00FCF079 /* UIButton.swift in Sources */,
 				5066E8721E32CF5F009771B6 /* EnemyController.swift in Sources */,
@@ -602,14 +626,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		500C0E251E325B5800FCF079 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				500C0E261E325B5800FCF079 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		500C0E2A1E325B5800FCF079 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -720,7 +736,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 3CJF6M3857;
+				DEVELOPMENT_TEAM = 3C7VUZNULA;
 				INFOPLIST_FILE = "Wave Runner/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -736,7 +752,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 3CJF6M3857;
+				DEVELOPMENT_TEAM = 3C7VUZNULA;
 				INFOPLIST_FILE = "Wave Runner/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -71,11 +71,11 @@ class GravitySkill {
     }
     
     func pushEnemies() {
-//        guard isCoolingDown == false else { return }
-//        var anim = Textures.attackAnimation
-//        anim.append(Textures.goku_standing)
-//        
-//        playerController.player.run(.animate(with: anim, timePerFrame: 0.1, resize: true, restore: false))
+        guard isCoolingDown == false else { return }
+        var anim = Textures.attackAnimation
+        anim.append(Textures.goku_standing)
+        
+        playerController.player.run(.animate(with: anim, timePerFrame: 0.1, resize: true, restore: false))
         
         playerController.gravity.removeField()
         for enemy in EnemyControllerManager.shared.enemies {

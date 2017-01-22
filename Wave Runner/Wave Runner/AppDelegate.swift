@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         Visualizer.start()
+//        self.setup()
         return true
     }
 
@@ -43,5 +44,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+    func setup() {
+        let count = UserDefaults.standard.integer(forKey: "OPEN")
+        guard count != 0 else {
+            return
+        }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        detailVC.index = images.count - 1
+        detailVC.image = images[images.count - 1]
+        self.window?.rootViewController = detailVC
+        
+    }
 }
 

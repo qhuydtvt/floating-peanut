@@ -24,7 +24,7 @@ class SingleControler : Controller {
         }
         parent.addChild(self.view)
         
-        self.view.destroy = self.destroy
+        self.view.destroy = { [weak self] in self?.destroy() }
         super.config(position: position, parent: parent)
     }
     

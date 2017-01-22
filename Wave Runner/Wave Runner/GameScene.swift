@@ -27,7 +27,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         enemyManager = EnemyControllerManager(enemyGenerator: EnemyControllerGenerator(jsonFile: "stage1"))
         EnemyControllerManager.shared = enemyManager
-        enemyManager.noEnemyLeft = self.claimVictory
+        enemyManager.noEnemyLeft = { [unowned self] in self.claimVictory() }
         
         configPlayer()
         configGesture()
@@ -97,7 +97,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.playerController = PlayerController()
         PlayerController.instance = playerController
         playerController.config(position: CGPoint(x: 175, y: platformController.platform1.height + playerController.board.height * 1.5), parent: self)
-        playerController.didDestroy = self.defeat
+        playerController.didDestroy = { [weak self] in self?.defeat() }
     }
     
     func configPlatform() {

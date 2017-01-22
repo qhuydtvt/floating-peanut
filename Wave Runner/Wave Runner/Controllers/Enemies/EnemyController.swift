@@ -65,16 +65,19 @@ class EnemyController : SingleControler {
             print(">> EnemyController: contacted")
             
             guard self != nil else { return }
-            if ((other.physicsBody?.categoryBitMask)! & Masks.ENEMY_SONIC) != 0 && !self!.exposed {
-                self!.view.run(.sequence([.run{
-                    self!.view.lightingBitMask = 0
-                    self!.exposed = true
-                    }, .wait(forDuration: 0.3)])) {
-                        self!.view.lightingBitMask = 1
-                        self!.exposed = false
-                        self!.view.contacted = false
-                }
+            if ((other.physicsBody?.categoryBitMask)! & Masks.PLAYER_SONIC) != 0 {
                 self?.view.contacted = false
+                if !self!.exposed {
+                    self!.view.run(.sequence([.run{
+                        self!.view.lightingBitMask = 0
+                        self!.exposed = true
+                        }, .wait(forDuration: 0.3)])) {
+                            self!.view.lightingBitMask = 1
+                            self!.exposed = false
+                            self!.view.contacted = false
+                    }
+                    
+                }
             }
         }
     }

@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Wave Runner.xcodeproj">
+      location = "group:/Users/duyanh2912/Desktop/Floating-Peanut/Wave Runner/The Waver.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

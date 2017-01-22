@@ -96,7 +96,7 @@
 		18C03EB31E341FA1007944BE /* LightController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightController.swift; sourceTree = "<group>"; };
 		18C03EB51E342BA2007944BE /* powerup.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = powerup.wav; sourceTree = "<group>"; };
 		18C03EB71E342C9A007944BE /* gravity_pull.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gravity_pull.wav; sourceTree = "<group>"; };
-		500C0E181E325B5800FCF079 /* Wave Runner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wave Runner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		500C0E181E325B5800FCF079 /* The Waver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Waver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		500C0E1B1E325B5800FCF079 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		500C0E1D1E325B5800FCF079 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		500C0E211E325B5800FCF079 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -206,7 +206,7 @@
 		500C0E191E325B5800FCF079 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				500C0E181E325B5800FCF079 /* Wave Runner.app */,
+				500C0E181E325B5800FCF079 /* The Waver.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -430,9 +430,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		500C0E171E325B5700FCF079 /* Wave Runner */ = {
+		500C0E171E325B5700FCF079 /* The Waver */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 500C0E301E325B5800FCF079 /* Build configuration list for PBXNativeTarget "Wave Runner" */;
+			buildConfigurationList = 500C0E301E325B5800FCF079 /* Build configuration list for PBXNativeTarget "The Waver" */;
 			buildPhases = (
 				B5127ABB830A06531DE0BEE4 /* [CP] Check Pods Manifest.lock */,
 				500C0E141E325B5700FCF079 /* Sources */,
@@ -445,9 +445,9 @@
 			);
 			dependencies = (
 			);
-			name = "Wave Runner";
+			name = "The Waver";
 			productName = "Wave Runner";
-			productReference = 500C0E181E325B5800FCF079 /* Wave Runner.app */;
+			productReference = 500C0E181E325B5800FCF079 /* The Waver.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -467,7 +467,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 500C0E131E325B5700FCF079 /* Build configuration list for PBXProject "Wave Runner" */;
+			buildConfigurationList = 500C0E131E325B5700FCF079 /* Build configuration list for PBXProject "The Waver" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -480,7 +480,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				500C0E171E325B5700FCF079 /* Wave Runner */,
+				500C0E171E325B5700FCF079 /* The Waver */,
 			);
 		};
 /* End PBXProject section */
@@ -765,7 +765,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		500C0E131E325B5700FCF079 /* Build configuration list for PBXProject "Wave Runner" */ = {
+		500C0E131E325B5700FCF079 /* Build configuration list for PBXProject "The Waver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				500C0E2E1E325B5800FCF079 /* Debug */,
@@ -774,7 +774,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		500C0E301E325B5800FCF079 /* Build configuration list for PBXNativeTarget "Wave Runner" */ = {
+		500C0E301E325B5800FCF079 /* Build configuration list for PBXNativeTarget "The Waver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				500C0E311E325B5800FCF079 /* Debug */,
